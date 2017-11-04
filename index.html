@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<!--
+© 2017 Jackson Hayes
+-->
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" />
+    <title>Lawnchair</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=almnYgqQyp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=almnYgqQyp">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=almnYgqQyp">
+    <link rel="manifest" href="/favicon/manifest.json?v=almnYgqQyp">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=almnYgqQyp" color="#00c853">
+    <link rel="shortcut icon" href="/favicon/favicon.ico?v=almnYgqQyp">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=almnYgqQyp">
+    <meta name="theme-color" content="#1976D2">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <meta charset="UTF-8" />
+    <meta property="og:title" content="Lawnchair: No clever tagline needed" />
+    <meta property="og:type" content="website" />
+    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+    <meta property="og:url" content="http://lawnchair.deletescape.ch/" />
+    <meta property="og:image" content="http://lawnchair.deletescape.ch/images/lawnchair-icon.png" />
+    <meta property="og:description" content="The rootless Pixel Launcher that is both heavily customizable and ships with backported Android Oreo features and tweaks." />
+    <meta name="description" content="The rootless Pixel Launcher that is both heavily customizable and ships with backported Android Oreo features and tweaks." />
+    <meta name="author" content="Jackson Hayes" />
+    <meta name="keywords" content="Android, customize, Pixel, Pixel Launcher, Google Pixel, Pixel Google, APK, free, free app, app free, home screen, homescreen" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102200622-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-102200622-2');
+
+    </script>
+
+</head>
+
+<body>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!--section color--->
+    <div class="row">
+        <!---Desktop Version-->
+        <div id="colorBackgroundD" class="col s12 hide-on-small-only" style="min-height: 100vh; padding-bottom: 40px; padding-top: 55vh; background-color: #00C853">
+
+            <h2 class="white-text center-align">Lawnchair</h2>
+            <h4 class="white-text center-align thin">No clever tagline needed</h4>
+
+
+
+            <div class="center-align" style="">
+                <a href='https://play.google.com/store/apps/details?id=ch.deletescape.lawnchair.plah&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' target="_blank" class="responsive-img" style="height: 100px;" /></a>
+            </div>
+
+        </div>
+        <!---Mobile Version-->
+        <div id="colorBackgroundM" class="col s12 hide-on-med-and-up" style="min-height: 100vh; padding-bottom: 40px;  padding-top: 55vh; background-color: #00C853">
+
+            <h2 class="white-text center-align">Lawnchair</h2>
+            <h4 class="white-text center-align thin">No clever tagline needed</h4>
+
+
+
+            <div class="center-align" style="">
+                <a href='https://play.google.com/store/apps/details?id=ch.deletescape.lawnchair.plah&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' class="responsive-img" target="_blank" style="height: 100px;" /></a>
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <!---Desktop Version-->
+        <div class="container hide-on-small-only">
+
+            <div class="row valign-wrapper">
+
+                <div class="col s12 m6  center center-align">
+                    <img class="responsive-img" style="max-height: 90vh" src="images/mainImage.jpg">
+                </div>
+
+
+
+                <div class="col s12 m6">
+
+                    <h4 class="center">No clever tagline needed</h4>
+
+                    <p class="light center-align flow-text">Lawnchair. Get it? It's a bad pun, I know. Based on Launcher3 from AOSP, Lawnchair has all the features of the Pixel Launcher (including GNow), plus customizability. Best of all? No root required.</p>
+                </div>
+
+            </div>
+            <div class="hide-on-small-only" style="background-color: #E0E0E0; height: 1px;"></div>
+
+        </div>
+        <!---Mobile Version-->
+        <div class="container hide-on-med-and-up">
+
+            <div class="row">
+
+                <div class="col s12">
+                    <img class="responsive-img" src="images/mainImage.jpg">
+                </div>
+
+
+
+                <div class="col s12">
+
+                    <h4 class="center">No clever tagline needed</h4>
+
+                    <p class="light center-align flow-text">Lawnchair. Get it? It's a bad pun, I know. Based on Launcher3 from AOSP, Lawnchair has all the features of the Pixel Launcher (including GNow), plus customizability. Best of all? No root required.</p>
+                </div>
+
+            </div>
+            <div class="hide-on-med-and-up" style="background-color: #E0E0E0; height: 1px;"></div>
+
+        </div>
+    </div>
+    <!--section color-->
+    <div class="">
+        <!---Desktop Version-->
+        <div class="container hide-on-small-only">
+
+            <div class="row valign-wrapper">
+
+
+
+                <div class="col m6">
+
+                    <h3 class="center">Android Oreo features</h3>
+
+                    <p class="light center-align flow-text">Notification Dots and improved shortcut UI (with notifications) have been backported for anyone to use! Perfect for anyone who won't be getting Android Oreo anytime soon.</p>
+                </div>
+                <div class="col m6 center center-align">
+                    <img class="responsive-img" style="max-height: 90vh" src="images/shortcuts.jpg" />
+                </div>
+
+            </div>
+
+            <div class="hide-on-small-only" style="background-color: #E0E0E0; height: 1px;"></div>
+        </div>
+    </div>
+    <!---Mobile Version-->
+    <div class="container hide-on-med-and-up">
+
+        <div class="row">
+
+            <div class="col s12">
+                <img class="responsive-img" src="images/shortcuts.jpg" />
+            </div>
+
+
+
+            <div class="col s12">
+
+                <h3 class="center">Android Oreo features</h3>
+
+                <p class="light center-align flow-text">Notification Dots and improved shortcut UI (with notifications) have been backported for anyone to use! Perfect for anyone who won't be getting Android Oreo anytime soon.</p>
+            </div>
+        </div>
+        <div class="hide-on-med-and-up" style="background-color: #E0E0E0; height: 1px;"></div>
+
+    </div>
+
+    <!--section color-->
+    <div class="">
+        <!---Desktop Version-->
+        <div class="container hide-on-small-only">
+
+            <div class="row valign-wrapper">
+
+                <div class="col s12 m6  center center-align">
+                    <img class="responsive-img" style="max-height: 90vh" src="images/settings1.jpg" />
+                </div>
+
+
+
+                <div class="col s12 m6">
+
+                    <h3 class="center">Pixel Launcher: Customizable</h3>
+
+                    <p class="light center-align flow-text">Icon size, label, rows, and columns are all adjustable. Icon packs are also supported, and the Pill is customizable as well. There are many other features besides this, and more features are added regularly.<br><span style="font-size: 16px"><i>(This icon pack is Ream by Gabriel Zegarra and Justin Kruit)</i></span></p>
+                </div>
+
+            </div>
+
+        </div>
+        <!---Mobile Version-->
+        <div class="container hide-on-med-and-up">
+
+            <div class="row">
+
+                <div class="col s12">
+                    <img class="responsive-img" src="images/settings1.jpg" />
+                </div>
+
+
+
+                <div class="col s12">
+
+                    <h3 class="center">Pixel Launcher: Customizable</h3>
+
+                    <p class="light center-align flow-text">Icon size, label, rows, and columns are all adjustable. Icon packs are also supported, and the Pill is customizable as well. There are many other features besides this, and more features are added regularly.<br><span style="font-size: 16px"><i>(This icon pack is Ream by Gabriel Zegarra and Justin Kruit)</i></span></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div style="background-color: #E0E0E0; height: 1px;"></div>
+
+        <div class="row">
+            <div class="col s12 center">
+                <h4 style="margin-top: 60px; margin-bottom: 60px;">The Lawnchair Team</h4>
+                <div class="row center-align">
+                    <div class="col s12 m4 bioContainer">
+                        <div class="hoverable bioCard" id="tillModal"><img class="responsive-img circle" src="images/till.jpg">
+                            <h5>Till Kottmann</h5>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 bioContainer">
+                        <div class="hoverable bioCard" id="papModal"><img class="responsive-img circle" src="images/paphonb.jpg">
+                            <h5>paphonb</h5>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m4 bioContainer">
+                        <div class="hoverable bioCard" id="jozsefModal"><img class="responsive-img circle" src="images/blank.png">
+                            <h5>Jozsef Kiraly</h5>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 bioContainer">
+                        <div class="hoverable bioCard" id="davidModal"><img class="responsive-img circle" src="images/david.jpg">
+                            <h5>David Sn</h5>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 bioContainer">
+                        <div class="hoverable bioCard" id="szymonModal"><img class="responsive-img circle" src="images/szymon.jpg">
+                            <h5>Szymon Pusz</h5>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 bioContainer">
+                        <div class="hoverable bioCard" id="jacksonModal"><img class="responsive-img circle" src="images/jackson.png">
+                            <h5>Jackson Hayes</h5>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 bioContainer">
+                        <div class="hoverable bioCard" id="joshuaModal"><img class="responsive-img circle" src="images/jackson.png">
+                            <h5>Joshua Baldassare</h5>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 bioContainer">
+                        <div class="hoverable bioCard" id="lumiqModal"><img class="responsive-img circle" src="images/lumiq.png">
+                            <h5>Lumiq Creative</h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bio Modals -->
+    <!-- Till Kottmann -->
+    <aside id="dialog-till" class="mdc-dialog" role="alertdialog" aria-labelledby="my-mdc-dialog-label" aria-describedby="my-mdc-dialog-description">
+        <div class="mdc-dialog__surface">
+            <header class="mdc-dialog__header">
+                <h2 id="my-mdc-dialog-label" class="mdc-dialog__header__title">
+                    Till Kottmann
+                </h2>
+            </header>
+            <section id="my-mdc-dialog-description" class="mdc-dialog__body ">
+                I was born in Lucerne (Switzerland), in 1999 and have since then stayed there. I consider myself a geek, and am probably also seen as one by others. I am quite experienced in Java and mostly focus on Android Development. I also have atleast a bit of knowledge in most other major programming languages and technologies.<br><br> Taking photos and making videos definetly also count to my passions! I'd also really like to make music, but I am not really that talented in that.<br><br> Oh, I almost forgot, I'm also a professional Shitposter (mostly on Telegram) and in love with all kinds of memes, some even call me a meme for some reason.
+            </section>
+            <footer class="mdc-dialog__footer">
+                <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Close</button>
+                <a href="https://deletescape.ch" target="_blank"><button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Visit Website</button></a>
+            </footer>
+        </div>
+        <div class="mdc-dialog__backdrop"></div>
+    </aside>
+
+    <!-- paphonb -->
+    <aside id="dialog-pap" class="mdc-dialog" role="alertdialog" aria-labelledby="my-mdc-dialog-label" aria-describedby="my-mdc-dialog-description">
+        <div class="mdc-dialog__surface">
+            <header class="mdc-dialog__header">
+                <h2 id="my-mdc-dialog-label" class="mdc-dialog__header__title">
+                    paphonb
+                </h2>
+            </header>
+            <section id="my-mdc-dialog-description" class="mdc-dialog__body ">
+                Legendary developer.
+            </section>
+            <footer class="mdc-dialog__footer">
+                <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Close</button>
+                <a href="https://forum.xda-developers.com/member.php?u=6018897" target="_blank"><button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Visit XDA Profile</button></a>
+            </footer>
+        </div>
+        <div class="mdc-dialog__backdrop"></div>
+    </aside>
+
+    <!-- Jozsef -->
+    <aside id="dialog-jozsef" class="mdc-dialog" role="alertdialog" aria-labelledby="my-mdc-dialog-label" aria-describedby="my-mdc-dialog-description">
+        <div class="mdc-dialog__surface">
+            <header class="mdc-dialog__header">
+                <h2 id="my-mdc-dialog-label" class="mdc-dialog__header__title">
+                    Jozsef Kiraly
+                </h2>
+            </header>
+            <section id="my-mdc-dialog-description" class="mdc-dialog__body ">
+                Legendary developer.
+            </section>
+            <footer class="mdc-dialog__footer">
+                <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Close</button>
+                <a href="https://github.com/fonix232" target="_blank"><button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Visit GitHub</button></a>
+            </footer>
+        </div>
+        <div class="mdc-dialog__backdrop"></div>
+    </aside>
+
+    <!-- David -->
+    <aside id="dialog-david" class="mdc-dialog" role="alertdialog" aria-labelledby="my-mdc-dialog-label" aria-describedby="my-mdc-dialog-description">
+        <div class="mdc-dialog__surface">
+            <header class="mdc-dialog__header">
+                <h2 id="my-mdc-dialog-label" class="mdc-dialog__header__title">
+                    David Sn
+                </h2>
+            </header>
+            <section id="my-mdc-dialog-description" class="mdc-dialog__body ">
+                17 years old, Google Code-in 2016 Finalist. Also previously known as Codebucket. From Krakau, Polen.
+            </section>
+            <footer class="mdc-dialog__footer">
+                <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Close</button>
+                <a href="https://codebucket.de" target="_blank"><button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Visit Website</button></a>
+            </footer>
+        </div>
+        <div class="mdc-dialog__backdrop"></div>
+    </aside>
+
+    <!-- Szymon -->
+    <aside id="dialog-szymon" class="mdc-dialog" role="alertdialog" aria-labelledby="my-mdc-dialog-label" aria-describedby="my-mdc-dialog-description">
+        <div class="mdc-dialog__surface">
+            <header class="mdc-dialog__header">
+                <h2 id="my-mdc-dialog-label" class="mdc-dialog__header__title">
+                    Szymon Pusz </h2>
+            </header>
+            <section id="my-mdc-dialog-description" class="mdc-dialog__body ">
+                Legendary Developer.
+            </section>
+            <footer class="mdc-dialog__footer">
+                <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Close</button>
+                <a href="https://github.com/Rawi666" target="_blank"><button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Visit GitHub</button></a>
+            </footer>
+        </div>
+        <div class="mdc-dialog__backdrop"></div>
+    </aside>
+
+    <!-- Jackson -->
+    <aside id="dialog-jackson" class="mdc-dialog" role="alertdialog" aria-labelledby="my-mdc-dialog-label" aria-describedby="my-mdc-dialog-description">
+        <div class="mdc-dialog__surface">
+            <header class="mdc-dialog__header">
+                <h2 id="my-mdc-dialog-label" class="mdc-dialog__header__title">
+                    Jackson Hayes
+                </h2>
+            </header>
+            <section id="my-mdc-dialog-description" class="mdc-dialog__body ">
+                Web developer. Cinematographer, Photographer, Musician, Author, tech-enthusiast. Christian.<br><br> Web Developer, PR & Marketing for Lawnchair.
+            </section>
+            <footer class="mdc-dialog__footer">
+                <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Close</button>
+                <a href="https://jacksonhayes.me" target="_blank"><button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Visit Website</button></a>
+            </footer>
+        </div>
+        <div class="mdc-dialog__backdrop"></div>
+    </aside>
+    <!-- Joshua -->
+    <aside id="dialog-joshua" class="mdc-dialog" role="alertdialog" aria-labelledby="my-mdc-dialog-label" aria-describedby="my-mdc-dialog-description">
+        <div class="mdc-dialog__surface">
+            <header class="mdc-dialog__header">
+                <h2 id="my-mdc-dialog-label" class="mdc-dialog__header__title">
+                    Joshua Baldassare
+                </h2>
+            </header>
+            <section id="my-mdc-dialog-description" class="mdc-dialog__body ">
+                Legendary Designer.
+            </section>
+            <footer class="mdc-dialog__footer">
+                <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Close</button>
+                <a href="https://twitter.com/joshbaldassarre" target="_blank"><button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Visit Website</button></a>
+            </footer>
+        </div>
+        <div class="mdc-dialog__backdrop"></div>
+    </aside>
+    <!-- Lumiq -->
+    <aside id="dialog-lumiq" class="mdc-dialog" role="alertdialog" aria-labelledby="my-mdc-dialog-label" aria-describedby="my-mdc-dialog-description">
+        <div class="mdc-dialog__surface">
+            <header class="mdc-dialog__header">
+                <h2 id="my-mdc-dialog-label" class="mdc-dialog__header__title">
+                    Lumiq Creative
+                </h2>
+            </header>
+            <section id="my-mdc-dialog-description" class="mdc-dialog__body ">
+                Legendary Designer.
+            </section>
+            <footer class="mdc-dialog__footer">
+                <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Close</button>
+                <a href="https://plus.google.com/+LumiqCreative" target="_blank"><button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Visit Website</button></a>
+            </footer>
+        </div>
+        <div class="mdc-dialog__backdrop"></div>
+    </aside>
+
+    <div class="container" style="padding-top: 20px;">
+        <div style="background-color: #E0E0E0; height: 1px;"></div>
+
+        <div class="row valign-wrapper hide-on-small-only">
+            <div class="col s12 m6">
+                <h3 style="margin-top: 60px; margin-bottom: 30px;">Links</h3>
+                <p class="light flow-text">If you have an issue with Lawnchair, we're more than happy to help. Ask around in our Telegram Group, G+ community, or mention us on Twitter. Follow us on Twitter for announcements as well.<br><br>Check out Lawnchair's GitHub. Help out by fixing bugs, flagging issues, or even by just downloading and testing!</p>
+            </div>
+            <div class="col s12 m6" style="margin-top:70px;">
+                <div id="linkSection">
+                    <section class="tab" id="linkSection">
+                        <div class="content" id="linkContent">
+                            <div class="contacts" id="contacts"><a href="https://twitter.com/lawnchairapp/" class="black-text valign-wrapper flow-text"><i class="contact_icon mdi mdi-twitter mdi-36px blue-text"></i>&nbsp; Twitter</a></div>
+                            <div class="contacts" id="contacts"><a href="#modal1" class="modal-trigger black-text valign-wrapper flow-text" target="_blank"><i class="contact_icon mdi mdi-telegram mdi-36px blue-text darken-1"></i>&nbsp; Telegram</a></div>
+                            <div class="contacts" id="contacts"><a href="https://www.instagram.com/lawnchairstyle/" class="black-text valign-wrapper flow-text" target="_blank"><i class="contact_icon mdi mdi-instagram mdi-36px purple-text"></i>&nbsp; Instagram</a></div>
+                            <div class="contacts" id="contacts"><a href="https://goo.gl/ZxPaEk" class="black-text valign-wrapper flow-text" target="_blank"><i class="contact_icon mdi mdi-google-plus mdi-36px red-text"></i>&nbsp; Google+</a></div>
+                            <div class="contacts" id="contacts"><a href="https://lawnchair.freshdesk.com" class="black-text valign-wrapper flow-text" target="_blank"><i class="contact_icon mdi mdi-help-circle-outline mdi-36px green-text"></i>&nbsp; Support</a></div>
+                            <div class="contacts" id="contacts"><a href="https://github.com/deletescape-media/lawnchair" class="black-text valign-wrapper flow-text"><i class="contact_icon mdi mdi-github-circle mdi-36px"></i>&nbsp; GitHub</a></div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="row hide-on-med-and-up">
+            <div class="col s12">
+                <h3 style="margin-top: 60px; margin-bottom: 30px;">Links</h3>
+                <p class="light flow-text">If you have an issue with Lawnchair, we're more than happy to help. Ask around in our Telegram Group, G+ community, or mention us on Twitter. Follow us on Twitter for announcements as well.<br><br>Check out Lawnchair's GitHub. Help out by fixing bugs, flagging issues, or even by just downloading and testing!</p>
+            </div>
+            <div class="col s12" style="margin-top:30px;">
+                <div id="linkSection">
+                    <section class="tab" id="linkSection">
+                        <div class="content" id="linkContent">
+                            <div class="contacts" id="contacts"><a href="https://twitter.com/lawnchairapp/" class="black-text valign-wrapper flow-text"><i class="contact_icon mdi mdi-twitter mdi-36px blue-text"></i>&nbsp; Twitter</a></div>
+                            <div class="contacts" id="contacts"><a href="#modal1" class="modal-trigger black-text valign-wrapper flow-text" target="_blank"><i class="contact_icon mdi mdi-telegram mdi-36px blue-text darken-1"></i>&nbsp; Telegram</a></div>
+                            <div class="contacts" id="contacts"><a href="https://www.instagram.com/lawnchairstyle/" class="black-text valign-wrapper flow-text" target="_blank"><i class="contact_icon mdi mdi-instagram mdi-36px purple-text"></i>&nbsp; Instagram</a></div>
+                            <div class="contacts" id="contacts"><a href="https://goo.gl/ZxPaEk" class="black-text valign-wrapper flow-text" target="_blank"><i class="contact_icon mdi mdi-google-plus mdi-36px red-text"></i>&nbsp; Google+</a></div>
+                            <div class="contacts" id="contacts"><a href="https://lawnchair.freshdesk.com" class="black-text valign-wrapper flow-text" target="_blank"><i class="contact_icon mdi mdi-help-circle-outline mdi-36px green-text"></i>&nbsp; Support</a></div>
+                            <div class="contacts" id="contacts"><a href="https://github.com/deletescape-media/lawnchair" class="black-text valign-wrapper flow-text"><i class="contact_icon mdi mdi-github-circle mdi-36px"></i>&nbsp; GitHub</a></div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal1" class="modal bottom-sheet">
+        <div class="modal-content">
+            <h4>Telegram</h4>
+            <ul class="collection">
+                <li class="collection-item avatar">
+                    <img src="images/mainChannel.jpg" alt="" class="circle">
+                    <a href="https://t.me/lawnchairchannel" class="black-text"><span class="title">Lawnchair Telegram Channel</span>
+          <p>Get the latest information available, such as releases or other announcements.
+          </p></a>
+                </li>
+                <li class="collection-item avatar">
+                    <img src="images/mainGroup.jpg" alt="" class="circle">
+                    <a href="https://t.me/lccommunity" class="black-text"><span class="title">Lawnchair Community Telegram Group</span>
+          <p>Come here if you find any bugs, or have a feature idea. NO off topic allowed.
+          </p></a>
+                </li>
+                <li class="collection-item avatar">
+                    <img src="images/style.jpg" alt="" class="circle">
+                    <a href="https://t.me/lcstyle" class="black-text"><span class="title">Lawnchair Style Telegram Group</span>
+          <p>The place to show off your Lawnchair homescreen, your wall, or icons.
+          </p></a>
+                </li>
+                <li class="collection-item avatar">
+                    <img src="images/ot.jpg" alt="" class="circle">
+                    <a href="https://t.me/lcofftopic" class="black-text"><span class="title">Lawnchair OT Telegram Group</span>
+          <p>This is the place (and the ONLY place) to talk about whatever the heck you'd like.
+          </p></a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <footer class="page-footer white">
+        <div class="footer-copyright" style="background-color: #00C853">
+            <div class="container">
+                Website by <a class="white-text" href="http://goo.gl/jULEUS"><b>Jackson Hayes</b></a>
+            </div>
+        </div>
+    </footer>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script>
+        window.mdc.autoInit();
+
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.modal').modal();
+        });
+
+        const MDCDialog = mdc.dialog.MDCDialog;
+        const MDCDialogFoundation = mdc.dialog.MDCDialogFoundation;
+        const util = mdc.dialog.util;
+        // Till Modal
+        var dialogTill = new mdc.dialog.MDCDialog(document.querySelector('#dialog-till'));
+
+        dialogTill.listen('MDCDialog:accept', function() {
+            dialogTill.close();
+            console.log('accepted');
+        })
+
+        dialogTill.listen('MDCDialog:cancel', function() {
+            console.log('canceled');
+        })
+
+        document.querySelector('#tillModal').addEventListener('click', function(evt) {
+            dialogTill.lastFocusedTarget = evt.target;
+            dialogTill.show();
+        })
+
+        // pap modal
+        var dialogPap = new mdc.dialog.MDCDialog(document.querySelector('#dialog-pap'));
+
+        dialogPap.listen('MDCDialog:accept', function() {
+            dialogTill.close();
+            console.log('accepted');
+        })
+
+        dialogPap.listen('MDCDialog:cancel', function() {
+            console.log('canceled');
+        })
+
+        document.querySelector('#papModal').addEventListener('click', function(evt) {
+            dialogPap.lastFocusedTarget = evt.target;
+            dialogPap.show();
+        })
+
+        // jozsef modal
+        var dialogJoz = new mdc.dialog.MDCDialog(document.querySelector('#dialog-jozsef'));
+
+        dialogJoz.listen('MDCDialog:accept', function() {
+            dialogJoz.close();
+            console.log('accepted');
+        })
+
+        dialogJoz.listen('MDCDialog:cancel', function() {
+            console.log('canceled');
+        })
+
+        document.querySelector('#jozsefModal').addEventListener('click', function(evt) {
+            dialogJoz.lastFocusedTarget = evt.target;
+            dialogJoz.show();
+        })
+
+        // david modal
+        var dialogDavid = new mdc.dialog.MDCDialog(document.querySelector('#dialog-david'));
+
+        dialogDavid.listen('MDCDialog:accept', function() {
+            dialogDavid.close();
+            console.log('accepted');
+        })
+
+        dialogDavid.listen('MDCDialog:cancel', function() {
+            console.log('canceled');
+        })
+
+        document.querySelector('#davidModal').addEventListener('click', function(evt) {
+            dialogDavid.lastFocusedTarget = evt.target;
+            dialogDavid.show();
+        })
+
+        // szymon modal
+        var dialogSzymon = new mdc.dialog.MDCDialog(document.querySelector('#dialog-szymon'));
+
+        dialogSzymon.listen('MDCDialog:accept', function() {
+            dialogSzymon.close();
+            console.log('accepted');
+        })
+
+        dialogSzymon.listen('MDCDialog:cancel', function() {
+            console.log('canceled');
+        })
+
+        document.querySelector('#szymonModal').addEventListener('click', function(evt) {
+            dialogSzymon.lastFocusedTarget = evt.target;
+            dialogSzymon.show();
+        })
+
+        // Jackson modal
+        var dialogJackson = new mdc.dialog.MDCDialog(document.querySelector('#dialog-jackson'));
+
+        dialogJackson.listen('MDCDialog:accept', function() {
+            dialogJackson.close();
+            console.log('accepted');
+        })
+
+        dialogJackson.listen('MDCDialog:cancel', function() {
+            console.log('canceled');
+        })
+
+        document.querySelector('#jacksonModal').addEventListener('click', function(evt) {
+            dialogJackson.lastFocusedTarget = evt.target;
+            dialogJackson.show();
+        })
+        
+        // Joshua modal
+        var dialogJoshua = new mdc.dialog.MDCDialog(document.querySelector('#dialog-joshua'));
+
+        dialogJoshua.listen('MDCDialog:accept', function() {
+            dialogJoshua.close();
+            console.log('accepted');
+        })
+
+        dialogJoshua.listen('MDCDialog:cancel', function() {
+            console.log('canceled');
+        })
+
+        document.querySelector('#joshuaModal').addEventListener('click', function(evt) {
+            dialogJoshua.lastFocusedTarget = evt.target;
+            dialogJoshua.show();
+        })
+        
+        // Lumiq modal
+        var dialogLumiq = new mdc.dialog.MDCDialog(document.querySelector('#dialog-lumiq'));
+
+        dialogLumiq.listen('MDCDialog:accept', function() {
+            dialogLumiq.close();
+            console.log('accepted');
+        })
+
+        dialogLumiq.listen('MDCDialog:cancel', function() {
+            console.log('canceled');
+        })
+
+        document.querySelector('#lumiqModal').addEventListener('click', function(evt) {
+            dialogLumiq.lastFocusedTarget = evt.target;
+            dialogLumiq.show();
+        })
+
+    </script>
+</body>
+
+</html>

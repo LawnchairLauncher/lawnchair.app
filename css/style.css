@@ -1,0 +1,165 @@
+#colorBackgroundD,
+#colorBackgroundM {
+    /*background: #00C853;
+            background: -webkit-linear-gradient(left top, #00C853, #00E676);
+            background: -o-linear-gradient(bottom right, #00C853, #00E676);
+            background: -moz-linear-gradient(bottom right, #00C853, #00E676);
+            background: linear-gradient(to bottom right, #00C853, #00E676);*/
+    background-image: url("/images/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#bioColumn {
+    height: 100vh;
+    top: 0;
+}
+
+#profileImageD {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-top: calc(10%);
+    margin-left: calc(50% - 150px);
+    margin-bottom: 40px;
+}
+
+#profileImageM {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    margin-top: calc(30%);
+    margin-bottom: calc(10%);
+    margin-left: calc(50% - 100px);
+}
+
+.modal.bottom-sheet {
+    max-height: 90% !important;
+}
+
+.download:hover {
+    background-color: lightgray;
+}
+
+body {
+    animation-name: alphaIn;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes alphaIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Bio */
+
+.bioContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+}
+
+.bioCard {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px
+}
+
+.bioCard>img {
+    height: 120px;
+    width: auto;
+}
+
+.mdc-dialog__body {
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+}
+
+@media only screen and (max-height: 475px) {
+    #colorBackgroundD, #colorBackgroundM {
+        padding-top: 300px !important;
+    }
+}
+.thin {
+    font-weight: 300 !important;
+}
+
+.mdc-dialog__footer__button {
+    color: #00C853 !important;
+}
+
+#contact_card {
+  margin: 0 auto;
+  position: relative;
+  padding: 15px 30px 15px 30px;
+  margin-top: 22px;
+  margin-bottom: 40px;
+}
+
+#contact_card>.tab {
+  margin-top: 3px;
+  margin-bottom: 8px;
+}
+
+#contact_card>.tab>.title {
+  font-size: 16px;
+  color: #2196F3;
+  /*Change title and title icon color (Contact Card)*/
+}
+
+#contact_card>.tab>.content {
+  padding-top: 10px;
+  text-align: center;
+}
+
+#contact_card>.tab>.content>.contacts {
+  margin: 0 20px 0 20px;
+  display: inline-block;
+  font-size: 14px;
+  color: #212121;
+}
+
+#contact_card a {
+  color: #616161;
+  text-decoration: none;
+  /*Change link color (ONLY Contact Card)*/
+}
+
+#contact_card a:hover {
+  color: #9E9E9E;
+  /*Change link color (on mouse over, ONLY Contact Card) */
+}
+
+.contact_icon {
+  font-size: 24px;
+}
+#linkSection {
+  margin-top: 3px;
+    margin-bottom: 8px;
+    display: block;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#linkContent {
+  padding-top: 10px;
+text-align: center;
+
+
+}
+#contacts {
+  margin: 0 20px 0 20px;
+  display: inline-block;
+  font-size: 16px;
+  color: #212121;
+
+}
