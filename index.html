@@ -256,11 +256,6 @@
                         </div>
                     </div>
                     <div class="col s12 m4 bioContainer">
-                        <div class="hoverable bioCard" id="jacksonModal"><img class="responsive-img circle" src="images/jackson.png">
-                            <h5>Jackson Hayes</h5>
-                        </div>
-                    </div>
-                    <div class="col s12 m4 bioContainer">
                         <div class="hoverable bioCard" id="joshuaModal"><img class="responsive-img circle" src="images/jackson.png">
                             <h5>Joshua Baldassare</h5>
                         </div>
@@ -366,25 +361,6 @@
             <footer class="mdc-dialog__footer">
                 <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Close</button>
                 <a href="https://github.com/Rawi666" target="_blank"><button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Visit GitHub</button></a>
-            </footer>
-        </div>
-        <div class="mdc-dialog__backdrop"></div>
-    </aside>
-
-    <!-- Jackson -->
-    <aside id="dialog-jackson" class="mdc-dialog" role="alertdialog" aria-labelledby="my-mdc-dialog-label" aria-describedby="my-mdc-dialog-description">
-        <div class="mdc-dialog__surface">
-            <header class="mdc-dialog__header">
-                <h2 id="my-mdc-dialog-label" class="mdc-dialog__header__title">
-                    Jackson Hayes
-                </h2>
-            </header>
-            <section id="my-mdc-dialog-description" class="mdc-dialog__body ">
-                Web developer. Cinematographer, Photographer, Musician, Author, tech-enthusiast. Christian.<br><br> Web Developer for Lawnchair.
-            </section>
-            <footer class="mdc-dialog__footer">
-                <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Close</button>
-                <a href="https://jacksonhayes.me" target="_blank"><button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Visit Website</button></a>
             </footer>
         </div>
         <div class="mdc-dialog__backdrop"></div>
@@ -612,24 +588,6 @@
             dialogSzymon.lastFocusedTarget = evt.target;
             dialogSzymon.show();
         })
-
-        // Jackson modal
-        var dialogJackson = new mdc.dialog.MDCDialog(document.querySelector('#dialog-jackson'));
-
-        dialogJackson.listen('MDCDialog:accept', function() {
-            dialogJackson.close();
-            console.log('accepted');
-        })
-
-        dialogJackson.listen('MDCDialog:cancel', function() {
-            console.log('canceled');
-        })
-
-        document.querySelector('#jacksonModal').addEventListener('click', function(evt) {
-            dialogJackson.lastFocusedTarget = evt.target;
-            dialogJackson.show();
-        })
-        
         // Joshua modal
         var dialogJoshua = new mdc.dialog.MDCDialog(document.querySelector('#dialog-joshua'));
 
