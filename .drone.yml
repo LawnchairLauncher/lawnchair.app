@@ -1,8 +1,8 @@
 pipeline:
   deploy:
-    image: cschlosser/drone-ftps
+    image: divadsn/drone-ftps
     username: lawnchair
-    hostname: "172.18.1.1:21"
+    hostname: vweb.codebucket.de:21
     secrets: [ ftp_password ]
     dest_dir: /
     src_dir: /
