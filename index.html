@@ -251,12 +251,7 @@
                         </div>
                     </div>
                     <div class="col s12 m4 bioContainer">
-                        <div class="hoverable bioCard" id="szymonModal"><img class="responsive-img circle" src="images/szymon.jpg">
-                            <h5>Szymon Pusz</h5>
-                        </div>
-                    </div>
-                    <div class="col s12 m4 bioContainer">
-                        <div class="hoverable bioCard" id="joshuaModal"><img class="responsive-img circle" src="images/jackson.png">
+                        <div class="hoverable bioCard" id="joshuaModal"><img class="responsive-img circle" src="images/joshua.png">
                             <h5>Joshua Baldassare</h5>
                         </div>
                     </div>
@@ -348,23 +343,6 @@
         <div class="mdc-dialog__backdrop"></div>
     </aside>
 
-    <!-- Szymon -->
-    <aside id="dialog-szymon" class="mdc-dialog" role="alertdialog" aria-labelledby="my-mdc-dialog-label" aria-describedby="my-mdc-dialog-description">
-        <div class="mdc-dialog__surface">
-            <header class="mdc-dialog__header">
-                <h2 id="my-mdc-dialog-label" class="mdc-dialog__header__title">
-                    Szymon Pusz </h2>
-            </header>
-            <section id="my-mdc-dialog-description" class="mdc-dialog__body ">
-                Legendary Developer.
-            </section>
-            <footer class="mdc-dialog__footer">
-                <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Close</button>
-                <a href="https://github.com/Rawi666" target="_blank"><button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Visit GitHub</button></a>
-            </footer>
-        </div>
-        <div class="mdc-dialog__backdrop"></div>
-    </aside>
     <!-- Joshua -->
     <aside id="dialog-joshua" class="mdc-dialog" role="alertdialog" aria-labelledby="my-mdc-dialog-label" aria-describedby="my-mdc-dialog-description">
         <div class="mdc-dialog__surface">
@@ -383,6 +361,7 @@
         </div>
         <div class="mdc-dialog__backdrop"></div>
     </aside>
+    
     <!-- Lumiq -->
     <aside id="dialog-lumiq" class="mdc-dialog" role="alertdialog" aria-labelledby="my-mdc-dialog-label" aria-describedby="my-mdc-dialog-description">
         <div class="mdc-dialog__surface">
@@ -504,6 +483,7 @@
         const MDCDialog = mdc.dialog.MDCDialog;
         const MDCDialogFoundation = mdc.dialog.MDCDialogFoundation;
         const util = mdc.dialog.util;
+        
         // Till Modal
         var dialogTill = new mdc.dialog.MDCDialog(document.querySelector('#dialog-till'));
 
@@ -521,7 +501,7 @@
             dialogTill.show();
         })
 
-        // pap modal
+        // paphonb modal
         var dialogPap = new mdc.dialog.MDCDialog(document.querySelector('#dialog-pap'));
 
         dialogPap.listen('MDCDialog:accept', function() {
@@ -538,7 +518,7 @@
             dialogPap.show();
         })
 
-        // jozsef modal
+        // Jozsef modal
         var dialogJoz = new mdc.dialog.MDCDialog(document.querySelector('#dialog-jozsef'));
 
         dialogJoz.listen('MDCDialog:accept', function() {
@@ -555,7 +535,7 @@
             dialogJoz.show();
         })
 
-        // david modal
+        // David modal
         var dialogDavid = new mdc.dialog.MDCDialog(document.querySelector('#dialog-david'));
 
         dialogDavid.listen('MDCDialog:accept', function() {
@@ -571,23 +551,7 @@
             dialogDavid.lastFocusedTarget = evt.target;
             dialogDavid.show();
         })
-
-        // szymon modal
-        var dialogSzymon = new mdc.dialog.MDCDialog(document.querySelector('#dialog-szymon'));
-
-        dialogSzymon.listen('MDCDialog:accept', function() {
-            dialogSzymon.close();
-            console.log('accepted');
-        })
-
-        dialogSzymon.listen('MDCDialog:cancel', function() {
-            console.log('canceled');
-        })
-
-        document.querySelector('#szymonModal').addEventListener('click', function(evt) {
-            dialogSzymon.lastFocusedTarget = evt.target;
-            dialogSzymon.show();
-        })
+        
         // Joshua modal
         var dialogJoshua = new mdc.dialog.MDCDialog(document.querySelector('#dialog-joshua'));
 
