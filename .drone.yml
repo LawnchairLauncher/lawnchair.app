@@ -1,10 +1,9 @@
 pipeline:
   deploy:
     image: cschlosser/drone-ftps
-    secrets: [ ftp_password ]
     username: lawnchair
     hostname: vweb.codebucket.de:21
-    secure: false
+    secrets: [ ftp_password ]
     dest_dir: /
     src_dir: /
     when:
