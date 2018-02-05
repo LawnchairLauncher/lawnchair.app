@@ -1,9 +1,8 @@
 pipeline:
   deploy:
     image: divadsn/drone-ftps
-    username: lawnchair
-    hostname: vweb.codebucket.de:21
-    secrets: [ ftp_password ]
+    secrets: [ ftp_password, plugin_hostname, plugin_username ]
+    secure: false
     dest_dir: /
     src_dir: /
     when:
