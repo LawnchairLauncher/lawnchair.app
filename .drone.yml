@@ -1,0 +1,11 @@
+pipeline:
+  deploy:
+    image: cschlosser/drone-ftps
+    secrets: [ ftp_hostname, ftp_username, ftp_password, ftp_secure ]
+    username: $ftp_username
+    hostname: $ftp_hostname:21
+    secure: $ftp_secure
+    dest_dir: /
+    src_dir: /
+    when:
+      branch: master
