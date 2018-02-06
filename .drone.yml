@@ -1,7 +1,8 @@
 pipeline:
-  deploy:
-    image: divadsn/drone-ftps
-    secrets: [ ftp_password, plugin_hostname, plugin_username ]
+  upload:
+    image: christophschlosser/drone-ftps
+    secrets: [ ftp_username, ftp_password ]
+    hostname: vweb.codebucket.de
     secure: false
     dest_dir: /
     src_dir: /
