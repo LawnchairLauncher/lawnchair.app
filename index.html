@@ -210,8 +210,8 @@
                     </div>
 
                     <div class="col s12 m4 bioContainer">
-                        <div class="hoverable bioCard" id="lumiqModal"><img class="responsive-img circle" src="images/lumiq.png">
-                            <h5>Lumiq Creative</h5>
+                        <div class="hoverable bioCard" id="chrisModal"><img class="responsive-img circle" src="images/chris.png">
+                            <h5>Christopher Kardas</h5>
                         </div>
                     </div>
                 </div>
@@ -315,20 +315,20 @@
         <div class="mdc-dialog__backdrop"></div>
     </aside>
 
-    <!-- Lumiq -->
-    <aside id="dialog-lumiq" class="mdc-dialog" role="alertdialog" aria-labelledby="my-mdc-dialog-label" aria-describedby="my-mdc-dialog-description">
+    <!-- Chris -->
+    <aside id="dialog-chris" class="mdc-dialog" role="alertdialog" aria-labelledby="my-mdc-dialog-label" aria-describedby="my-mdc-dialog-description">
         <div class="mdc-dialog__surface">
             <header class="mdc-dialog__header">
                 <h2 id="my-mdc-dialog-label" class="mdc-dialog__header__title">
-                    Lumiq Creative
+                    Christopher Kardas
                 </h2>
             </header>
             <section id="my-mdc-dialog-description" class="mdc-dialog__body ">
-                Legendary Designer.
+                I’m Christopher, tech news writer for Richtopia and the German site Tarnkappe, designer, social media manager and coffee enthusiast living in Vienna, Austria.
             </section>
             <footer class="mdc-dialog__footer">
                 <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Close</button>
-                <a href="https://plus.google.com/+LumiqCreative" target="_blank"><button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Visit Website</button></a>
+                <a href="https://christopherkardas.me target="_blank"><button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Visit Website</button></a>
             </footer>
         </div>
         <div class="mdc-dialog__backdrop"></div>
@@ -521,21 +521,21 @@
             dialogJoshua.show();
         })
 
-        // Lumiq modal
-        var dialogLumiq = new mdc.dialog.MDCDialog(document.querySelector('#dialog-lumiq'));
+        // Chris modal
+        var dialogChris = new mdc.dialog.MDCDialog(document.querySelector('#dialog-chris'));
 
-        dialogLumiq.listen('MDCDialog:accept', function() {
-            dialogLumiq.close();
+        dialogChris.listen('MDCDialog:accept', function() {
+            dialogChris.close();
             console.log('accepted');
         })
 
-        dialogLumiq.listen('MDCDialog:cancel', function() {
+        dialogChris.listen('MDCDialog:cancel', function() {
             console.log('canceled');
         })
 
-        document.querySelector('#lumiqModal').addEventListener('click', function(evt) {
-            dialogLumiq.lastFocusedTarget = evt.target;
-            dialogLumiq.show();
+        document.querySelector('#chrisModal').addEventListener('click', function(evt) {
+            dialogChris.lastFocusedTarget = evt.target;
+            dialogChris.show();
         })
     </script>
 </body>
