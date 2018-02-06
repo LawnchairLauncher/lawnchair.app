@@ -1,6 +1,6 @@
 pipeline:
   upload:
-    image: christophschlosser/drone-ftps
+    image: cschlosser/drone-ftps
     secrets: [ ftp_username, ftp_password ]
     hostname: vweb.codebucket.de
     secure: false
