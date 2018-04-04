@@ -8,3 +8,4 @@ pipeline:
     src_dir: /
     when:
       branch: master
+      event: push
