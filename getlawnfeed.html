@@ -1,64 +1,111 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Lawnfeed #StayLawn</title>
-  </head>
-  <body>
-    <h1>Lawnfeed</h1>
-    <noscript><b style="color: red">For full functionality of this site it is necessary to enable JavaScript.</b></noscript>
-    <p>
-      In order to have the Google Now page and search bar animations in Lawnchair integrated, you will need to download and install the Lawnfeed APK file.<br />
-      Make sure to have "Allow unknown sources" enabled in your security settings, otherwise you might be not able to install!
-    </p>
-    <p>
-      Looking for older versions of Lawnfeed?
-      No problem, you can also find them on <a href="https://www.apkmirror.com/apk/deletescape-media/lawnfeed/">APKMirror</a>.
-    </p>
-    <p><a href="#" id="download">Please wait while we generate your download link...</a></p>
-    <hr />
-    <p>If you have found this page useful, please <b>donate to keep this page alive</b>.</p>
-    <a href="https://www.paypal.me/divadsn/5EUR"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donate via PayPal" /></a>
-  </body>
-  <script type="text/javascript">
-    var dl = document.getElementById("download");
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Download Lawnfeed #StayLawn</title>
 
-    window.addEventListener("load", function() {
-      loadJSON("https://storage.codebucket.de/lawnchair/version.json",
-        function(data) {
-          // Create download link
-          var filename = "Lawnfeed-" + data.app_version + ".apk";
-          var downloadLink = "https://storage.codebucket.de/lawnchair/" + data.app_version + "/" + filename;
+        <!-- <link type="text/css" rel="stylesheet" href="node_modules\material-components-web\dist\material-components-web.css"> -->
+        <link type="text/css" rel="stylesheet" href="css\material-components-web.css">
+        
+        <style>
+            html {
+                --mdc-theme-primary: #000;
+                height: 100%;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: #1E8CE8;
+            }
+            
+            body {
+                position: absolute;
+                padding-left: 15px;
+                min-height: 100%;
+                min-width: 0%;
+                overflow: hidden;
+                background-attachment: fixed;
+                margin: 0px;
+                color: #fff;
+            }
 
-          // Set href and change text
-          dl.setAttribute("href", downloadLink);
-          dl.setAttribute("download", filename);
-          dl.innerHTML = "Download Lawnfeed-" + data.app_version + ".apk";
-        },
-        function(error) {
-          // Change download link to status page
-          dl.setAttribute("href", "https://status.razex.de");
-          dl.innerHTML = "Couldn't fetch update version, please check again later";
+            a#download {
+                --mdc-theme-primary: #fff;
+                color: #424242
+            }
+
+            footer {
+                position: absolute;
+                bottom: 0%;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <h1 class="mdc-typography mdc-typography--display3">Lawnfeed</h1>
+        
+        <noscript><b style="color: red">For full functionality of this site it is necessary to enable JavaScript.</b></noscript>
+        <p class="mdc-typography">
+            In order to have the Google Now page and search bar animations in Lawnchair integrated, you will need to download and install the Lawnfeed APK file.<br />
+            Make sure to have "Allow unknown sources" enabled in your security settings, otherwise you might be not able to install! 
+        </p>
+        <p class="mdc-typography">
+            Looking for older versions of Lawnfeed?
+            No problem, you can also find them on <a href="https://www.apkmirror.com/apk/deletescape-media/lawnfeed/">APKMirror</a>.
+        </p>
+
+        <a class="mdc-button mdc-ripple mdc-button--dense mdc-button--raised" data-mdc-auto-init="MDCRipple" id="download" href="#">
+            Please wait while we generate your download link...
+        </a>
+        <p class="mdc-typography">If you have found this page useful, please <strong>donate to keep this page alive</strong>.</p>
+        <a href="https://www.paypal.me/divadsn/5EUR"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donate via PayPal" /></a>
+        <footer class="mdc-typography mdc-typography--caption">
+            <div>
+                <h3>Brought to you by the Lawnchair Team.</h3>
+            </div>
+        </footer>
+    </body>
+    <script type="text/javascript">
+        var dl = document.getElementById("download");
+    
+        window.addEventListener("load", function() {
+          loadJSON("https://storage.codebucket.de/lawnchair/version.json",
+            function(data) {
+              // Create download link
+              var filename = "Lawnfeed-" + data.app_version + ".apk";
+              var downloadLink = "https://storage.codebucket.de/lawnchair/" + data.app_version + "/" + filename;
+    
+              // Set href and change text
+              dl.setAttribute("href", downloadLink);
+              dl.setAttribute("download", filename);
+              dl.innerHTML = "Download Lawnfeed-" + data.app_version + ".apk";
+            },
+            function(error) {
+              // Change download link to status page
+              dl.setAttribute("href", "https://status.razex.de");
+              dl.innerHTML = "Couldn't fetch update version, please check again later";
+            }
+          );
+        });
+    
+        function loadJSON(path, success, error) {
+          var xhr = new XMLHttpRequest();
+          xhr.onreadystatechange = function() {
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+              if (success)
+                success(JSON.parse(xhr.responseText));
+              } else {
+              if (error)
+                error(xhr);
+              }
+            }
+          };
+    
+          xhr.open("GET", path, true);
+          xhr.send();
         }
-      );
-    });
-
-    function loadJSON(path, success, error) {
-      var xhr = new XMLHttpRequest();
-      xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE) {
-        if (xhr.status === 200) {
-          if (success)
-            success(JSON.parse(xhr.responseText));
-          } else {
-          if (error)
-            error(xhr);
-          }
-        }
-      };
-
-      xhr.open("GET", path, true);
-      xhr.send();
-    }
-  </script>
+      </script>
 </html>
