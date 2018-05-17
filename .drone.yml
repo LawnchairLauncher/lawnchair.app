@@ -9,3 +9,5 @@ pipeline:
     when:
       branch: master
       event: push
+
+branches: master
