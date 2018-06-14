@@ -4,80 +4,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Download Lawnfeed #StayLawn</title>
 
-        <!-- <link type="text/css" rel="stylesheet" href="node_modules\material-components-web\dist\material-components-web.css"> -->
+        
         <link type="text/css" rel="stylesheet" href="css\material-components-web.css">
         
-        <style>
-            html {
-                --mdc-theme-primary: #000;
-                height: 100%;
-                min-width: 100%;
-                background-attachment: fixed;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-color: #1E8CE8;
-            }
-            
-            body {
-                position: absolute;
-                min-height: 100%;
-                min-width: 100%;
-                overflow: hidden;
-                background-attachment: fixed;
-                margin: 0px;
-                color: #fff;
-            }
-            
-            #head {
-                left: 2%;
-                position: relative;
-                width: 98%!
-            }
-
-            #container {
-                left: 2%;
-                position: relative;
-                width: 98%;
-            }
-            
-            a#apkmirror {
-                text-decoration: none;
-                color: #424242;
-            }
-
-            a#download {
-                --mdc-theme-primary: #fff;
-                color: #424242
-            }
-
-            footer {
-                position: absolute;
-                bottom: 0%;
-                display: inline-block;
-                min-width: 100%;
-                vertical-align: middle;
-            }
-            
-            #footer-text {
-                float: left;
-                left: 1%;
-                position: relative; 
-            }
-
-            #footer-logo {
-                float: right;
-                right: 1%;
-                padding-top: 0.6%;
-                position: relative;
-            }
-        </style>
-
     </head>
 
-    <body>
+    <body style="padding: 2px">
+        
+    
         <div id="head">
-            <h1 class="mdc-typography mdc-typography--display3">Lawnfeed</h1>
+            <img src="images/lawnchair_inverted.png" width="20px" style="display: inline">
+            <h1 style="display: inline">|</h1>
+            <h1 class="mdc-typography mdc-typography--display3" style="display: inline">Lawnfeed</h1>
         </div>
         <div id="container">       
             <noscript><b style="color: red">For full functionality of this site it is necessary to enable JavaScript.</b></noscript>
@@ -90,20 +28,24 @@
                 No problem, you can also find them on <a href="https://www.apkmirror.com/apk/deletescape-media/lawnfeed/" id="apkmirror">APKMirror</a>.
             </p>
 
-            <a class="mdc-button mdc-ripple mdc-button--dense mdc-button--raised" data-mdc-auto-init="MDCRipple" id="download" href="#">
-                Generating download link...
+            <a class="mdc-button mdc-ripple mdc-button--dense mdc-button--raised" data-mdc-auto-init="MDCRipple" id="download" href="#" style="--mdc-theme-primary: #424242">
+                Please wait while we generate your download link...
             </a>
+            <hr>
             <p class="mdc-typography">If you have found this page useful, please <strong>donate to keep this page alive</strong>.</p>
             <a href="https://www.paypal.me/divadsn/5EUR"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donate via PayPal" /></a>
         </div> 
-        <footer class="mdc-typography mdc-typography--caption">
+        <div class="mdc-typography--overline">
+            <h3>Brought to you by the Lawnchair Team.</h3>
+        </div>
+        <!--<footer class="mdc-typography mdc-typography--overline">
             <div id="footer-text">
-                <h3>Brought to you by the Lawnchair Team.</h3>
+                <h3 class="mdc-typography--overline">Brought to you by the Lawnchair Team.</h3>
             </div>
             <div id="footer-logo">
-                <img src="images/lawnchair.png" width="30px">
+                <img src="images/lawnchair_inverted.png" width="30px">
             </div>
-        </footer>
+        </footer>-->
     </body>
     <script type="text/javascript">
         var dl = document.getElementById("download");
