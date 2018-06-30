@@ -4,20 +4,17 @@
 
 .mdc-button:after, .mdc-button:before {
     background-color: #00C853 !important;
-
 }
 
-#colorBackgroundD,
-#colorBackgroundM {
-    /*background: #00C853;
-            background: -webkit-linear-gradient(left top, #00C853, #00E676);
-            background: -o-linear-gradient(bottom right, #00C853, #00E676);
-            background: -moz-linear-gradient(bottom right, #00C853, #00E676);
-            background: linear-gradient(to bottom right, #00C853, #00E676);*/
+#colorBackground {
     background-image: url("/images/banner.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    min-height: 100vh; 
+    padding-bottom: 40px; 
+    padding-top: 55vh; 
+    background-color: #00C853;
 }
 
 #bioColumn {
@@ -66,7 +63,6 @@ body {
     }
 }
 
-
 /* Bio */
 
 .bioContainer {
@@ -99,6 +95,7 @@ body {
         padding-top: 300px !important;
     }
 }
+
 .thin {
     font-weight: 300 !important;
 }
@@ -115,45 +112,42 @@ body {
   margin-bottom: 40px;
 }
 
-#contact_card>.tab {
+.linkSection>.tab {
   margin-top: 3px;
   margin-bottom: 8px;
 }
 
-#contact_card>.tab>.title {
+.linkSection>.tab>.title {
   font-size: 16px;
   color: #2196F3;
-  /*Change title and title icon color (Contact Card)*/
 }
 
-#contact_card>.tab>.content {
+.linkSection>.tab>.content {
   padding-top: 10px;
   text-align: center;
 }
 
-#contact_card>.tab>.content>.contacts {
+.linkSection>.tab>.content>.links {
   margin: 0 20px 0 20px;
   display: inline-block;
   font-size: 14px;
   color: #212121;
 }
 
-#contact_card a {
-  color: #616161;
+.linkSection a {
   text-decoration: none;
-  /*Change link color (ONLY Contact Card)*/
 }
 
-#contact_card a:hover {
-  color: #9E9E9E;
-  /*Change link color (on mouse over, ONLY Contact Card) */
+.linkSection {
+    padding-top: 120px;
 }
 
-.contact_icon {
-  font-size: 24px;
+@media screen and (max-width: 600px) {
+    .linkSection {padding-top: 0px;}
 }
+
 #linkSection {
-  margin-top: 3px;
+    margin-top: 3px;
     margin-bottom: 8px;
     display: block;
     padding-right: 10px;
@@ -161,20 +155,20 @@ body {
 }
 
 #linkContent {
-  padding-top: 10px;
-text-align: center;
-
-
+    padding-top: 10px;
+    text-align: center;
 }
-#contacts {
+
+.links {
     margin: 0 20px 0 20px;
     display: inline-block;
     font-size: 16px;
-    color: #212121;
+    color: #000000;
     padding-left: 14px;
     padding-right: 14px;
     border-radius: 30px;
 }
+
 .socialhovertext {
     color: #000000;
 }
@@ -187,4 +181,23 @@ text-align: center;
     background-color: lightgrey;
     transition-duration: 0.5s;
     color: #ffffff;
+}
+
+@media screen and (max-width: 600px) {
+    .valign-wrapper {
+        display: initial;
+        display: inherit;
+        -webkit-box-align: inherit;
+        -webkit-align-items: initial;
+        -ms-flex-align: initial;
+        align-items: initial;
+    }
+    .lawnchairlefty {
+        text-align:center;
+    }
+    .reverseonmobile {
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
 }
