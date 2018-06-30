@@ -164,3 +164,13 @@ text-align: center;
   color: #212121;
 
 }
+
+.lawnchairlefty {
+    text-align: left;
+}
+
+@media screen and (max-width: 300px) {
+    .lawnchairlefty {
+
+    }
+}
