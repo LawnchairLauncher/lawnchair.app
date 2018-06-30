@@ -1,3 +1,12 @@
+:root {
+    --mdc-theme-primary: #00C853 !important;
+}
+
+.mdc-button:after, .mdc-button:before {
+    background-color: #00C853 !important;
+
+}
+
 #colorBackgroundD,
 #colorBackgroundM {
     /*background: #00C853;
@@ -67,10 +76,10 @@ body {
 }
 
 .bioCard {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -158,9 +167,24 @@ text-align: center;
 
 }
 #contacts {
-  margin: 0 20px 0 20px;
-  display: inline-block;
-  font-size: 16px;
-  color: #212121;
+    margin: 0 20px 0 20px;
+    display: inline-block;
+    font-size: 16px;
+    color: #212121;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 30px;
+}
+.socialhovertext {
+    color: #000000;
+}
 
+.lawnchairlefty {
+    text-align: left;
+}
+
+.socialhover:hover {
+    background-color: lightgrey;
+    transition-duration: 0.5s;
+    color: #ffffff;
 }
