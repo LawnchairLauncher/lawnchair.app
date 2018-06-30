@@ -4,11 +4,9 @@
 
 .mdc-button:after, .mdc-button:before {
     background-color: #00C853 !important;
-
 }
 
-#colorBackgroundD,
-#colorBackgroundM {
+#colorBackground {
     background-image: url("/images/banner.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -18,10 +16,6 @@
     padding-top: 55vh; 
     background-color: #00C853;
 }
-
-#colorBackgroundD {}
-
-#colorBackgroundM {}
 
 #bioColumn {
     height: 100vh;
@@ -69,7 +63,6 @@ body {
     }
 }
 
-
 /* Bio */
 
 .bioContainer {
@@ -102,6 +95,7 @@ body {
         padding-top: 300px !important;
     }
 }
+
 .thin {
     font-weight: 300 !important;
 }
@@ -126,7 +120,6 @@ body {
 .linkSection>.tab>.title {
   font-size: 16px;
   color: #2196F3;
-  /*Change title and title icon color (Contact Card)*/
 }
 
 .linkSection>.tab>.content {
@@ -148,11 +141,13 @@ body {
 .linkSection {
     padding-top: 120px;
 }
+
 @media screen and (max-width: 600px) {
     .linkSection {padding-top: 0px;}
 }
+
 #linkSection {
-  margin-top: 3px;
+    margin-top: 3px;
     margin-bottom: 8px;
     display: block;
     padding-right: 10px;
@@ -160,11 +155,10 @@ body {
 }
 
 #linkContent {
-  padding-top: 10px;
-text-align: center;
-
-
+    padding-top: 10px;
+    text-align: center;
 }
+
 .links {
     margin: 0 20px 0 20px;
     display: inline-block;
@@ -174,6 +168,7 @@ text-align: center;
     padding-right: 14px;
     border-radius: 30px;
 }
+
 .socialhovertext {
     color: #000000;
 }
@@ -187,6 +182,7 @@ text-align: center;
     transition-duration: 0.5s;
     color: #ffffff;
 }
+
 @media screen and (max-width: 600px) {
     .valign-wrapper {
         display: initial;
