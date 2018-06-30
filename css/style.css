@@ -9,16 +9,19 @@
 
 #colorBackgroundD,
 #colorBackgroundM {
-    /*background: #00C853;
-            background: -webkit-linear-gradient(left top, #00C853, #00E676);
-            background: -o-linear-gradient(bottom right, #00C853, #00E676);
-            background: -moz-linear-gradient(bottom right, #00C853, #00E676);
-            background: linear-gradient(to bottom right, #00C853, #00E676);*/
     background-image: url("/images/banner.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    min-height: 100vh; 
+    padding-bottom: 40px; 
+    padding-top: 55vh; 
+    background-color: #00C853;
 }
+
+#colorBackgroundD {}
+
+#colorBackgroundM {}
 
 #bioColumn {
     height: 100vh;
