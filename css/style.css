@@ -187,3 +187,21 @@ text-align: center;
     transition-duration: 0.5s;
     color: #ffffff;
 }
+@media screen and (max-width: 600px) {
+    .valign-wrapper {
+        display: initial;
+        display: inherit;
+        -webkit-box-align: inherit;
+        -webkit-align-items: initial;
+        -ms-flex-align: initial;
+        align-items: initial;
+    }
+    .lawnchairlefty {
+        text-align:center;
+    }
+    .reverseonmobile {
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+}
