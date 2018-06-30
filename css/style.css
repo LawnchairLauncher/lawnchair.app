@@ -115,42 +115,38 @@ body {
   margin-bottom: 40px;
 }
 
-#contact_card>.tab {
+.linkSection>.tab {
   margin-top: 3px;
   margin-bottom: 8px;
 }
 
-#contact_card>.tab>.title {
+.linkSection>.tab>.title {
   font-size: 16px;
   color: #2196F3;
   /*Change title and title icon color (Contact Card)*/
 }
 
-#contact_card>.tab>.content {
+.linkSection>.tab>.content {
   padding-top: 10px;
   text-align: center;
 }
 
-#contact_card>.tab>.content>.contacts {
+.linkSection>.tab>.content>.links {
   margin: 0 20px 0 20px;
   display: inline-block;
   font-size: 14px;
   color: #212121;
 }
 
-#contact_card a {
-  color: #616161;
+.linkSection a {
   text-decoration: none;
-  /*Change link color (ONLY Contact Card)*/
 }
 
-#contact_card a:hover {
-  color: #9E9E9E;
-  /*Change link color (on mouse over, ONLY Contact Card) */
+.linkSection {
+    padding-top: 120px;
 }
-
-.contact_icon {
-  font-size: 24px;
+@media screen and (max-width: 600px) {
+    .linkSection {padding-top: 0px;}
 }
 #linkSection {
   margin-top: 3px;
@@ -166,11 +162,11 @@ text-align: center;
 
 
 }
-#contacts {
+.links {
     margin: 0 20px 0 20px;
     display: inline-block;
     font-size: 16px;
-    color: #212121;
+    color: #000000;
     padding-left: 14px;
     padding-right: 14px;
     border-radius: 30px;
