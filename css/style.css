@@ -167,19 +167,24 @@ text-align: center;
 
 }
 #contacts {
-  margin: 0 20px 0 20px;
-  display: inline-block;
-  font-size: 16px;
-  color: #212121;
-
+    margin: 0 20px 0 20px;
+    display: inline-block;
+    font-size: 16px;
+    color: #212121;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 30px;
+}
+.socialhovertext {
+    color: #000000;
 }
 
 .lawnchairlefty {
     text-align: left;
 }
 
-@media screen and (max-width: 300px) {
-    .lawnchairlefty {
-
-    }
+.socialhover:hover {
+    background-color: lightgrey;
+    transition-duration: 0.5s;
+    color: #ffffff;
 }
