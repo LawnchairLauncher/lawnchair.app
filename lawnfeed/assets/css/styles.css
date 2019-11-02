@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap");
+@import url("https://rsms.me/inter/inter.css");
+
+:root {
+    --bg: rgba(255, 255, 255, 1);
+    --fg: rgba(0, 0, 0, 0.9);
+    --fg-sec: rgba(0, 0, 0, 0.84);
+    --fg-ter: rgba(0, 0, 0, 0.24);
+    --sep: rgba(0, 0, 0, 0.12);
+    --acc: rgb(33, 33, 33);
+    --acc-fcs: rgb(48, 48, 48);
+    --a-fcs: #1973E8;
+    --h1-fs: 3rem;
+    --ic-h: 136px;
+    --p-fs: 1.14rem;
+    --btn-fs: 0.88rem;
+}
+
+body {
+    min-height: 100vh;
+}
+
+#hero {
+    margin-bottom: 40px;
+}
+
+.container {
+    padding: 16px;
+}
+
+#icon {
+    height: var(--ic-h);
+    margin-bottom: 24px;
+    transition: 0.3s ease;
+}
+
+h1 {
+    color: var(--fg);
+    font-family: "Lexend Deca", sans-serif;
+    letter-spacing: -0.084rem;
+    font-size: var(--h1-fs);
+    margin-bottom: 8px;
+    transition: 0.3s ease;
+}
+
+p {
+    color: var(--fg-sec);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: var(--p-fs);
+    margin: 0;
+    transition: 0.3s ease;
+}
+
+#subheading {
+    margin-bottom: 26px;
+    text-align: center;
+}
+
+.btn {
+    margin: 3px;
+    font-family: "Inter", sans-serif;
+    font-size: var(--btn-fs);
+    font-weight: 500;
+    letter-spacing: 0.064rem;
+    padding: 10px 20px 10px 20px;
+    border-radius: 24px;
+    transition: 0.3s ease;
+}
+
+.btn.btn-primary {
+    color: var(--bg) !important;
+    background-color: var(--acc);
+    border: none;
+}
+
+.btn.btn-primary:hover {
+    color: var(--bg) !important;
+    background-color: var(--acc-fcs);
+}
+
+.btn.btn-primary:focus {
+    color: var(--bg) !important;
+    background-color: var(--acc-fcs) !important;
+    box-shadow: none !important;
+}
+
+.btn.btn-primary:active {
+    color: var(--bg) !important;
+    background-color: var(--acc-fcs) !important;
+    box-shadow: none !important;
+}
+
+.btn.btn-secondary {
+    color: var(--fg) !important;
+    background-color: var(--bg);
+    border: 1px solid var(--sep);
+}
+
+.btn.btn-secondary:hover {
+    color: var(--fg) !important;
+    border: 1px solid var(--fg-ter);
+}
+
+.btn.btn-secondary:focus {
+    color: var(--fg) !important;
+    border: 1px solid var(--fg);
+    background-color: var(--bg) !important;
+    box-shadow: none !important;
+}
+
+.btn.btn-secondary:active {
+    color: var(--fg) !important;
+    border: 1px solid var(--fg);
+    background-color: var(--bg) !important;
+    box-shadow: none !important;
+}
+
+#btn-group {
+    margin-bottom: 64px;
+}
+
+#handle {
+    color: var(--fg);
+    transition: color 0.2s ease;
+}
+
+#handle:hover {
+    color: var(--a-fcs);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+@media (max-width: 576px) {
+    :root {
+        --h1-fs: 2.72rem;
+        --ic-h: 120px;
+        --p-fs: 1rem;
+    }
+}
