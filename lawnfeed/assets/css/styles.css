@@ -16,7 +16,20 @@
     --btn-fs: 0.88rem;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: rgba(0, 0, 0, 1);
+        --fg: rgba(255, 255, 255, 1);
+        --fg-sec: rgba(255, 255, 255, 0.84);
+        --fg-ter: rgba(255, 255, 255, 0.24);
+        --sep: rgba(255, 255, 255, 0.18);
+        --acc: rgba(255, 255, 255, 1);
+        --acc-fcs: rgba(255, 255, 255, 0.86);
+    }
+}
+
 body {
+    background-color: var(--bg);
     min-height: 100vh;
 }
 

@@ -1,4 +1,5 @@
 var btn = document.getElementById("btn-download");
+var p = document.getElementById("release-name");
 
         window.addEventListener("load", function() {
           loadJSON("https://storage.codebucket.de/lawnchair/version.json",
@@ -7,10 +8,12 @@ var btn = document.getElementById("btn-download");
               var fileUrl = "https://storage.codebucket.de/lawnchair/" + data.app_version + "/" + fileName;
               btn.setAttribute("href", fileUrl);
               btn.setAttribute("download", fileName);
+              p.innerHTML = "Version <i>" + data.app_version + "</i>";
             },
             
             function(error) {
               btn.setAttribute("href", "https://status.razex.de");
+              p.innerHTML = "No Connection";
             }
           );
         });
