@@ -36,6 +36,7 @@ body {
 }
 
 .hero__copy {
+  text-align: center;
   margin: 6px auto 0 auto;
 }
 
@@ -67,6 +68,7 @@ body {
 }
 
 .hero__attribution {
+  text-align: center;
   font-size: 14px;
   letter-spacing: 0.02em;
   margin: 28px auto 0 auto;
