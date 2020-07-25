@@ -1,153 +1,104 @@
-@import url("https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap");
-@import url("https://rsms.me/inter/inter.css");
-
-:root {
-    --bg: rgba(255, 255, 255, 1);
-    --fg: rgba(0, 0, 0, 0.9);
-    --fg-sec: rgba(0, 0, 0, 0.84);
-    --fg-ter: rgba(0, 0, 0, 0.24);
-    --sep: rgba(0, 0, 0, 0.12);
-    --acc: rgb(33, 33, 33);
-    --acc-fcs: rgb(48, 48, 48);
-    --a-fcs: #1973E8;
-    --h1-fs: 3rem;
-    --ic-h: 136px;
-    --p-fs: 1.14rem;
-    --btn-fs: 0.88rem;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: rgba(0, 0, 0, 1);
-        --fg: rgba(255, 255, 255, 1);
-        --fg-sec: rgba(255, 255, 255, 0.84);
-        --fg-ter: rgba(255, 255, 255, 0.24);
-        --sep: rgba(255, 255, 255, 0.18);
-        --acc: rgba(255, 255, 255, 1);
-        --acc-fcs: rgba(255, 255, 255, 0.86);
-    }
-}
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap");
 
 body {
-    background-color: var(--bg);
-    min-height: 100vh;
-}
-
-#hero {
-    margin-bottom: 40px;
+  margin: 0;
+  font-family: "Manrope";
 }
 
 .container {
-    padding: 16px;
+  display: flex;
+  margin: auto;
+  max-width: 960px;
+  padding: 0 20px;
 }
 
-#icon {
-    height: var(--ic-h);
-    margin-bottom: 24px;
-    transition: 0.3s ease;
+.hero {
+  min-height: 100vh;
+  align-items: center;
 }
 
-h1 {
-    color: var(--fg);
-    font-family: "Lexend Deca", sans-serif;
-    letter-spacing: -0.084rem;
-    font-size: var(--h1-fs);
-    margin-bottom: 8px;
-    transition: 0.3s ease;
+.hero__inner {
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+  padding: 20px 0;
 }
 
-p {
-    color: var(--fg-sec);
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: var(--p-fs);
-    margin: 0;
-    transition: 0.3s ease;
+.hero__icon {
+  height: 120px;
+  margin: 0 auto;
+  width: 120px;
 }
 
-#subheading {
-    margin-bottom: 26px;
-    text-align: center;
+.hero__title {
+  margin: 28px auto 0 auto;
 }
 
-.btn {
-    margin: 3px;
-    font-family: "Inter", sans-serif;
-    font-size: var(--btn-fs);
-    font-weight: 500;
-    letter-spacing: 0.064rem;
-    padding: 10px 20px 10px 20px;
-    border-radius: 24px;
-    transition: 0.3s ease;
+.hero__copy {
+  margin: 6px auto 0 auto;
 }
 
-.btn.btn-primary {
-    color: var(--bg) !important;
-    background-color: var(--acc);
-    border: none;
+.button {
+  justify-content: center;
+  display: inline-flex;
+  height: 48px;
+  letter-spacing: 0.02em;
+  padding: 0 24px;
+  border-radius: 4px;
+  font-size: 18px;
+  background: hsl(210, 100%, 50%);
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.btn.btn-primary:hover {
-    color: var(--bg) !important;
-    background-color: var(--acc-fcs);
+.button:hover {
+  background: hsl(214, 100%, 44%);
 }
 
-.btn.btn-primary:focus {
-    color: var(--bg) !important;
-    background-color: var(--acc-fcs) !important;
-    box-shadow: none !important;
+.hero__get-button {
+  margin: 36px auto 0 auto;
 }
 
-.btn.btn-primary:active {
-    color: var(--bg) !important;
-    background-color: var(--acc-fcs) !important;
-    box-shadow: none !important;
+.hero__download-detail {
+  margin: 12px auto 0 auto;
 }
 
-.btn.btn-secondary {
-    color: var(--fg) !important;
-    background-color: var(--bg);
-    border: 1px solid var(--sep);
+.hero__attribution {
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  margin: 28px auto 0 auto;
 }
 
-.btn.btn-secondary:hover {
-    color: var(--fg) !important;
-    border: 1px solid var(--fg-ter);
+.link {
+  text-decoration: none;
+  color: hsl(210, 100%, 50%);
 }
 
-.btn.btn-secondary:focus {
-    color: var(--fg) !important;
-    border: 1px solid var(--fg);
-    background-color: var(--bg) !important;
-    box-shadow: none !important;
+.link:hover {
+  color: black;
 }
 
-.btn.btn-secondary:active {
-    color: var(--fg) !important;
-    border: 1px solid var(--fg);
-    background-color: var(--bg) !important;
-    box-shadow: none !important;
+.copy {
+  font-feature-settings: "liga";
+  font-weight: 400;
+  color: black;
+  letter-spacing: 0.02em;
 }
 
-#btn-group {
-    margin-bottom: 64px;
+.copy_size_1 {
+  font-size: 16px;
 }
 
-#handle {
-    color: var(--fg);
-    transition: color 0.2s ease;
+.copy_size_2 {
+  font-size: 14px;
 }
 
-#handle:hover {
-    color: var(--a-fcs);
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-@media (max-width: 576px) {
-    :root {
-        --h1-fs: 2.72rem;
-        --ic-h: 120px;
-        --p-fs: 1rem;
-    }
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  color: black;
+  letter-spacing: -0.02em;
 }
