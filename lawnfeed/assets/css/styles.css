@@ -9,20 +9,27 @@ body {
   display: flex;
   margin: auto;
   max-width: 960px;
-  padding: 0 20px;
+  padding: 0 16px;
+  flex-direction: column;
 }
 
 .hero {
   min-height: 100vh;
   align-items: center;
+  justify-content: center;
 }
 
 .hero__inner {
+  width: 100%;
+  margin: auto 0;
+  padding: 64px 0;
+}
+
+.hero__card {
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  margin: 0 auto;
   display: flex;
-  padding: 20px 0;
 }
 
 .hero__icon {
@@ -103,4 +110,21 @@ body {
   font-weight: 700;
   color: black;
   letter-spacing: -0.02em;
+}
+
+@media (min-width: 720px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .hero__card {
+    padding: 64px 48px;
+    border: 1px solid hsl(210, 16%, 90%);
+    border-radius: 24px;
+    width: fit-content;
+  }
+
+  .hero__attribution {
+    margin-top: 20px;
+  }
 }
