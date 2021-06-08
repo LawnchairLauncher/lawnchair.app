@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*:active,
+*:focus {
+  outline: 0 !important;
+  outline-style: none !important;
+  -moz-outline-style: none !important;
+}
