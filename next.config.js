@@ -1,4 +1,6 @@
+const PRODUCTION = process.env.NODE_ENV !== "development"
+
 module.exports = {
-  basePath: "/lawnchair.app",
-  assetPrefix: "/lawnchair.app/",
+  basePath: PRODUCTION ? "/lawnchair.app" : "",
+  assetPrefix: PRODUCTION ? "/lawnchair.app/" : "",
 }
