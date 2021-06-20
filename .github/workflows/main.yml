@@ -10,6 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install and build
+        env:
+          NODE_ENV: production
         run: |
           npm install
           npm run build
