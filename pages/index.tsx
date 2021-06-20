@@ -6,7 +6,7 @@ export default function IndexPage() {
   return (
     <Layout title="Lawnchair App">
       {/* Hero section */}
-      <div className={clsx("hero text-white pt-20 px-8", "md:pt-24 md:px-36")}>
+      <div className={clsx("hero text-white pt-28 px-8", "md:pt-24 md:px-36")}>
         <img
           src="/images/lawnchair-icon.webp"
           alt="Lawnchair icon"
