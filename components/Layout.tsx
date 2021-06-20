@@ -1,5 +1,6 @@
 import { NextSeo } from "next-seo"
 import { ReactNode } from "react"
+import Header from "@components/Header"
 
 type Props = {
   children: ReactNode
@@ -25,6 +26,7 @@ export default function Layout({ title, children }: Props) {
           cardType: "summary_image_large",
         }}
       />
+      <Header />
       {children}
     </>
   )
