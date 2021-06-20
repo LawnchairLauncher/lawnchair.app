@@ -7,10 +7,12 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "clsx": "^1.1.1",
     "next": "latest",
     "next-seo": "^4.24.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-use": "^17.2.4"
   },
   "devDependencies": {
     "@types/node": "^12.12.21",

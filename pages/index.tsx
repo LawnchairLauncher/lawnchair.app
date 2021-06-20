@@ -1,5 +1,6 @@
 import Layout from "@components/Layout"
 import DownloadButton from "@components/DownloadButton"
+import clsx from "clsx"
 
 export default function IndexPage() {
   return (
@@ -45,13 +46,89 @@ export default function IndexPage() {
         </div>
       </div>
 
+      <FeatureSection
+        imgSrc="/images/preview-screenshot-1.png"
+        imgAlt="Preview screenshot 1"
+        direction="ltr"
+        headerText="No clever tagline needed"
+        bodyText="Yup. Get it? Lawnchair. It's a bad pun, we know. Lawnchair is a
+                  supercharged version of the AOSP Launcher you know and love. Being
+                  an open-source project, you get all the latest Pixel Launcher
+                  features shipped by Google in their latest Android release, plus
+                  added customisablity. The best part? No root required. 🥳"
+      />
+      <FeatureSection
+        imgSrc="/images/preview-screenshot-2.png"
+        imgAlt="Preview screenshot 2"
+        direction="rtl"
+        headerText="Fully customizable"
+        bodyText="Icon size, label, rows, and columns are all adjustable.
+                  Lawnchair also supports icon packs, and the Pill is customizable
+                  as well. These aren't the only features, and more are added
+                  regularly."
+      />
+      <FeatureSection
+        imgSrc="/images/android-robot-logo.svg"
+        imgAlt="Android logo"
+        direction="ltr"
+        headerText="Latest Android features"
+        bodyText="Icon size, label, rows, and columns are all adjustable.
+                  Lawnchair also supports icon packs, and the Pill is customizable as well.
+                  These aren't the only features, and more are added regularly."
+      />
+
       <style jsx>{`
         .hero {
           background: no-repeat fixed url("/images/hero-bg.svg");
           background-size: cover;
           min-height: calc(100vh - 70px);
         }
+        .
       `}</style>
     </Layout>
+  )
+}
+
+type FeatureSectionProps = {
+  imgSrc: string
+  imgAlt?: string
+  className?: string
+  direction: "ltr" | "rtl"
+  headerText?: string
+  bodyText?: string
+}
+
+function FeatureSection({
+  imgSrc,
+  imgAlt,
+  className,
+  direction,
+  headerText,
+  bodyText,
+}: FeatureSectionProps) {
+  return (
+    <div
+      className={clsx(
+        "px-56 py-28 flex",
+        direction === "ltr" ? "flex-row" : "flex-row-reverse",
+        className
+      )}
+    >
+      <img
+        src={imgSrc}
+        alt={imgAlt}
+        className={clsx("w-96", direction === "ltr" ? "mr-20" : "ml-20")}
+      />
+      <div className="flex flex-col">
+        <p className="text-2xl font-medium mt-32">{headerText}</p>
+        <p className="text-xl font-light mt-6 leading-8">{bodyText}</p>
+      </div>
+
+      <style jsx>{`
+        img {
+          filter: drop-shadow(0px 12px 20px rgba(0, 0, 0, 0.4));
+        }
+      `}</style>
+    </div>
   )
 }
