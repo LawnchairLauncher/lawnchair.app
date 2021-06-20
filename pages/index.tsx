@@ -6,17 +6,23 @@ export default function IndexPage() {
   return (
     <Layout title="Lawnchair App">
       {/* Hero section */}
-      <div className="hero pt-24 px-36 text-white">
+      <div className={clsx("hero text-white pt-20 px-8", "md:pt-24 md:px-36")}>
         <img
           src="/images/lawnchair-icon.webp"
           alt="Lawnchair icon"
-          className="rounded-full w-32"
+          className={clsx("rounded-full w-28", "md:w-32")}
         />
         <p className="text-4xl font-bold font-sans-alt mt-7">Lawnchair</p>
         <p className="text-2xl font-medium font-sans-alt mt-3">
           No clever tagline needed.
         </p>
-        <div className="mt-10 flex flex-row space-x-6">
+        <div
+          className={clsx(
+            "mt-12 flex flex-wrap flex-row space-y-4",
+            "md:space-x-6",
+            "md:space-y-0"
+          )}
+        >
           <DownloadButton link="https://play.google.com/store/apps/details?id=ch.deletescape.lawnchair.plah">
             <img
               src="/images/google-play-icon-1.svg"
@@ -38,7 +44,7 @@ export default function IndexPage() {
             <img
               src="/images/apk-mirror-logo-1.png"
               alt="APKMirror logo"
-              className="mr-4 w-10"
+              className="mr-4 w-10 my-3 md:my-0"
               style={{ filter: "invert(0.8)" }}
             />{" "}
             <span className="text-base font-medium">APKMirror</span>
@@ -109,18 +115,21 @@ function FeatureSection({
   return (
     <div
       className={clsx(
-        "px-56 py-28 flex",
-        direction === "ltr" ? "flex-row" : "flex-row-reverse",
+        "md:px-56 md:py-28 px-8 py-16 flex flex-col",
+        direction === "ltr" ? "md:flex-row" : "md:flex-row-reverse",
         className
       )}
     >
       <img
         src={imgSrc}
         alt={imgAlt}
-        className={clsx("w-96", direction === "ltr" ? "mr-20" : "ml-20")}
+        className={clsx(
+          "w-96 place-self-center md:place-self-start",
+          direction === "ltr" ? "md:mr-20" : "md:ml-20"
+        )}
       />
       <div className="flex flex-col">
-        <p className="text-2xl font-medium mt-32">{headerText}</p>
+        <p className="text-2xl font-medium md:mt-32 mt-16">{headerText}</p>
         <p className="text-xl font-light mt-6 leading-8">{bodyText}</p>
       </div>
 
