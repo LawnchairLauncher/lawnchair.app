@@ -16,7 +16,17 @@ export default function DownloadButton({ children, link }: Props) {
         <style jsx>{`
           a {
             background: no-repeat fixed #f5f5f5;
-            box-shadow: 0px 8px 18px -2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 1.9px 2.2px rgba(0, 0, 0, 0.02),
+              0 4.6px 5.3px rgba(0, 0, 0, 0.028),
+              0 8.6px 10px rgba(0, 0, 0, 0.035),
+              0 15.4px 17.9px rgba(0, 0, 0, 0.042),
+              0 28.8px 33.4px rgba(0, 0, 0, 0.05),
+              0 69px 80px rgba(0, 0, 0, 0.07);
+            transition: all ease 0.4s;
+          }
+          a:hover {
+            transform: translateY(-4px);
+            filter: brightness(80%);
           }
         `}</style>
       </a>
