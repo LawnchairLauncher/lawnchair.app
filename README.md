@@ -21,6 +21,19 @@
 
 The official Lawnchair website. Provides information about us, the organization, what our goals are, and the things that we look forward to. Download links for the Lawnchair launcher will be in the top of every page.
 
+## How to develop
+
+To test the website locally, start a development server.
+
+```sh
+# install dependencies
+npm i
+# start dev server
+npm run dev
+```
+
+then open [http://localhost:3000]() on a web browser.
+
 ## Contributing
 
 Contributions are always welcome. If you feel inclined to, feel free to submit a pull request.
