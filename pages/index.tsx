@@ -52,6 +52,7 @@ export default function IndexPage() {
         </div>
       </div>
 
+      {/* Features */}
       <FeatureSection
         imgSrc={`${process.env.BACKEND_URL}/images/preview-screenshot-1.png`}
         imgAlt="Preview screenshot 1"
@@ -83,6 +84,7 @@ export default function IndexPage() {
                   These aren't the only features, and more are added regularly."
       />
 
+      {/* Socials section */}
       <div
         className={clsx(
           "contact-section flex flex-col mt-10",
