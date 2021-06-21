@@ -1,6 +1,7 @@
 import { NextSeo } from "next-seo"
 import { ReactNode } from "react"
 import Header from "@components/Header"
+import Footer from "./Footer"
 
 type Props = {
   children: ReactNode
@@ -28,6 +29,7 @@ export default function Layout({ title, children }: Props) {
       />
       <Header />
       {children}
+      <Footer />
     </>
   )
 }
