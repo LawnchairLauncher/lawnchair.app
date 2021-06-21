@@ -1,6 +1,7 @@
 import Layout from "@components/Layout"
 import DownloadButton from "@components/DownloadButton"
 import clsx from "clsx"
+import SocialLinkTile from "@components/SocialLinkTile"
 
 export default function IndexPage() {
   return (
@@ -82,13 +83,72 @@ export default function IndexPage() {
                   These aren't the only features, and more are added regularly."
       />
 
+      <div
+        className={clsx(
+          "contact-section flex flex-col mt-10",
+          "py-8 pt-20 bg-cover",
+          "md:px-36 md:py-28 md:pt-32 md:bg-contain"
+        )}
+      >
+        <div className="px-8">
+          <p className="text-6xl font-medium font-sans-alt">Find us</p>
+          <p className="text-2xl font-sans-alt mt-10">
+            If you have an issue with Lawnchair, we're more than happy to help.
+            Ask around in our Telegram Group, or mention us on Twitter. Follow
+            us on Twitter for announcements as well.
+          </p>
+          <p className="text-2xl font-sans-alt mt-4">
+            Check out Lawnchair's GitHub. Help out by fixing bugs, flagging
+            issues, or even by just downloading and testing!
+          </p>
+        </div>
+        <div
+          className={clsx(
+            "flex flex-row overflow-y-auto gap-8 px-8 py-10 pb-20",
+            "md:px-20 md:-mx-20 md:py-20 md:pb-32",
+            "md:scrollbar-hide"
+          )}
+        >
+          <SocialLinkTile
+            link="https://twitter.com/lawnchairapp/"
+            imageSrc="/images/twitter-logo-blue.svg"
+            label="Twitter"
+          />
+          <SocialLinkTile
+            link="#telegram"
+            imageSrc="/images/telegram-icon-without-bg.svg"
+            label="Telegram"
+          />
+          <SocialLinkTile
+            link="https://www.instagram.com/lawnchairapp/"
+            imageSrc="/images/instagram-icon-1.svg"
+            label="Instagram"
+          />
+          <SocialLinkTile
+            link="https://lawnchair.freshdesk.com"
+            imageSrc="/images/help-circle-outline.svg"
+            label="Support"
+          />
+          <SocialLinkTile
+            link="https://github.com/LawnchairLauncher/Lawnchair"
+            imageSrc="/images/github-logo-1.svg"
+            label="Github"
+          />
+        </div>
+      </div>
+
       <style jsx>{`
         .hero {
-          background: no-repeat fixed url("${process.env.BACKEND_URL}/images/hero-bg.svg");
+          background: no-repeat fixed
+            url("${process.env.BACKEND_URL}/images/hero-bg.svg");
           background-size: cover;
           min-height: calc(100vh - 70px);
         }
-        .
+        .contact-section {
+          background: no-repeat local
+            url("${process.env.BACKEND_URL}/images/contact-us-bg.png");
+          background-position: top;
+        }
       `}</style>
     </Layout>
   )
