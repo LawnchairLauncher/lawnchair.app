@@ -19,13 +19,12 @@ export default function IndexPage() {
         <div
           className={clsx(
             "mt-12 flex flex-wrap flex-row space-y-4",
-            "md:space-x-6",
-            "md:space-y-0"
+            "md:space-x-6 md:space-y-0"
           )}
         >
           <DownloadButton link="https://play.google.com/store/apps/details?id=ch.deletescape.lawnchair.plah">
             <img
-              src="/images/google-play-icon-1.svg"
+              src={`${process.env.BACKEND_URL}/images/google-play-icon-1.svg`}
               alt="Google Play icon"
               className="mr-2"
             />{" "}
@@ -33,7 +32,7 @@ export default function IndexPage() {
           </DownloadButton>
           <DownloadButton link="https://f-droid.org/packages/ch.deletescape.lawnchair.plah">
             <img
-              src="/images/f-droid-logo-1.svg"
+              src={`${process.env.BACKEND_URL}/images/f-droid-logo-1.svg`}
               alt="F-Droid logo"
               className="mr-2"
               style={{ filter: "grayscale(1)" }}
@@ -42,7 +41,7 @@ export default function IndexPage() {
           </DownloadButton>
           <DownloadButton link="https://www.apkmirror.com/apk/deletescape/lawnchair">
             <img
-              src="/images/apk-mirror-logo-1.png"
+              src={`${process.env.BACKEND_URL}/images/apk-mirror-logo-1.png`}
               alt="APKMirror logo"
               className="mr-4 w-10 my-3 md:my-0"
               style={{ filter: "invert(0.8)" }}
