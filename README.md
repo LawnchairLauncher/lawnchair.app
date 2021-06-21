@@ -1,3 +1,5 @@
+[![preview image](./.github/website-preview.png)](https://lawnchairlauncher.github.io/lawnchair.app)
+
 <p align='center'>
   <h5 align='center'>ABOUT</h5>
   <p align='center'>
@@ -20,6 +22,8 @@
 ## About
 
 The official Lawnchair website. Provides information about us, the organization, what our goals are, and the things that we look forward to. Download links for the Lawnchair launcher will be in the top of every page.
+
+A preview of the website is available [here](https://lawnchairlauncher.github.io/lawnchair.app)
 
 ## How to develop
 
