@@ -8,7 +8,7 @@ export default function IndexPage() {
       {/* Hero section */}
       <div className={clsx("hero text-white pt-28 px-8", "md:pt-24 md:px-36")}>
         <img
-          src="/images/lawnchair-icon.webp"
+          src={`${process.env.BACKEND_URL}/images/lawnchair-icon.webp`}
           alt="Lawnchair icon"
           className={clsx("rounded-full w-28", "md:w-32")}
         />
@@ -53,7 +53,7 @@ export default function IndexPage() {
       </div>
 
       <FeatureSection
-        imgSrc="/images/preview-screenshot-1.png"
+        imgSrc={`${process.env.BACKEND_URL}/images/preview-screenshot-1.png`}
         imgAlt="Preview screenshot 1"
         direction="ltr"
         headerText="No clever tagline needed"
@@ -64,7 +64,7 @@ export default function IndexPage() {
                   added customisablity. The best part? No root required. 🥳"
       />
       <FeatureSection
-        imgSrc="/images/preview-screenshot-2.png"
+        imgSrc={`${process.env.BACKEND_URL}/images/preview-screenshot-2.png`}
         imgAlt="Preview screenshot 2"
         direction="rtl"
         headerText="Fully customizable"
@@ -74,7 +74,7 @@ export default function IndexPage() {
                   regularly."
       />
       <FeatureSection
-        imgSrc="/images/android-robot-logo.svg"
+        imgSrc={`${process.env.BACKEND_URL}/images/android-robot-logo.svg`}
         imgAlt="Android logo"
         direction="ltr"
         headerText="Latest Android features"
@@ -85,7 +85,7 @@ export default function IndexPage() {
 
       <style jsx>{`
         .hero {
-          background: no-repeat fixed url("/images/hero-bg.svg");
+          background: no-repeat fixed url("${process.env.BACKEND_URL}/images/hero-bg.svg");
           background-size: cover;
           min-height: calc(100vh - 70px);
         }
