@@ -1,3 +1,6 @@
+// (c) 2021 Raphael Tang
+// This code is licensed under MIT license (see LICENSE for details)
+
 import { useState, useCallback } from "react"
 
 export const random = {

@@ -1,3 +1,6 @@
+// (c) 2021 Raphael Tang
+// This code is licensed under MIT license (see LICENSE for details)
+
 import Link from "next/link"
 import { navLinks } from "@utils/nav"
 import { useEffect, useState } from "react"

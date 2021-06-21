@@ -1,3 +1,6 @@
+// (c) 2021 Raphael Tang
+// This code is licensed under MIT license (see LICENSE for details)
+
 import type { AppProps } from "next/app"
 import Head from "next/head"
 

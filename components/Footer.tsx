@@ -1,3 +1,6 @@
+// (c) 2021 Raphael Tang
+// This code is licensed under MIT license (see LICENSE for details)
+
 export default function Footer() {
   return (
     <footer className="py-3">

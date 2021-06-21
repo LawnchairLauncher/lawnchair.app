@@ -1,3 +1,6 @@
+// (c) 2021 Raphael Tang
+// This code is licensed under MIT license (see LICENSE for details)
+
 import { NextSeo } from "next-seo"
 import { ReactNode } from "react"
 import Header from "@components/Header"
