@@ -91,8 +91,8 @@ export default function IndexPage() {
       <div
         className={clsx(
           "contact-section flex flex-col mt-10",
-          "py-8 pt-20 bg-cover",
-          "md:px-36 md:py-28 md:pt-32 md:bg-contain"
+          "py-8 pt-20",
+          "md:px-36 md:pt-32"
         )}
       >
         <div className="px-8">
@@ -109,8 +109,8 @@ export default function IndexPage() {
         </div>
         <div
           className={clsx(
-            "flex flex-row overflow-y-auto gap-8 px-8 py-10 pb-20",
-            "md:px-20 md:-mx-20 md:py-20 md:pb-32",
+            "flex flex-row overflow-y-auto gap-8 px-8 py-10 pb-24",
+            "md:px-20 md:-mx-20 md:pt-20 md:pb-32",
             "md:scrollbar-hide"
           )}
         >
@@ -152,7 +152,7 @@ export default function IndexPage() {
         .contact-section {
           background: no-repeat local
             url("${process.env.BACKEND_URL}/images/contact-us-bg.png");
-          background-position: top;
+          background-size: contain;
         }
       `}</style>
     </Layout>

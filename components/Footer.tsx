@@ -1,10 +1,17 @@
 // (c) 2021 Raphael Tang
 // This code is licensed under MIT license (see LICENSE for details)
 
+import clsx from "clsx"
+
 export default function Footer() {
   return (
     <footer className="py-3">
-      <p className="ml-36 text-base px-5 py-2 inline-block rounded-full text-gray-300">
+      <p
+        className={clsx(
+          "text-base px-5 py-2 mx-4 inline-block rounded-full text-gray-300",
+          "md:ml-36 md:mr-0"
+        )}
+      >
         Website by{" "}
         <a className="text-white" href="https://raphtlw.rocks/">
           raphtlw
