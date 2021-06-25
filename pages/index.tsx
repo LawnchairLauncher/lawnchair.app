@@ -9,12 +9,32 @@ import Modal from "@components/Modal"
 import { useState } from "react"
 import { telegramLinks } from "@utils/values"
 import Link from "next/link"
+import CloseButton from "@components/CloseButton"
 
 export default function IndexPage() {
   const [showTelegramLinkModal, setShowTelegramLinkModal] = useState(false)
+  const [topBannerShown, setTopBannerShown] = useState(true)
 
   return (
     <Layout title="Lawnchair" id="top">
+      <Modal
+        className="flex flex-col bg-gray-50 text-black mt-16 rounded-b-2xl p-6 pt-8"
+        isOpen={topBannerShown}
+        onRequestClose={() => setTopBannerShown(false)}
+        contentLabel="info banner"
+      >
+        <div className="flex flex-row justify-between">
+          <p className="text-2xl font-medium mb-2">Lawnchair v11 is coming</p>
+          <div>
+            <CloseButton onClick={() => setTopBannerShown(false)} />
+          </div>
+        </div>
+        <p className="text-base">
+          Currently in alpha stage, Lawnchair v11 is a brand new version of
+          Lawnchair reworked from the ground up and uses the latest Android 11
+          APIs. Stay tuned on our Telegram channels for more information!
+        </p>
+      </Modal>
       {/* Hero section */}
       <div className={clsx("hero text-white pt-28 px-8", "md:pt-24 md:px-36")}>
         <img
@@ -156,26 +176,8 @@ export default function IndexPage() {
       >
         <div className="flex flex-row py-4 justify-between">
           <p className="text-2xl font-medium">Telegram</p>
-          <div className="">
-            <button
-              className="p-1 bg-gray-200 rounded-full"
-              onClick={() => setShowTelegramLinkModal(false)}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
+          <div>
+            <CloseButton onClick={() => setShowTelegramLinkModal(false)} />
           </div>
         </div>
         <div className="flex flex-col space-y-4">

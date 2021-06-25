@@ -1,5 +1,7 @@
 import ReactModal from "react-modal"
 
+ReactModal.defaultStyles.overlay.backgroundColor = "#0000004d"
+
 interface Props extends ReactModal.Props {
   children: React.ReactNode
 }
