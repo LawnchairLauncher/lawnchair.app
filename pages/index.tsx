@@ -8,7 +8,7 @@ import SocialLinkTile from "@components/SocialLinkTile"
 
 export default function IndexPage() {
   return (
-    <Layout title="Lawnchair App">
+    <Layout title="Lawnchair" id="top">
       {/* Hero section */}
       <div className={clsx("hero text-white pt-28 px-8", "md:pt-24 md:px-36")}>
         <img

@@ -1,0 +1,14 @@
+// (c) 2021 Raphael Tang
+// This code is licensed under MIT license (see LICENSE for details)
+
+// import Layout from "@components/Layout";
+
+// export default function DownloadPage() {
+//   return (
+//     <Layout title="Download Lawnchair">
+//       <div className="flex flex-col">
+//         <p className="text-lg"></p>
+//       </div>
+//     </Layout>
+//   )
+// }

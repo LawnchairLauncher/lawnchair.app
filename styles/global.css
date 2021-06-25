@@ -8,3 +8,7 @@
   outline-style: none !important;
   -moz-outline-style: none !important;
 }
+
+html {
+  scroll-behavior: smooth;
+}

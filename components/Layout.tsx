@@ -6,14 +6,14 @@ import { ReactNode } from "react"
 import Header from "@components/Header"
 import Footer from "./Footer"
 
-type Props = {
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
   children: ReactNode
   title: string
 }
 
-export default function Layout({ title, children }: Props) {
+export default function Layout({ title, children, ...props }: Props) {
   return (
-    <>
+    <div {...props}>
       <NextSeo
         title={title}
         description="The most complete open source Android home screen."
@@ -33,6 +33,6 @@ export default function Layout({ title, children }: Props) {
       <Header />
       {children}
       <Footer />
-    </>
+    </div>
   )
 }
