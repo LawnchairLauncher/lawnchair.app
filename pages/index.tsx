@@ -5,8 +5,14 @@ import Layout from "@components/Layout"
 import DownloadButton from "@components/DownloadButton"
 import clsx from "clsx"
 import SocialLinkTile from "@components/SocialLinkTile"
+import Modal from "@components/Modal"
+import { useState } from "react"
+import { telegramLinks } from "@utils/values"
+import Link from "next/link"
 
 export default function IndexPage() {
+  const [showTelegramLinkModal, setShowTelegramLinkModal] = useState(false)
+
   return (
     <Layout title="Lawnchair" id="top">
       {/* Hero section */}
@@ -120,7 +126,7 @@ export default function IndexPage() {
             label="Twitter"
           />
           <SocialLinkTile
-            link="#telegram"
+            onClick={() => setShowTelegramLinkModal(true)}
             imageSrc="/images/telegram-icon-without-bg.svg"
             label="Telegram"
           />
@@ -141,6 +147,58 @@ export default function IndexPage() {
           />
         </div>
       </div>
+
+      <Modal
+        isOpen={showTelegramLinkModal}
+        className="flex flex-col bg-white text-black w-1/2 translate-center rounded-xl p-6"
+        onRequestClose={() => setShowTelegramLinkModal(false)}
+        contentLabel="Telegram"
+      >
+        <div className="flex flex-row py-4 justify-between">
+          <p className="text-2xl font-medium">Telegram</p>
+          <div className="">
+            <button
+              className="p-1 bg-gray-200 rounded-full"
+              onClick={() => setShowTelegramLinkModal(false)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div className="flex flex-col space-y-4">
+          {telegramLinks.map((item) => (
+            <Link href={item.link} passHref>
+              <a className="flex flex-row items-center">
+                <div>
+                  <img
+                    src={`${process.env.BACKEND_URL}${item.icon}`}
+                    alt="Telegram group/channel icon"
+                    width={50}
+                    className="rounded-full mr-4"
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <p className="text-lg">{item.title}</p>
+                  <p className="text-base">{item.description}</p>
+                </div>
+              </a>
+            </Link>
+          ))}
+        </div>
+      </Modal>
 
       <style jsx>{`
         .hero {
