@@ -121,6 +121,7 @@ export default function IndexPage() {
       <FeatureSection
         imgSrc={`${process.env.BACKEND_URL}/images/android-robot-logo.svg`}
         imgAlt="Android logo"
+        short
         direction="ltr"
         headerText="Latest Android features"
         bodyText="Icon size, label, rows, and columns are all adjustable.
@@ -238,6 +239,7 @@ export default function IndexPage() {
 type FeatureSectionProps = {
   imgSrc: string
   imgAlt?: string
+  short?: boolean
   className?: string
   direction: "ltr" | "rtl"
   headerText?: string
@@ -247,6 +249,7 @@ type FeatureSectionProps = {
 function FeatureSection({
   imgSrc,
   imgAlt,
+  short,
   className,
   direction,
   headerText,
@@ -269,7 +272,7 @@ function FeatureSection({
         )}
       />
       <div className="flex flex-col">
-        <p className="text-2xl font-medium md:mt-32 mt-16">{headerText}</p>
+        <p className={clsx("text-2xl font-medium mt-16", !short && "md:mt-32")}>{headerText}</p>
         <p className="text-xl font-light mt-6 leading-8">{bodyText}</p>
       </div>
 
