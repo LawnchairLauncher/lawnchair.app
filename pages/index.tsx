@@ -191,7 +191,7 @@ export default function IndexPage() {
         </div>
         <div className="flex flex-col space-y-4">
           {telegramLinks.map((item) => (
-            <Link href={item.link} passHref>
+            <Link href={item.link} passHref key={item.link}>
               <a className="flex flex-row items-center" target="_blank">
                 <div>
                   <img
