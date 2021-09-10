@@ -1,7 +1,7 @@
 // (c) 2021 Raphael Tang
 // This code is licensed under MIT license (see LICENSE for details)
 
-import { useRouter } from "next/router"
+import Link from "next/link"
 
 interface PropsBaseType {
   imageSrc: string
@@ -23,15 +23,12 @@ export default function SocialLinkTile({
   label,
   onClick,
 }: Props) {
+  const Component = link ? "a" : "div"
   return (
-    <div
+    <Component
+      {...(link && { href: link, target: "_blank" })}
       className="flex flex-col items-center bg-white rounded-2xl px-8 py-8 w-32 space-y-4 root cursor-pointer md:w-auto"
-      onClick={
-        onClick ||
-        (() => {
-          window.open(link)
-        })
-      }
+      onClick={onClick}
     >
       <img
         src={`${process.env.BACKEND_URL}${imageSrc}`}
@@ -54,6 +51,6 @@ export default function SocialLinkTile({
           transform: translateY(-6px);
         }
       `}</style>
-    </div>
+    </Component>
   )
 }
