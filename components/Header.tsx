@@ -28,8 +28,8 @@ export default function Header() {
   return (
     <header
       className={clsx(
-        "flex flex-row w-full px-14 py-6 bg-header-bg text-white sticky top-0 z-40",
-        showShadow && "show-shadow"
+        "flex flex-row w-full px-14 py-6 text-white fixed top-0 z-40",
+        showShadow && "show-shadow bg-header-bg",
       )}
     >
       <div className="space-x-10 ml-auto">
@@ -42,7 +42,7 @@ export default function Header() {
 
       <style jsx>{`
         header {
-          transition: box-shadow ease-out 0.2s;
+          transition: background-color ease-out 0.2s, box-shadow ease-out 0.2s;
         }
         .show-shadow {
           box-shadow: 0 0.4px 0.6px rgba(0, 0, 0, 0.017),

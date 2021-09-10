@@ -18,76 +18,78 @@ export default function IndexPage() {
 
   return (
     <Layout title="Lawnchair" id="top">
-      <AnimatePresence>
-        {topBannerShown && (
-          <motion.div
-            className={clsx("overflow-hidden h-0")}
-            animate={{ height: 135 }}
-            exit={{ height: 0 }}
-          >
-            <div className="flex flex-col bg-gray-50 text-black rounded-b-2xl top-0 p-6 shadow-lg box-border">
-              <div className="flex flex-row justify-between">
-                <p className="text-2xl font-medium mb-2">
-                  Lawnchair v11 is coming
-                </p>
-                <div>
-                  <CloseButton onClick={() => setTopBannerShown(false)} />
-                </div>
-              </div>
-              <p className="text-base">
-                Currently in alpha stage, Lawnchair v11 is a brand new version
-                of Lawnchair reworked from the ground up and uses the latest
-                Android 11 APIs. Stay tuned on our Telegram channels for more
-                information!
-              </p>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
       {/* Hero section */}
-      <div className={clsx("hero text-white pt-28 px-8", "md:pt-24 md:px-36")}>
-        <img
-          src={`${process.env.BACKEND_URL}/images/lawnchair-icon.webp`}
-          alt="Lawnchair icon"
-          className={clsx("rounded-full w-28", "md:w-32")}
-        />
-        <p className="text-4xl font-bold font-sans-alt mt-7">Lawnchair</p>
-        <p className="text-2xl font-medium font-sans-alt mt-3">
-          No clever tagline needed.
-        </p>
-        <div
-          className={clsx(
-            "mt-12 flex flex-wrap flex-row space-y-4",
-            "md:space-x-6 md:space-y-0"
+      <div className={clsx("hero pt-24")}>
+        <AnimatePresence>
+          {topBannerShown && (
+            <motion.div
+              className={clsx("overflow-hidden h-0 px-8", "md:px-36")}
+              animate={{ height: 135 }}
+              exit={{ height: 0 }}
+            >
+              <div className="flex flex-col bg-gray-50 text-black rounded-2xl top-0 p-6 shadow-lg box-border">
+                <div className="flex flex-row justify-between">
+                  <p className="text-2xl font-medium mb-2">
+                    Lawnchair v11 is coming
+                  </p>
+                  <div>
+                    <CloseButton onClick={() => setTopBannerShown(false)} />
+                  </div>
+                </div>
+                <p className="text-base">
+                  Currently in alpha stage, Lawnchair v11 is a brand new version
+                  of Lawnchair reworked from the ground up and uses the latest
+                  Android 11 APIs. Stay tuned on our Telegram channels for more
+                  information!
+                </p>
+              </div>
+            </motion.div>
           )}
-        >
-          <DownloadButton link="https://play.google.com/store/apps/details?id=ch.deletescape.lawnchair.plah">
-            <img
-              src={`${process.env.BACKEND_URL}/images/google-play-icon-1.svg`}
-              alt="Google Play icon"
-              className="mr-2"
-            />{" "}
-            <span className="text-base font-medium">Google Play</span>
-          </DownloadButton>
-          <DownloadButton link="https://f-droid.org/packages/ch.deletescape.lawnchair.plah">
-            <img
-              src={`${process.env.BACKEND_URL}/images/f-droid-logo-1.svg`}
-              alt="F-Droid logo"
-              className="mr-2"
-              style={{ filter: "grayscale(1)" }}
-            />{" "}
-            <span className="text-base font-medium mr-2">F-Droid</span>
-          </DownloadButton>
-          <DownloadButton link="https://www.apkmirror.com/apk/deletescape/lawnchair">
-            <img
-              src={`${process.env.BACKEND_URL}/images/apk-mirror-logo-1.png`}
-              alt="APKMirror logo"
-              className="mr-4 w-10 my-3 md:my-0"
-              style={{ filter: "invert(0.8)" }}
-            />{" "}
-            <span className="text-base font-medium">APKMirror</span>
-          </DownloadButton>
-        </div>
+        </AnimatePresence>
+        <div className={clsx("text-white pt-8 px-8", "md:pt-16 md:px-36")}>
+          <img
+            src={`${process.env.BACKEND_URL}/images/lawnchair-icon.webp`}
+            alt="Lawnchair icon"
+            className={clsx("rounded-full w-28", "md:w-32")}
+          />
+          <p className="text-4xl font-bold font-sans-alt mt-7">Lawnchair</p>
+          <p className="text-2xl font-medium font-sans-alt mt-3">
+            No clever tagline needed.
+          </p>
+          <div
+            className={clsx(
+              "mt-12 flex flex-wrap flex-row space-y-4",
+              "md:space-x-6 md:space-y-0"
+            )}
+          >
+            <DownloadButton link="https://play.google.com/store/apps/details?id=ch.deletescape.lawnchair.plah">
+              <img
+                src={`${process.env.BACKEND_URL}/images/google-play-icon-1.svg`}
+                alt="Google Play icon"
+                className="mr-2"
+              />{" "}
+              <span className="text-base font-medium">Google Play</span>
+            </DownloadButton>
+            <DownloadButton link="https://f-droid.org/packages/ch.deletescape.lawnchair.plah">
+              <img
+                src={`${process.env.BACKEND_URL}/images/f-droid-logo-1.svg`}
+                alt="F-Droid logo"
+                className="mr-2"
+                style={{ filter: "grayscale(1)" }}
+              />{" "}
+              <span className="text-base font-medium mr-2">F-Droid</span>
+            </DownloadButton>
+            <DownloadButton link="https://www.apkmirror.com/apk/deletescape/lawnchair">
+              <img
+                src={`${process.env.BACKEND_URL}/images/apk-mirror-logo-1.png`}
+                alt="APKMirror logo"
+                className="mr-4 w-10 my-3 md:my-0"
+                style={{ filter: "invert(0.8)" }}
+              />{" "}
+              <span className="text-base font-medium">APKMirror</span>
+            </DownloadButton>
+          </div>
+          </div>
       </div>
 
       {/* Features */}
@@ -216,7 +218,8 @@ export default function IndexPage() {
           background: no-repeat fixed
             url("${process.env.BACKEND_URL}/images/hero-bg.svg");
           background-size: cover;
-          min-height: calc(100vh - 70px);
+          min-height: 100vh;
+          /* padding-top: 70px; */
         }
         .contact-section {
           background: no-repeat local
