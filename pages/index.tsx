@@ -62,7 +62,7 @@ export default function IndexPage() {
           </p>
           <div
             className={clsx(
-              "mt-12 flex flex-wrap flex-row space-y-4",
+              "mt-12 flex flex-wrap flex-row space-y-4 pb-8",
               "md:space-x-6 md:space-y-0"
             )}
           >
