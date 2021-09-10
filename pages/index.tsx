@@ -6,14 +6,25 @@ import DownloadButton from "@components/DownloadButton"
 import clsx from "clsx"
 import SocialLinkTile from "@components/SocialLinkTile"
 import Modal from "@components/Modal"
-import { useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import { telegramLinks } from "@utils/values"
 import Link from "next/link"
 import CloseButton from "@components/CloseButton"
 
 export default function IndexPage() {
   const [showTelegramLinkModal, setShowTelegramLinkModal] = useState(false)
-  const [topBannerShown, setTopBannerShown] = useState(true)
+  const [topBannerShown, setTopBannerShown] = useState(false)
+
+  useEffect(() => {
+    if (localStorage.getItem("topBannerHidden") === null) {
+      setTopBannerShown(true)
+    }
+  }, [])
+
+  const hideTopBanner = useCallback(() => {
+    localStorage.setItem("topBannerHidden", "true")
+    setTopBannerShown(false)
+  }, [])
 
   return (
     <Layout title="Lawnchair" id="top">
@@ -27,7 +38,7 @@ export default function IndexPage() {
                   Lawnchair v11 is coming
                 </p>
                 <div>
-                  <CloseButton onClick={() => setTopBannerShown(false)} />
+                  <CloseButton onClick={hideTopBanner} />
                 </div>
               </div>
               <p className="text-base">
