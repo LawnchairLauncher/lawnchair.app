@@ -9,7 +9,7 @@
   "dependencies": {
     "clsx": "^1.1.1",
     "framer-motion": "^4.1.17",
-    "next": "latest",
+    "next": "^11.1.2",
     "next-seo": "^4.24.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
