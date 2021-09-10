@@ -10,7 +10,6 @@ import { useState } from "react"
 import { telegramLinks } from "@utils/values"
 import Link from "next/link"
 import CloseButton from "@components/CloseButton"
-import { AnimatePresence, motion } from "framer-motion"
 
 export default function IndexPage() {
   const [showTelegramLinkModal, setShowTelegramLinkModal] = useState(false)
@@ -20,32 +19,26 @@ export default function IndexPage() {
     <Layout title="Lawnchair" id="top">
       {/* Hero section */}
       <div className={clsx("hero pt-24")}>
-        <AnimatePresence>
-          {topBannerShown && (
-            <motion.div
-              className={clsx("overflow-hidden h-0 px-8", "md:px-36")}
-              animate={{ height: 135 }}
-              exit={{ height: 0 }}
-            >
-              <div className="flex flex-col bg-gray-50 text-black rounded-2xl top-0 p-6 shadow-lg box-border">
-                <div className="flex flex-row justify-between">
-                  <p className="text-2xl font-medium mb-2">
-                    Lawnchair v11 is coming
-                  </p>
-                  <div>
-                    <CloseButton onClick={() => setTopBannerShown(false)} />
-                  </div>
-                </div>
-                <p className="text-base">
-                  Currently in alpha stage, Lawnchair v11 is a brand new version
-                  of Lawnchair reworked from the ground up and uses the latest
-                  Android 11 APIs. Stay tuned on our Telegram channels for more
-                  information!
+        {topBannerShown && (
+          <div className={clsx("px-8", "md:px-36")}>
+            <div className="flex flex-col bg-gray-50 text-black rounded-2xl top-0 p-6 shadow-lg box-border">
+              <div className="flex flex-row justify-between">
+                <p className="text-2xl font-medium mb-2">
+                  Lawnchair v11 is coming
                 </p>
+                <div>
+                  <CloseButton onClick={() => setTopBannerShown(false)} />
+                </div>
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+              <p className="text-base">
+                Currently in alpha stage, Lawnchair v11 is a brand new version
+                of Lawnchair reworked from the ground up and uses the latest
+                Android 11 APIs. Stay tuned on our Telegram channels for more
+                information!
+              </p>
+            </div>
+          </div>
+        )}
         <div className={clsx("text-white pt-8 px-8", "md:pt-16 md:px-36")}>
           <img
             src={`${process.env.BACKEND_URL}/images/lawnchair-icon.webp`}
