@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-background: hsla(0, 0%, 100%, 1);
+    --color-surface: hsla(220, 100%, 98%, 1);
+    --color-primary: hsla(220, 100%, 50%, 1);
+    --color-on-primary: hsla(0, 0%, 100%, 1);
+    --color-on-surface: hsla(0, 0%, 0%, 1);
+    --color-outline: hsla(220, 24%, 76%, 1);
+    --color-on-surface-variant: hsla(220, 24%, 24%, 1);
+    --color-primary-variant: hsla(220, 100%, 40%, 1);
+}
+
+.container {
+    max-width: 520px;
+    padding: 20px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.large-app-card {
+    background: var(--color-surface);
+    padding: 20px;
+    border-radius: 20px;
+    display: inline-flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.large-app-card__icon {
+    width: 96px;
+    height: 96px;
+}
+
+.text {
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+.text_style_h5 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.text_style_h6 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.text_style_body1 {
+    font-size: 16px;
+}
+
+.text_style_button {
+    font-size: 16px;
+}
+
+.large-app-card__name {
+    margin-top: 12px;
+    color: var(--color-on-surface);
+}
+
+.large-app-card__version {
+    color: var(--color-on-surface-variant);
+}
+
+.button {
+    display: inline-flex;
+    padding: 0 20px;
+    height: 32px;
+    border-radius: 16px;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.button_style_primary {
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+}
+
+.button_style_secondary {
+    color: var(--color-primary);
+    border: 1px solid var(--color-outline);
+}
+
+.small-app-card {
+    background: var(--color-surface);
+    padding: 20px 12px 20px 20px;
+    border-radius: 20px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-button {
+    padding: 8px;
+    text-decoration: none;
+    color: var(--color-on-surface-variant);
+}
+
+.small-app-card__right {
+    display: inline-flex;
+}
+
+.large-app-card__buttons {
+    display: inline-flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.disabled {
+    opacity: 32%;
+}
+
+.small-app-card__name {
+    color: var(--color-on-surface);
+}
+
+.small-app-card__version {
+    color: var(--color-on-surface-variant);
+}
+
+.icon-button:hover {
+    color: var(--color-primary);
+}
+
+.button_style_primary:hover {
+    background: var(--color-primary-variant);
+}
+
+.button_style_secondary:hover {
+    color: var(--color-on-surface-variant);
+}
