@@ -1,0 +1,19 @@
+name: Deploy website
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy-website:
+    name: Deploy website
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Deploy website
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          
