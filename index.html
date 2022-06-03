@@ -1,356 +1,234 @@
 <!DOCTYPE html>
-<html>
-<!--
-© 2017-2019 Jackson Hayes
--->
-
-<head>
+<html lang="en" class="no-js">
+  <head>
     <meta charset="UTF-8" />
-
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" />
-    <title>Lawnchair</title>
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=almnYgqQyp">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=almnYgqQyp">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=almnYgqQyp">
-    <link rel="manifest" href="/favicon/manifest.json?v=almnYgqQyp">
-    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=almnYgqQyp" color="#00c853">
-    <link rel="shortcut icon" href="/favicon/favicon.ico?v=almnYgqQyp">
-    <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=almnYgqQyp">
-    <meta name="theme-color" content="#1976D2">
-
-    <!-- Social -->
-    <meta property="og:url" content="https://lawnchair.app/" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lawnchairapp" />
-    <meta name="twitter:app:id:googleplay" content="ch.deletescape.lawnchair.plah"/>
-    
-    <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="Lawnchair: No clever tagline needed" />
-    <meta property="og:type" content="website" />
-    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
-    <meta property="og:image" content="http://lawnchair.app/images/cover-image.png" />
-    <meta property="og:description" content="The rootless Pixel Launcher that is both heavily customizable and ships with backported Android Oreo features and tweaks." />
-    <meta name="description" content="The rootless Pixel Launcher that is both heavily customizable and ships with backported Android Oreo features and tweaks." />
-    <meta name="keywords" content="Android, customize, Pixel, Pixel Launcher, Google Pixel, Pixel Google, APK, free, free app, app free, home screen, homescreen" />
-    <script src="js/jquery-3.2.1.min.js"></script>
-</head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Lawnchair</title>
+    <meta
+      name="description"
+      content="The official website of Lawnchair Launcher"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300"
+      rel="stylesheet"
+    />
 
-<body>
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    
-    <div class="row">
-        <div id="colorBackground" class="col s12">
-            <h2 class="white-text center-align">Lawnchair</h2>
-            <h4 class="white-text center-align thin">No clever tagline needed</h4>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#15c666" />
+    <meta name="theme-color" content="#02d663" />
 
-            <div class="center-align">
-                <a href="https://play.google.com/store/apps/details?id=ch.deletescape.lawnchair.plah" target="_blank"><img alt='Get it on Google Play' src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" target="_blank" class="responsive-img" style="height: 100px;" /></a>
-                <a href="https://f-droid.org/packages/ch.deletescape.lawnchair.plah/" target="_blank"><img src="images/get-it-on-fdroid.png" alt="Get it on F-Droid" target="_blank" class="responsive-img" style="height: 100px;" /></a>
-                <a href="https://www.apkmirror.com/apk/deletescape/lawnchair/" target="_blank"><img src="images/get-it-on-apkmirror.png" alt="Get it on APKMirror" target="_blank" class="responsive-img" style="height: 100px;" /></a>
+    <link href="/assets/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div class="hero__wrapper">
+          <div class="hero__left hero__content">
+            <img
+              class="hero__content__icon"
+              src="/assets/lawnchair.png"
+              width="150"
+              height="150"
+              alt="The Lawnchair Logo"
+            />
+            <h1 class="hero__content__name">Lawnchair</h1>
+            <div class="hero__content__description">
+              No clever tagline needed.
             </div>
+            <a
+              href="https://github.com/LawnchairLauncher/lawnchair/wiki#download"
+              class="hero__content__download js__hide"
+            >
+              <span class="icon-button material-symbols-outlined"
+                >download</span
+              >
+              Download Lawnchair
+            </a>
+          </div>
+          <div class="hero__right hero__downloads no-js__hide">
+            <!-- Card 1 -->
+            <div class="card">
+              <div class="card__left">
+                <h2 class="card__name">Lawnchair</h2>
+                <span class="card__version" id="js-lawnchair-version"
+                  >Loading...</span
+                >
+              </div>
+              <div class="card__right">
+                <a
+                  id="js-lawnchair-download"
+                  class="icon-button material-symbols-outlined disabled"
+                  >download</a
+                >
+                <a
+                  class="icon-button material-symbols-outlined"
+                  href="https://github.com/lawnchairlauncher/lawnchair/releases"
+                  >history</a
+                >
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+              <div class="card__left">
+                <h2 class="card__name">Lawnfeed</h2>
+                <span class="card__version" id="js-lawnfeed-version"
+                  >Loading...</span
+                >
+              </div>
+              <div class="card__right">
+                <a
+                  id="js-lawnfeed-download"
+                  class="icon-button material-symbols-outlined disabled"
+                  >download</a
+                >
+                <a
+                  class="icon-button material-symbols-outlined"
+                  href="https://github.com/lawnchairlauncher/lawnfeed/releases"
+                  >history</a
+                >
+              </div>
+            </div>
+            <!-- Card 3-->
+            <div class="card">
+              <div class="card__left">
+                <h2 class="card__name">Lawnicons</h2>
+                <span class="card__version" id="js-lawnicons-version"
+                  >Loading...</span
+                >
+              </div>
+              <div class="card__right">
+                <a
+                  id="js-lawnicons-download"
+                  class="icon-button material-symbols-outlined disabled"
+                  >download</a
+                >
+                <a
+                  class="icon-button material-symbols-outlined"
+                  href="https://github.com/lawnchairlauncher/lawnicons/releases"
+                  >history</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
-
-    </div>
-    <div class="container">
-        <div class="row valign-wrapper">
-            <div class="col s12 m6 center center-align">
-                <img class="responsive-img" style="max-height: 90vh" src="images/mainImage.jpg" draggable="false">
-            </div>
-            <div class="col s12 m6">
-                <h4 class="center lawnchairlefty">No clever tagline needed</h4>
-                <p class="light center-align flow-text lawnchairlefty">Lawnchair. Get it? It's a bad pun, we know. Based on Launcher3 from AOSP, Lawnchair has all the features of the Pixel Launcher (including the Google Feed), plus customizability. Best of all? No root required.</p>
-            </div>
+      </section>
+      <section class="about">
+        <img
+          class="about__image"
+          src="/assets/phone.png"
+          alt="A screenshot of a user using Lawnchair for their home screen."
+          width="300"
+          height="600"
+        />
+        <div class="about__info">
+          <h2 class="about__header">No clever tagline needed</h2>
+          <div class="about__description">
+            Yup. Get it? Lawnchair. It's a bad pun, we know. Lawnchair is a
+            supercharged version of the Pixel Launcher you know and love. Being
+            an open-source project, you get all the latest Pixel Launcher
+            features shipped by Google in their latest Android release, plus
+            added customisablity. The best part? No root required!
+          </div>
         </div>
-        <div style="background-color: #E0E0E0; height: 1px;"></div>
-    </div>
-
-    <div class="container">
-        <div class="row valign-wrapper reverseonmobile">
-            <div class="col s12 m6">
-                <h3 class="center lawnchairlefty">Android Oreo features</h3>
-                <p class="light center-align flow-text lawnchairlefty">Notification dots and improved shortcut UI have been backported for anyone to use! Perfect for anyone who won't be getting Android Oreo anytime soon.</p>
-            </div>
-
-            <div class="col s12 m6 center center-align">
-                <img class="responsive-img" style="max-height: 90vh" src="images/shortcuts.jpg" draggable="false">
-            </div>
+      </section>
+      <section class="links">
+        <h2 class="links__header">Links</h2>
+        <div class="links__description">
+          If you have an issue with Lawnchair, we're more than happy to help.
+          Ask around in our Telegram Group or mention us on Twitter. Follow us
+          on Twitter for announcements as well.
         </div>
-        <div style="background-color: #E0E0E0; height: 1px;"></div>
-    </div>
+        <div class="links__cards">
+          <a
+            class="link__card"
+            href="https://github.com/LawnchairLauncher/lawnchair"
+          >
+            <img
+              src="/assets/github.png"
+              alt=""
+              class="dark-invert"
+              height="50"
+            />
+            <span>GitHub</span>
+          </a>
 
-
-    <div class="container">
-        <div class="row valign-wrapper">
-            <div class="col s12 m6 center center-align">
-                <img class="responsive-img" style="max-height: 90vh" src="images/customization.jpg" draggable="false">
-            </div>
-
-            <div class="col s12 m6">
-                <h3 class="center lawnchairlefty">Pixel Launcher: Customizable</h3>
-                <p class="light center-align flow-text lawnchairlefty">Icon size, label, rows, and columns are all adjustable. Lawnchair also supports icon packs, and the Pill is customizable as well. These aren't the only features, and more are added regularly.</p>
-            </div>
+          <a class="link__card" href="https://twitter.com/lawnchairapp">
+            <img
+              src="/assets/twitter.png"
+              alt=""
+              height="50"
+            />
+            <span>Twitter</span></a
+          >
+          <a class="link__card" href="https://t.me/lawnchair"
+            ><img
+              src="/assets/telegram.png"
+              alt=""
+              height="50"
+            /><span>Telegram</span></a
+          >
+          <a
+            class="link__card"
+            href="https://forum.xda-developers.com/t/lawnchair-customizable-pixel-launcher.3627137/"
+          >
+            <img
+              src="/assets/xda.png"
+              alt=""
+              height="50"
+            />
+            <span>XDA</span>
+          </a>
+          <a
+            class="link__card"
+            href="https://github.com/LawnchairLauncher/lawnchair/wiki"
+            ><img
+              src="/assets/web.png"
+              alt=""
+              height="50"
+            /><span>All links</span></a
+          >
         </div>
-    </div>
-
-    <div class="container">
-        <div style="background-color: #E0E0E0; height: 1px;"></div>
-        <div class="row">
-            <div class="col s12 center">
-                <h4 style="margin-top: 60px; margin-bottom: 60px;">The Lawnchair Team</h4>
-                <div class="row center-align">
-                    <div class="col s12 m4 bioContainer">
-                        <div class="bioCard" id="tillModal"><img class="responsive-img circle" src="images/till.jpg" draggable="false">
-                            <h5>Till Kottmann</h5>
-                        </div>
-                    </div>
-
-                    <div class="col s12 m4 bioContainer">
-                        <div class="bioCard" id="papModal"><img class="responsive-img circle" src="images/paphonb.jpg" draggable="false">
-                            <h5>paphonb</h5>
-                        </div>
-                    </div>
-
-                    <div class="col s12 m4 bioContainer">
-                        <div class="bioCard" id="jozsefModal"><img class="responsive-img circle" src="images/blank.png" draggable="false">
-                            <h5>Jozsef Kiraly</h5>
-                        </div>
-                    </div>
-
-                    <div class="col s12 m4 bioContainer">
-                        <div class="bioCard" id="joshuaModal"><img class="responsive-img circle" src="images/joshua.jpg" draggable="false">
-                            <h5>Joshua Baldassare</h5>
-                        </div>
-                    </div>
-
-                    <div class="col s12 m4 bioContainer">
-                        <div class="bioCard" id="lumiqModal"><img class="responsive-img circle" src="images/lumiq.png" draggable="false">
-                            <h5>Lumiq Creative</h5>
-                        </div>
-                    </div>
-
-                    <div class="col s12 m4 bioContainer">
-                        <div class="bioCard" id="chrisModal"><img class="responsive-img circle" src="images/chris.jpg" draggable="false">
-                            <h5>Christopher Kardas</h5>
-                        </div>
-                    </div>
-
-                    <div class="col s12 m4 bioContainer">
-                        <div class="bioCard" id="abhijeetModal"><img class="responsive-img circle" src="images/abhijeet.jpg" draggable="false">
-                            <h5>Abhijeet Bohra</h5>
-                        </div>
-                    </div>
-
-                    <div class="col s12 m4 bioContainer">
-                        <div class="bioCard" id="rikModal"><img class="responsive-img circle" src="images/rick.jpg" draggable="false">
-                            <h5>Rick Kode</h5>
-                        </div>
-                    </div>
-
-                    <div class="col s12 m4 bioContainer">
-                        <div class="bioCard" id="skittlesModal"><img class="responsive-img circle" src="images/skittles.jpg" draggable="false">
-                            <h5>Rhyse Simpson</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div style="background-color: #E0E0E0; height: 1px;"></div>
-
-        <div class="row" style="padding-top: 20px; padding-bottom: 20px;">
-            <div class="col s12 m6">
-                <h3 style="margin-top: 60px; margin-bottom: 30px;">Links</h3>
-                <p class="light flow-text">If you have an issue with Lawnchair, we're more than happy to help. Ask around in our Telegram Group or mention us on Twitter. Follow us on Twitter for announcements as well.<br><br>Check out Lawnchair's GitHub. Help out by fixing bugs, flagging issues, or even by just downloading and testing!</p>
-            </div>
-            <div class="col s12 m6">
-                <div class="linkSection">
-                    <section class="tab">
-                        <div class="content">
-                            <div class="links socialhover"><a href="https://twitter.com/lawnchairapp/" class="valign-wrapper flow-text socialhovertext" target="_blank"><i class="contact_icon mdi mdi-twitter mdi-36px blue-text"></i>&nbsp; Twitter</a></div>
-                            <div class="links socialhover"><a href="#modal1" class="modal-trigger valign-wrapper flow-text socialhovertext" target="_blank"><i class="contact_icon mdi mdi-telegram mdi-36px blue-text darken-1"></i>&nbsp; Telegram</a></div>
-                            <div class="links socialhover"><a href="https://www.instagram.com/lawnchairapp/" class="valign-wrapper flow-text socialhovertext" target="_blank"><i class="contact_icon mdi mdi-instagram mdi-36px purple-text"></i>&nbsp; Instagram</a></div>
-                            <div class="links socialhover"><a href="https://lawnchair.freshdesk.com" class="black-text valign-wrapper flow-text socialhovertext" target="_blank"><i class="contact_icon mdi mdi-help-circle-outline mdi-36px green-text"></i>&nbsp; Support</a></div>
-                            <div class="links socialhover"><a href="https://github.com/LawnchairLauncher/Lawnchair" class="valign-wrapper flow-text socialhovertext" target="_blank"><i class="contact_icon mdi mdi-github-circle mdi-36px black-text"></i>&nbsp; GitHub</a></div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="modal1" class="modal bottom-sheet">
-        <div class="modal-content">
-            <h4>Telegram</h4>
-            <ul class="collection">
-                <li class="collection-item avatar">
-                    <img src="images/mainChannel.jpg" draggable="false" alt="" class="circle">
-                    <a href="https://t.me/lawnchairchannel" class="black-text"><span class="title">Lawnchair Telegram Channel</span>
-          <p>Get the latest information available, such as releases or other announcements.
-          </p></a>
-                </li>
-                <li class="collection-item avatar">
-                    <img src="images/mainGroup.jpg" draggable="false" alt="" class="circle">
-                    <a href="https://t.me/lccommunity" class="black-text"><span class="title">Lawnchair Community Telegram Group</span>
-          <p>Come here if you find any bugs, or have a feature idea. NO off topic allowed.
-          </p></a>
-                </li>
-                <li class="collection-item avatar">
-                    <img src="images/style.jpg" draggable="false" alt="" class="circle">
-                    <a href="https://t.me/lcstyle" class="black-text"><span class="title">Lawnchair Style Telegram Group</span>
-          <p>The place to show off your Lawnchair homescreen, your wall, or icons.
-          </p></a>
-                </li>
-                <li class="collection-item avatar">
-                    <img src="images/ot.jpg" draggable="false" alt="" class="circle">
-                    <a href="https://t.me/lcofftopic" class="black-text"><span class="title">Lawnchair OT Telegram Group</span>
-          <p>This is the place (and the ONLY place) to talk about whatever the heck you'd like.
-          </p></a>
-                </li>
-            </ul>
-        </div>
-
-    </div>
-    <footer class="page-footer white">
-        <div class="footer-copyright" style="background-color: #00C853">
-            <div class="container" style="margin-bottom: -5px;">
-                <div class="chip" style="background-color: #01b54c">Website by <a class="white-text" href="https://twitter.com/jacksonhvisuals"><b>Jackson Hayes</b></a> — Hosted by <a class="white-text" href="https://www.razex.de"><b>Razex.de</b></a> — Public Analytics on <a class="white-text" href="https://simpleanalytics.com/lawnchair.app"><b>Simple Analytics</b></a> </div>
-            </div>
-        </div>
+      </section>
+    </main>
+    <footer>
+      <span
+        >Website by
+        <a href="https://superdragonxd.rf.gd">SuperDragonXD</a>. Icons in
+        links section are from
+        <a href="https://www.flaticon.com">Flaticons</a>. Analytics on Public Analytics on <a href="https://simpleanalytics.com/lawnchair.app">Simple Analytics</b></span
+      >
     </footer>
-
-    <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-    <script>
-        window.mdc.autoInit();
-    </script>
-    <script>
-        $(document).ready(function() {
-            $('.modal').modal();
-        });
-
-        const MDCDialog = mdc.dialog.MDCDialog;
-        const MDCDialogFoundation = mdc.dialog.MDCDialogFoundation;
-        const util = mdc.dialog.util;
-
-        // Till Modal
-        var dialogTill = new mdc.dialog.MDCDialog(document.querySelector('#dialog-till'));
-
-        dialogTill.listen('MDCDialog:accept', function() {
-            dialogTill.close();
-            console.log('accepted');
-        })
-
-        dialogTill.listen('MDCDialog:cancel', function() {
-            console.log('canceled');
-        })
-
-        document.querySelector('#tillModal').addEventListener('click', function(evt) {
-            dialogTill.lastFocusedTarget = evt.target;
-            dialogTill.show();
-        })
-
-        // paphonb modal
-        var dialogPap = new mdc.dialog.MDCDialog(document.querySelector('#dialog-pap'));
-
-        dialogPap.listen('MDCDialog:accept', function() {
-            dialogTill.close();
-            console.log('accepted');
-        })
-
-        dialogPap.listen('MDCDialog:cancel', function() {
-            console.log('canceled');
-        })
-
-        document.querySelector('#papModal').addEventListener('click', function(evt) {
-            dialogPap.lastFocusedTarget = evt.target;
-            dialogPap.show();
-        })
-
-        // Jozsef modal
-        var dialogJoz = new mdc.dialog.MDCDialog(document.querySelector('#dialog-jozsef'));
-
-        dialogJoz.listen('MDCDialog:accept', function() {
-            dialogJoz.close();
-            console.log('accepted');
-        })
-
-        dialogJoz.listen('MDCDialog:cancel', function() {
-            console.log('canceled');
-        })
-
-        document.querySelector('#jozsefModal').addEventListener('click', function(evt) {
-            dialogJoz.lastFocusedTarget = evt.target;
-            dialogJoz.show();
-        })
-
-        // David modal
-        var dialogDavid = new mdc.dialog.MDCDialog(document.querySelector('#dialog-david'));
-
-        dialogDavid.listen('MDCDialog:accept', function() {
-            dialogDavid.close();
-            console.log('accepted');
-        })
-
-        dialogDavid.listen('MDCDialog:cancel', function() {
-            console.log('canceled');
-        })
-
-        document.querySelector('#davidModal').addEventListener('click', function(evt) {
-            dialogDavid.lastFocusedTarget = evt.target;
-            dialogDavid.show();
-        })
-
-        // Joshua modal
-        var dialogJoshua = new mdc.dialog.MDCDialog(document.querySelector('#dialog-joshua'));
-
-        dialogJoshua.listen('MDCDialog:accept', function() {
-            dialogJoshua.close();
-            console.log('accepted');
-        })
-
-        dialogJoshua.listen('MDCDialog:cancel', function() {
-            console.log('canceled');
-        })
-
-        document.querySelector('#joshuaModal').addEventListener('click', function(evt) {
-            dialogJoshua.lastFocusedTarget = evt.target;
-            dialogJoshua.show();
-        })
-
-        // Chris modal
-        var dialogChris = new mdc.dialog.MDCDialog(document.querySelector('#dialog-chris'));
-
-        dialogChris.listen('MDCDialog:accept', function() {
-            dialogChris.close();
-            console.log('accepted');
-        })
-
-        dialogChris.listen('MDCDialog:cancel', function() {
-            console.log('canceled');
-        })
-
-        document.querySelector('#chrisModal').addEventListener('click', function(evt) {
-            dialogChris.lastFocusedTarget = evt.target;
-            dialogChris.show();
-        })
-
-    </script>
-    <script async defer src="https://cdn.simpleanalytics.io/hello.js"></script> 
-    <noscript><img src="https://api.simpleanalytics.io/hello.gif" alt="" aria-hidden="true"></noscript>
-</body>
-
+    <script src="/assets/index.js" type="module"></script>
+	
+	<script
+      async
+      defer
+      src="https://scripts.simpleanalyticscdn.com/latest.js"
+    ></script>
+    <noscript>
+	   <img
+         src="https://queue.simpleanalyticscdn.com/noscript.gif"
+         alt=""
+         referrerpolicy="no-referrer-when-downgrade"
+       />
+	 </noscript>
+  </body>
 </html>
