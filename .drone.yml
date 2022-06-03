@@ -1,0 +1,13 @@
+pipeline:
+  upload:
+    image: cschlosser/drone-ftps:latest
+    secrets: [ ftp_username, ftp_password ]
+    hostname: vweb.codebucket.de
+    secure: false
+    dest_dir: /
+    src_dir: /
+    when:
+      branch: master
+      event: push
+
+branches: master
