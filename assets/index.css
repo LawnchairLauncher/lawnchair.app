@@ -18,6 +18,7 @@ body {
   --text-disabled: hsl(220deg 5% 10% / 60%);
 
   --footer-color: hsl(149deg 98% 40%);
+  --footer-color--darker: hsl(149deg 87% 37%);
 
   --lawnchair-background-color: hsl(209deg, 78%, 48%);
   --lawnchair-background: url(/assets/hero-background.svg);
@@ -211,6 +212,9 @@ footer span {
   display: block;
   margin: auto;
   width: 80%;
+  background: var(--footer-color--darker)
+  padding: 5px 10px;
+  border-radius: 20px;
 }
 
 footer a {
@@ -225,9 +229,13 @@ footer a {
     --accent-light: hsl(230deg 8% 15%);
     --accent-normal: hsl(240deg 4% 11%);
     --accent-dark: hsl(240deg 4% 7%);
+
     --text-color: hsl(240deg 4% 83%);
     --text-disabled: hsl(240deg 4% 77% / 60%);
+
     --footer-color: hsl(152deg 100% 10%);
+    --footer-color--darker: hsl(152deg 98% 14%);
+
     --lawnchair-background-color: hsl(209deg, 78%, 48%);
     --lawnchair-background: linear-gradient(rgb(0 0 0 / 70%), rgb(0 0 0 / 70%)), 
 	  url(/assets/hero-background.svg);
