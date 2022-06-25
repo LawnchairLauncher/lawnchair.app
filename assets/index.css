@@ -72,25 +72,6 @@ body {
   font-weight: 600;
 }
 
-.hero__content__download {
-  background: var(--accent-light);
-  color: var(--text-color);
-  text-decoration: none;
-  padding: 20px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.hero__content__download:hover,
-.hero__content__download:focus {
-  background: var(--accent-normal);
-}
-
-.hero__content__download:active {
-  background: var(--accent-normal);
-}
-
 .hero__right {
   margin-left: auto;
 }
@@ -130,6 +111,28 @@ body {
 
 .icon-button.disabled {
   color: var(--text-disabled);
+}
+
+.card__right a.card__button {
+  border-radius: 20px;
+  border: 1px solid var(--accent-light)
+}
+
+.card__right a.card__button.disabled, .card__right a.card__button.primary.disabled {
+  border: 0;
+  background: var(--text-disabled);
+}
+
+.card__right a.card__button.primary {
+  background: var(--accent-normal)
+}
+
+.card__right a.card__button.primary:hover {
+  background: var(--accent-dark)
+}
+
+.card.card__main {
+  flex-direction: column;
 }
 
 .about {
