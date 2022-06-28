@@ -233,6 +233,11 @@ footer a {
   text-decoration: none;
 }
 
+.about, .links, footer span {
+  max-width: 750px;
+}
+
+
 @media screen and (prefers-color-scheme: dark) {
   :root {
     --body-color: hsl(228deg 5% 10%);
