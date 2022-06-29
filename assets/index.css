@@ -236,7 +236,7 @@ footer a {
 .about,
 .links,
 footer span {
-  max-width: 750px;
+  max-width: 840px;
 }
 
 @media screen and (prefers-color-scheme: dark) {
