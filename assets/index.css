@@ -125,11 +125,11 @@ body {
 }
 
 .card__right a.card__button.primary {
-  background: var(--accent-normal)
+  background: var(--accent-normal);
 }
 
 .card__right a.card__button:not(.disabled).primary:hover {
-  background: var(--accent-dark)
+  background: var(--accent-dark);
 }
 
 .card.card__main {
@@ -233,10 +233,11 @@ footer a {
   text-decoration: none;
 }
 
-.about, .links, footer span {
+.about,
+.links,
+footer span {
   max-width: 750px;
 }
-
 
 @media screen and (prefers-color-scheme: dark) {
   :root {
@@ -254,8 +255,8 @@ footer a {
     --footer-color--darker: hsl(152deg 98% 14%);
 
     --lawnchair-background-color: hsl(209deg, 78%, 48%);
-    --lawnchair-background: linear-gradient(rgb(0 0 0 / 70%), rgb(0 0 0 / 70%)), 
-	  url(/assets/hero-background.svg);
+    --lawnchair-background: linear-gradient(rgb(0 0 0 / 70%), rgb(0 0 0 / 70%)),
+      url(/assets/hero-background.svg);
   }
 
   .hero__content {
@@ -318,7 +319,11 @@ footer a {
 }
 
 @media screen and (min-width: 1700px) and (max-height: 900px) {
-    section.hero {
-      background: linear-gradient(180deg, rgba(27,127,219,1) 30%, rgba(0,165,88,1) 100%);
-    }
+  section.hero {
+    background: linear-gradient(
+      180deg,
+      rgba(27, 127, 219, 1) 30%,
+      rgba(0, 165, 88, 1) 100%
+    );
+  }
 }
