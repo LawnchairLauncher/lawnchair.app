@@ -1,6 +1,6 @@
 html,
 body {
-  font-size: 18px;
+  font-size: 1.05em;
 }
 
 body {
@@ -33,10 +33,25 @@ header a.lawnchair__logo {
 
 h2 {
   font-weight: 700;
+  margin-block-start: 30px;
+  margin-block-end: 5px;
 }
 
-h3 {
+h2 + h3 {
+  margin-block-start: 0px;
+}
+
+h3,
+h4 {
   font-weight: 500;
+  margin-block-end: 5px;
+}
+
+h3 + p,
+h3 + ul,
+h4 + p,
+h4 + ol {
+  margin-block-start: 0;
 }
 
 a {
