@@ -1,0 +1,116 @@
+:root {
+  --body-color: hsl(0deg, 100%, 100%);
+  --accent-light: hsl(222deg, 100%, 98%);
+  --accent-normal: hsl(222deg, 100%, 90%);
+  --accent-dark: hsl(222deg, 100%, 85%);
+
+  --accent-normal--transparent: hsla(222deg 100% 90% / 25%);
+
+  --text-color: hsl(220deg, 5%, 10%);
+  --text-disabled: hsl(220deg 5% 10% / 60%);
+
+  --footer-color: hsl(149deg 98% 40%);
+  --footer-color--darker: hsl(149deg 87% 37%);
+
+  --lawnchair-background-color: hsl(209deg, 78%, 48%);
+  --lawnchair-background-color--lighter: hsl(209deg 70% 55%);
+  --lawnchair-background: url(/assets/hero-background.svg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:focus-visible {
+  outline: 1px solid var(--accent-normal);
+}
+
+/* Site basics */
+html,
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  line-height: 1.2;
+  font-weight: 400;
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+/* Header */
+header {
+  background-color: var(--lawnchair-background-color);
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  height: 50px;
+  display: flex;
+  transition: background 1s;
+  z-index: 20;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+header a img {
+  border-radius: 50%;
+}
+
+header a:hover {
+  border-bottom: 1px solid var(--accent-dark);
+  padding-bottom: 5px;
+}
+
+header > a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+header nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+nav a,
+nav span.active {
+  transition: all 0.4s;
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid #00000000;
+}
+
+nav span.active,
+nav a:hover {
+  border-color: var(--accent-dark);
+}
+
+nav span.active,
+nav a:active {
+  background: var(--accent-normal--transparent);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --body-color: hsl(228deg 5% 10%);
+    --accent-light: hsl(230deg 8% 15%);
+    --accent-normal: hsl(230deg 35% 35%);
+    --accent-dark: hsl(230deg 40% 40%);
+
+    --accent-normal--transparent: hsl(230deg 30% 35% / 25%);
+
+    --text-color: hsl(240deg 4% 83%);
+    --text-disabled: hsl(240deg 4% 77% / 60%);
+
+    --footer-color: hsl(152deg 100% 10%);
+    --footer-color--darker: hsl(152deg 98% 14%);
+
+    --lawnchair-background-color: hsl(206deg 81% 14%);
+    --lawnchair-background-color--lighter: hsl(206deg 78% 20%);
+    --lawnchair-background: linear-gradient(rgb(0 0 0 / 70%), rgb(0 0 0 / 70%)),
+      url(/assets/hero-background.svg);
+  }
+}

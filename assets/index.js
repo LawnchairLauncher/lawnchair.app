@@ -3,6 +3,13 @@ import { Octokit } from "https://cdn.skypack.dev/@octokit/core";
 const octokit = new Octokit();
 
 const getLatestRelease = async (repo) => {
+  const urlParams = new URLSearchParams(window.location.search);
+
+  if (urlParams.get("disabledownloads")) {
+    console.log("Disabled downloads due to flag <code>disableDownloads</code>");
+    return null;
+  }
+
   try {
     const data = (
       await octokit.request("GET /repos/{owner}/{repo}/releases", {
