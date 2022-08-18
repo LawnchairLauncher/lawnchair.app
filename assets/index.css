@@ -31,6 +31,8 @@ main > * {
 }
 
 .hero__notice {
+  display: none;
+
   background: var(--accent-light);
   color: var(--text-color);
   padding: 20px;

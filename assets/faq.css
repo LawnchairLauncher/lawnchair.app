@@ -1,6 +1,7 @@
 html,
 body {
   font-size: 1.05em;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -15,6 +16,11 @@ body {
   padding-bottom: 60px;
 }
 
+header,
+header a.lawnchair__logo {
+  color: white;
+}
+
 main {
   background: var(--accent-light);
   color: var(--text-color);
@@ -26,38 +32,27 @@ main {
   margin-top: 10px;
 }
 
-header,
-header a.lawnchair__logo {
-  color: white;
-}
-
-h2 {
-  font-weight: 700;
-  margin-block-start: 30px;
-  margin-block-end: 5px;
-}
-
-h2 + h3 {
-  margin-block-start: 0px;
-}
-
-h3,
-h4 {
-  font-weight: 500;
-  margin-block-end: 5px;
-}
-
-h3 + p,
-h3 + ul,
-h4 + p,
-h4 + ol {
+:is(h3, h4) + :is(p, ul, ol) {
   margin-block-start: 0;
+}
+
+:is(h2, h3, h4):target,
+:is(h2, h3, h4):target + :is(p, ul) {
+  animation: highlight 2s ease;
 }
 
 a {
   color: #0400ff;
   text-decoration: none;
   outline-offset: 4px;
+}
+
+:is(h2, h3, h4) a:is(:visited, :link) {
+  color: var(--text-disabled);
+}
+
+:is(h2, h3, h4) a:is(:active, :hover) {
+  color: var(--text-color);
 }
 
 a:hover {
@@ -72,19 +67,92 @@ a:visited {
   color: #5600ff;
 }
 
+#toc:not(:empty) {
+  border: 2px solid var(--accent-normal);
+  border-radius: 20px;
+  max-width: 300px;
+  float: right;
+  margin-left: 20px;
+}
+
+#toc :is(p, ul) {
+  padding: 10px;
+}
+
+#toc p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-block: 0;
+}
+
+#toc button {
+  background: none;
+  border: 1px solid var(--accent-dark);
+  border-radius: 20px;
+  color: var(--text-color);
+  padding: 5px 7px;
+}
+
+#toc button:hover {
+  background: var(--accent-normal);
+}
+
+#toc > ul {
+  border-top: 2px solid var(--accent-normal);
+}
+
+#toc ul {
+  margin: 0;
+  padding-inline-start: 20px;
+  list-style-type: decimal;
+  color: var(--text-disabled);
+}
+
+#toc.collapsed ul {
+  display: none;
+}
+
+#toc ul a {
+  color: var(--text-color);
+}
+
+h2 {
+  font-weight: 700;
+  margin-block-start: 30px;
+  margin-block-end: 5px;
+}
+
+h3,
+h4 {
+  font-weight: 500;
+  margin-block-end: 5px;
+}
+
+h2 + h3 {
+  margin-block-start: 0px;
+}
+
+@keyframes highlight {
+  0% {
+    background: var(--accent-dark);
+    border-left: 2px solid var(--accent-dark);
+  }
+  100% {
+    background: unset;
+    border-left: 0;
+  }
+}
+
 code {
   word-break: break-word;
 }
 
 @media screen and (prefers-color-scheme: dark) {
   html:root {
-    /* The reversation of the values are intentional. */
     --lawnchair-background-color: hsl(206deg 78% 20%);
     --lawnchair-background-color--lighter: hsl(206deg 78% 34%);
-  }
-
-  header {
-    filter: brightness(75%);
   }
 
   a {
@@ -93,5 +161,13 @@ code {
 
   a:visited {
     color: #a54aff;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #toc:not(:empty) {
+    float: none;
+    max-width: none;
+    margin: 0;
   }
 }
