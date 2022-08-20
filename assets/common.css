@@ -1,6 +1,7 @@
 :root {
   --body-color: hsl(0deg, 100%, 100%);
-  --accent-light: hsl(222deg, 100%, 98%);
+  --accent-lighter: hsl(222deg, 100%, 98%);
+  --accent-light: hsl(222deg, 100%, 95%);
   --accent-normal: hsl(222deg, 100%, 90%);
   --accent-dark: hsl(222deg, 100%, 85%);
 
@@ -19,10 +20,12 @@
 
 * {
   box-sizing: border-box;
+  transition: outline 0s;
 }
 
 *:focus-visible {
-  outline: 1px solid var(--accent-normal);
+  outline: 1px solid var(--text-color);
+  border-radius: 20px;
 }
 
 /* Site basics */
@@ -52,13 +55,8 @@ header a {
   text-decoration: none;
 }
 
-header a img {
+header > a img {
   border-radius: 50%;
-}
-
-header a:hover {
-  border-bottom: 1px solid var(--accent-dark);
-  padding-bottom: 5px;
 }
 
 header > a {
@@ -68,6 +66,10 @@ header > a {
   font-weight: 700;
 }
 
+header > a:hover {
+  border-bottom: 1px solid var(--accent-dark);
+}
+
 header nav {
   margin-left: auto;
   display: flex;
@@ -75,28 +77,26 @@ header nav {
   margin-right: 10px;
 }
 
-nav a,
-nav span.active {
-  transition: all 0.4s;
+header nav a {
+  transition: all 0.2s;
   border-radius: 20px;
   padding: 10px;
   border: 1px solid #00000000;
 }
 
-nav span.active,
-nav a:hover {
+header nav a:hover {
   border-color: var(--accent-dark);
 }
 
-nav span.active,
-nav a:active {
+header nav a:active {
   background: var(--accent-normal--transparent);
 }
 
 @media screen and (prefers-color-scheme: dark) {
   :root {
     --body-color: hsl(228deg 5% 10%);
-    --accent-light: hsl(230deg 8% 15%);
+    --accent-lighter: hsl(230deg 8% 15%);
+    --accent-light: hsl(230deg 8% 25%);
     --accent-normal: hsl(230deg 35% 35%);
     --accent-dark: hsl(230deg 40% 40%);
 

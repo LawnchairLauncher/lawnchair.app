@@ -12,7 +12,7 @@ body {
   background-size: cover;
   min-height: 100vh;
   max-height: 100%;
-  color: var(--accent-light);
+  color: var(--accent-lighter);
   padding-bottom: 60px;
 }
 
@@ -22,7 +22,7 @@ header a.lawnchair__logo {
 }
 
 main {
-  background: var(--accent-light);
+  background: var(--accent-lighter);
   color: var(--text-color);
   padding: 20px;
   border-radius: 20px;
@@ -150,11 +150,6 @@ code {
 }
 
 @media screen and (prefers-color-scheme: dark) {
-  html:root {
-    --lawnchair-background-color: hsl(206deg 78% 20%);
-    --lawnchair-background-color--lighter: hsl(206deg 78% 34%);
-  }
-
   a {
     color: #5996ff;
   }
