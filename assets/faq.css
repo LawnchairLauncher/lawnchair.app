@@ -1,10 +1,19 @@
 html,
 body {
   font-size: 1.05em;
-  scroll-behavior: smooth;
 }
 
-body {
+header,
+header a.lawnchair__logo {
+  color: white;
+  font-size: 0.95em;
+}
+header > nav > a:is(:visited, :link) {
+  color: white;
+  border-bottom-style: solid;
+}
+
+main {
   background-image: var(--lawnchair-background);
   background-color: var(--lawnchair-background-color);
   background-repeat: no-repeat;
@@ -12,47 +21,24 @@ body {
   background-size: cover;
   min-height: 100vh;
   max-height: 100%;
-  color: var(--accent-lighter);
-  padding-bottom: 60px;
+  color: var(--accent-background);
+  padding-bottom: 10px;
 }
 
-header,
-header a.lawnchair__logo {
-  color: white;
-}
-
-main {
-  background: var(--accent-lighter);
+main > div {
+  background: var(--accent-background);
   color: var(--text-color);
   padding: 20px;
   border-radius: 20px;
   width: 90%;
   max-width: 1000px;
   margin: auto;
-  margin-top: 10px;
-}
-
-:is(h3, h4) + :is(p, ul, ol) {
-  margin-block-start: 0;
-}
-
-:is(h2, h3, h4):target,
-:is(h2, h3, h4):target + :is(p, ul) {
-  animation: highlight 2s ease;
 }
 
 a {
   color: #0400ff;
   text-decoration: none;
   outline-offset: 4px;
-}
-
-:is(h2, h3, h4) a:is(:visited, :link) {
-  color: var(--text-disabled);
-}
-
-:is(h2, h3, h4) a:is(:active, :hover) {
-  color: var(--text-color);
 }
 
 a:hover {
@@ -73,6 +59,8 @@ a:visited {
   max-width: 300px;
   float: right;
   margin-left: 20px;
+  background: var(--accent-background);
+  z-index: 30;
 }
 
 #toc :is(p, ul) {
@@ -85,22 +73,29 @@ a:visited {
   justify-content: space-between;
   gap: 10px;
   margin-block: 0;
+  border-bottom: 2px solid var(--accent-normal);
+}
+
+#toc span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 #toc button {
   background: none;
-  border: 1px solid var(--accent-dark);
+  border: 1px solid var(--accent-normal);
   border-radius: 20px;
   color: var(--text-color);
   padding: 5px 7px;
 }
 
 #toc button:hover {
-  background: var(--accent-normal);
+  background: var(--accent-light);
 }
 
-#toc > ul {
-  border-top: 2px solid var(--accent-normal);
+#toc button:active {
+  background: var(--accent-dark);
 }
 
 #toc ul {
@@ -112,6 +107,10 @@ a:visited {
 
 #toc.collapsed ul {
   display: none;
+}
+
+#toc.collapsed p {
+  border: 0;
 }
 
 #toc ul a {
@@ -134,14 +133,35 @@ h2 + h3 {
   margin-block-start: 0px;
 }
 
+:is(h3, h4) + :is(p, ul, ol) {
+  margin-block-start: 0;
+}
+
+:is(h2, h3, h4):target {
+  animation: highlight 2s ease;
+}
+
+:is(h2, h3, h4) a:is(:visited, :link) {
+  color: var(--text-color);
+}
+
+:is(h2, h3, h4) a:is(:active, :hover):after {
+  color: var(--text-disabled);
+  content: "#";
+  display: inline-flex;
+  font-size: 0.7em;
+  line-height: 1;
+  margin-left: 4px;
+  text-decoration: none;
+}
+
+
 @keyframes highlight {
   0% {
     background: var(--accent-dark);
-    border-left: 2px solid var(--accent-dark);
   }
   100% {
     background: unset;
-    border-left: 0;
   }
 }
 

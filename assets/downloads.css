@@ -1,0 +1,117 @@
+html,
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  background-image: var(--lawnchair-background);
+  background-color: var(--lawnchair-background-color);
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+  height: 100%;
+  padding-bottom: 10px;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.card {
+  background: var(--accent-background);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 20px;
+  width: 500px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.card__name {
+  font-size: 1.1em;
+  margin: 0;
+  font-weight: 600;
+}
+
+.card__right a {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 5px;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.card__right a.disabled {
+  cursor: not-allowed;
+}
+
+.card__right .icon-button.disabled {
+  color: var(--text-disabled);
+}
+
+.card__right .icon-button:not(.disabled):hover {
+  background: var(--accent-light);
+}
+
+.card__right .icon-button:not(.disabled):active {
+  background: var(--accent-normal);
+}
+
+.card__right a.card__button {
+  padding: 10px;
+  border: 1px solid var(--accent-normal);
+}
+
+.card__right a.card__button.primary {
+  background: var(--accent-normal);
+}
+
+.card__right a.card__button.disabled {
+  background: var(--accent-light);
+  border-color: var(--accent-light);
+}
+
+.card__right a.card__button:not(.disabled).primary:hover {
+  border-color: var(--accent-dark);
+}
+
+.card__right a.card__button:not(.disabled).primary:active {
+  background: var(--accent-dark);
+}
+
+.card__right a.card__button:not(.disabled):not(.primary):hover {
+  background: var(--accent-normal--transparent);
+}
+
+.card__right a.card__button:not(.disabled):not(.primary):active {
+  background: var(--accent-light);
+  border-color: var(--accent-dark);
+}
+
+.card.card__main {
+  gap: 10px;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 100px
+}
+
+.card.card__main .card__right {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.card__main h2.card__name {
+  font-size: 1.3em;
+}
+
+@media screen and (max-width: 700px) {
+  .card {
+    width: 70%
+  }
+}

@@ -37,8 +37,8 @@
     <meta name="msapplication-TileColor" content="#15c666" />
     <meta name="theme-color" content="#02d663" />
 
-    <link href="/assets/index.css?foobar" rel="stylesheet" />
-    <link href="/assets/common.css?foobar" rel="stylesheet" />
+    <link href="/assets/common.css?qwertyuiop" rel="stylesheet" />
+    <link href="/assets/index.css?qwertyuiop" rel="stylesheet" />
 
     <script type="application/ld+json">
       {
@@ -49,7 +49,7 @@
         "applicationCategory": "DesktopEnhancementApplication",
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": "4.5",
+          "ratingValue": "4.3",
           "ratingCount": "35200"
         },
         "offers": {
@@ -62,19 +62,20 @@
   </head>
   <body>
     <header>
-      <a href="/" class="lawnchair__logo">
+      <!--       <a href="#" class="lawnchair__logo">
         <picture>
-          <source type="image/webp" srcset="/assets/lawnchair.webp" />
+          <source type="image/webp" srcset="/images/lawnchair.webp" />
           <img
-            src="/assets/lawnchair.png"
+            src="/images/lawnchair.png"
             width="30"
             height="30"
             alt="The Lawnchair Logo"
           />
         </picture>
         <span>Lawnchair</span>
-      </a>
+      </a> -->
       <nav>
+        <a href="/downloads">Downloads</a>
         <a href="/faq">FAQ</a>
       </nav>
     </header>
@@ -88,10 +89,10 @@
         <div class="hero__wrapper">
           <div class="hero__left hero__content">
             <picture>
-              <source type="image/webp" srcset="/assets/lawnchair.webp" />
+              <source type="image/webp" srcset="/images/lawnchair.webp" />
               <img
                 class="hero__content__icon"
-                src="/assets/lawnchair.png"
+                src="/images/lawnchair.png"
                 width="150"
                 height="150"
                 alt="The Lawnchair Logo"
@@ -101,80 +102,52 @@
             <div class="hero__content__description">
               No clever tagline needed.
             </div>
-          </div>
-          <div class="hero__right hero__downloads">
-            <!-- Card 1 -->
-            <div class="card card__main">
-              <div class="card__left">
-                <h2 class="card__name">Lawnchair</h2>
-                <span class="card__version" id="js-lawnchair-version"
-                  >Loading...</span
+            <div class="hero__content__downloads">
+              <a href="/downloads" class="button primary">
+                <span class="icon-button material-symbols-outlined"
+                  >download</span
                 >
-              </div>
-              <div class="card__right">
-                <a
-                  id="js-lawnchair-download"
-                  class="card__button primary disabled"
-                  >Download</a
+                Download Lawnchair 12.1
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=ch.deletescape.lawnchair.plah"
+                class="button"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="#000000"
+                  stroke-width="12"
+                  version="1.1"
+                  id="svg67"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:svg="http://www.w3.org/2000/svg"
                 >
-                <a
-                  class="card__button"
-                  href="https://github.com/lawnchairlauncher/lawnchair/releases"
-                  >History</a
-                >
-              </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="card">
-              <div class="card__left">
-                <h2 class="card__name">Lawnfeed</h2>
-                <span class="card__version" id="js-lawnfeed-version"
-                  >Loading...</span
-                >
-              </div>
-              <div class="card__right">
-                <a
-                  id="js-lawnfeed-download"
-                  class="icon-button material-symbols-outlined disabled"
-                  >download</a
-                >
-                <a
-                  class="icon-button material-symbols-outlined"
-                  href="https://github.com/lawnchairlauncher/lawnfeed/releases"
-                  >history</a
-                >
-              </div>
-            </div>
-            <!-- Card 3-->
-            <div class="card">
-              <div class="card__left">
-                <h2 class="card__name">Lawnicons</h2>
-                <span class="card__version" id="js-lawnicons-version"
-                  >Loading...</span
-                >
-              </div>
-              <div class="card__right">
-                <a
-                  id="js-lawnicons-download"
-                  class="icon-button material-symbols-outlined disabled"
-                  >download</a
-                >
-                <a
-                  class="icon-button material-symbols-outlined"
-                  href="https://github.com/lawnchairlauncher/lawnicons/releases"
-                  >history</a
-                >
-              </div>
+                  <defs id="defs71" />
+                  <path
+                    d="M 3.6429272,3.9676769 V 20.031943 a 1.3975569,1.3975569 0 0 0 2.095317,1.210961 L 19.683265,13.207461 a 1.3936111,1.3936111 0 0 0 0,-2.414922 L 5.7382442,2.7570969 a 1.3975569,1.3975569 0 0 0 -2.095317,1.210834 z"
+                    id="path63"
+                    style="stroke-width: 1.52738"
+                  />
+                  <path
+                    d="M 3.7702092,19.636605 15.225593,8.1812219 M 3.7702092,4.3627599 15.225593,15.818143"
+                    id="path65"
+                    style="stroke-width: 1.52738"
+                  />
+                </svg>
+                View Lawnchair 2
+              </a>
             </div>
           </div>
         </div>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <picture>
-          <source type="image/webp" srcset="/assets/phone.webp" />
+          <source type="image/webp" srcset="/images/phone.webp" />
           <img
             class="about__image"
-            src="/assets/phone.png"
+            src="/images/phone.png"
             alt="A screenshot of a user using Lawnchair for their home screen."
             width="300"
             height="600"
@@ -183,11 +156,58 @@
         <div class="about__info">
           <h2 class="about__header">No clever tagline needed</h2>
           <div class="about__description">
-            Yup. Get it? Lawnchair. It's a bad pun, we know. Lawnchair is a
-            supercharged version of the Pixel Launcher you know and love. Being
-            an open-source project, you get all the latest Pixel Launcher
-            features shipped by Google in their latest Android release, plus
-            added customisablity. The best part? No root required!
+            Yup. Get it?
+            <span title="A pun of the word Launcher, if you didn't get it..."
+              >Lawnchair</span
+            >. It's a bad pun, we know. Lawnchair is a supercharged version of
+            the Pixel Launcher you know and love. Being an open-source project,
+            you get all the latest Pixel Launcher features shipped by Google in
+            their latest Android release, plus added customisablity. The best
+            part? No root required!
+          </div>
+        </div>
+      </section>
+      <section class="features">
+        <h2 class="features__header">Features</h2>
+        <div class="features__container">
+          <div class="feature">
+            <span class="material-symbols-outlined">smartphone</span>
+            <h3>Customizable Pixel Launcher</h3>
+            <p>
+              Lawnchair has a design similar to the Pixel Launcher, with added
+              customizability.
+            </p>
+          </div>
+          <div class="feature">
+            <span class="material-symbols-outlined">android</span>
+            <h3>Latest Android features</h3>
+            <p>
+              Lawnchair has the latest Android features, like Material You and
+              the new At a Glance widget.
+            </p>
+          </div>
+          <div class="feature">
+            <svg
+              width="192"
+              height="192"
+              fill="currentColor"
+              viewbox="0 0 192 192"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m60 32h72v128h-72zm92 108h18v-88l-18-2e-6m-112 88h-18v-88l18 2e-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="12"
+              />
+            </svg>
+            <h3>QuickSwitch support</h3>
+            <p>
+              Lawnchair has support for QuickSwitch, a Magisk module that adds
+              Recents customization.
+            </p>
           </div>
         </div>
       </section>
@@ -204,7 +224,7 @@
             href="https://github.com/LawnchairLauncher/lawnchair"
           >
             <img
-              src="/assets/github.svg"
+              src="/images/github.svg"
               alt=""
               class="dark-invert"
               height="50"
@@ -213,16 +233,21 @@
           </a>
 
           <a class="link__card" href="https://twitter.com/lawnchairapp">
-            <img src="/assets/twitter.svg" alt="" height="50" />
+            <img src="/images/twitter.svg" alt="" height="50" />
             <span>Twitter</span></a
           >
+<<<<<<< Updated upstream
           <a class="link__card" href="https://t.me/lccommunity"
             ><img src="/assets/telegram.svg" alt="" height="50" /><span
+=======
+          <a class="link__card" href="https://t.me/lawnchair"
+            ><img src="/images/telegram.svg" alt="" height="50" /><span
+>>>>>>> Stashed changes
               >Telegram</span
             ></a
           >
           <a class="link__card" href="https://discord.gg/3x8qNWxgGZ"
-            ><img src="/assets/discord.svg" alt="" height="50" /><span
+            ><img src="/images/discord.svg" alt="" height="50" /><span
               >Discord</span
             ></a
           >
@@ -230,18 +255,18 @@
             class="link__card"
             href="https://forum.xda-developers.com/t/lawnchair-customizable-pixel-launcher.3627137/"
           >
-            <img src="/assets/xda.svg" alt="" height="50" />
+            <img src="/images/xda.svg" alt="" height="50" />
             <span>XDA</span>
           </a>
           <a class="link__card" href="/faq">
-            <img src="/assets/faq.svg" alt="" height="50" />
+            <img src="/images/faq.svg" alt="" height="50" />
             <span>FAQ</span>
           </a>
           <a
             class="link__card"
             href="https://github.com/LawnchairLauncher/lawnchair/wiki"
           >
-            <img src="/assets/wiki.svg" alt="" height="50" />
+            <img src="/images/wiki.svg" alt="" height="50" />
             <span>Wiki</span>
           </a>
         </div>
@@ -252,13 +277,11 @@
         >Website by
         <a href="https://superdragonxd.github.io/">SuperDragonXD</a> - Hosted by
         <a href="https://razex.de">Razex.de</a> - Public Analytics on
-        <a href="https://simpleanalytics.com/lawnchair.app"
-          >Simple Analytics</a
-        ></span
+        <a href="https://simpleanalytics.com/lawnchair.app">Simple Analytics</a>
+        - View <a href="/privacy_policy">Privacy Policy</a></span
       >
     </footer>
-    <script src="/assets/index.js?foobar" type="module"></script>
-    <script src="/assets/common.js?foobar" type="module"></script>
+    <script src="/assets/common.js?qwertyuiop"></script>
 
     <script
       async

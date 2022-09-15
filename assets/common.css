@@ -1,9 +1,10 @@
 :root {
   --body-color: hsl(0deg, 100%, 100%);
-  --accent-lighter: hsl(222deg, 100%, 98%);
+  --accent-background: hsl(222deg, 100%, 98%);
   --accent-light: hsl(222deg, 100%, 95%);
   --accent-normal: hsl(222deg, 100%, 90%);
-  --accent-dark: hsl(222deg, 100%, 85%);
+  --accent-dark: hsl(226deg 100% 85%);
+  --accent-darker: hsl(230deg 100% 80%);
 
   --accent-normal--transparent: hsla(222deg 100% 90% / 25%);
 
@@ -15,7 +16,33 @@
 
   --lawnchair-background-color: hsl(209deg, 78%, 48%);
   --lawnchair-background-color--lighter: hsl(209deg 70% 55%);
-  --lawnchair-background: url(/assets/hero-background.svg);
+  --lawnchair-background: url(/images/hero-background.svg);
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+#toc::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--accent-light);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-button {
+  visibility: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-normal);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-dark);
 }
 
 * {
@@ -28,7 +55,6 @@
   border-radius: 20px;
 }
 
-/* Site basics */
 html,
 body {
   font-family: "IBM Plex Sans", sans-serif;
@@ -36,6 +62,8 @@ body {
   font-weight: 400;
   background-color: var(--body-color);
   color: var(--text-color);
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
 }
 
 /* Header */
@@ -75,6 +103,7 @@ header nav {
   display: flex;
   align-items: center;
   margin-right: 10px;
+  gap: 5px;
 }
 
 header nav a {
@@ -84,21 +113,51 @@ header nav a {
   border: 1px solid #00000000;
 }
 
-header nav a:hover {
+header nav a:hover,
+header nav a.active {
   border-color: var(--accent-dark);
 }
 
-header nav a:active {
+header nav a:active,
+header nav a.active {
   background: var(--accent-normal--transparent);
+}
+
+/* Footer */
+footer {
+  background: var(--footer-color);
+  padding: 10px;
+}
+
+footer span {
+  display: block;
+  margin: auto;
+  width: 80%;
+  background: var(--footer-color--darker);
+  padding: 10px;
+  border-radius: 20px;
+  max-width: 840px;
+}
+
+footer a,
+footer a:visited {
+  font-weight: 450;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (prefers-color-scheme: dark) {
   :root {
     --body-color: hsl(228deg 5% 10%);
-    --accent-lighter: hsl(230deg 8% 15%);
-    --accent-light: hsl(230deg 8% 25%);
+    --accent-background: hsl(230deg 8% 15%);
+    --accent-light: hsl(230deg 35% 25%);
     --accent-normal: hsl(230deg 35% 35%);
-    --accent-dark: hsl(230deg 40% 40%);
+    --accent-dark: hsl(225deg 40% 40%);
+    --accent-darker: hsl(220deg 50% 50%);
 
     --accent-normal--transparent: hsl(230deg 30% 35% / 25%);
 
@@ -111,6 +170,12 @@ header nav a:active {
     --lawnchair-background-color: hsl(206deg 81% 14%);
     --lawnchair-background-color--lighter: hsl(206deg 78% 20%);
     --lawnchair-background: linear-gradient(rgb(0 0 0 / 70%), rgb(0 0 0 / 70%)),
-      url(/assets/hero-background.svg);
+      url(/images/hero-background.svg);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header > a span {
+    display: none;
   }
 }
