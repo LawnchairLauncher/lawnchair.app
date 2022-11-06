@@ -1,16 +1,16 @@
-html,
-body {
-  font-size: 1.05em;
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-header,
-header a.lawnchair__logo {
-  color: white;
-  font-size: 0.95em;
+main>* {
+  flex: 1 1 fit-content;
 }
-header > nav > a:is(:visited, :link) {
-  color: white;
-  border-bottom-style: solid;
+
+main>*:not(:first-child) {
+  font-size: 1.2em;
 }
 
 main {
@@ -25,10 +25,10 @@ main {
   padding-bottom: 10px;
 }
 
-main > div {
+main>div {
   background: var(--accent-background);
   color: var(--text-color);
-  padding: 20px;
+  padding: 12px 40px;
   border-radius: 20px;
   width: 90%;
   max-width: 1000px;
@@ -41,15 +41,15 @@ a {
   outline-offset: 4px;
 }
 
-a:hover {
+a:hover:not(.lawnchair__logo) :not(#nav) {
   border-bottom: 1px dashed;
 }
 
-a:active {
+a:active:not(.lawnchair__logo) :not(#nav) {
   background: #11111111;
 }
 
-a:visited {
+a:visited:not(.lawnchair__logo) :not(#nav) {
   color: #5600ff;
 }
 
@@ -64,7 +64,7 @@ a:visited {
 }
 
 #toc :is(p, ul) {
-  padding: 10px;
+  padding: 8px 10px;
 }
 
 #toc p {
@@ -80,6 +80,7 @@ a:visited {
   display: flex;
   align-items: center;
   gap: 10px;
+  padding: 0 8px;
 }
 
 #toc button {
@@ -87,7 +88,7 @@ a:visited {
   border: 1px solid var(--accent-normal);
   border-radius: 20px;
   color: var(--text-color);
-  padding: 5px 7px;
+  padding: 6px 16px;
 }
 
 #toc button:hover {
@@ -129,11 +130,11 @@ h4 {
   margin-block-end: 5px;
 }
 
-h2 + h3 {
+h2+h3 {
   margin-block-start: 0px;
 }
 
-:is(h3, h4) + :is(p, ul, ol) {
+:is(h3, h4)+ :is(p, ul, ol) {
   margin-block-start: 0;
 }
 
@@ -160,6 +161,7 @@ h2 + h3 {
   0% {
     background: var(--accent-dark);
   }
+
   100% {
     background: unset;
   }

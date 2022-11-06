@@ -22,7 +22,7 @@ img {
 .card {
   background: var(--accent-background);
   color: var(--text-color);
-  padding: 20px;
+  padding: 20px 24px;
   border-radius: 20px;
   width: 500px;
   align-items: center;
@@ -41,8 +41,8 @@ img {
 .card__right a {
   text-decoration: none;
   color: var(--text-color);
-  padding: 5px;
-  transition: 0.4s;
+  padding: 5px 10px;
+  transition: background 0.4s ease;
   border-radius: 20px;
 }
 
@@ -55,6 +55,7 @@ img {
 }
 
 .card__right .icon-button:not(.disabled):hover {
+  transition: background 0.4s ease;
   background: var(--accent-light);
 }
 
@@ -63,7 +64,7 @@ img {
 }
 
 .card__right a.card__button {
-  padding: 10px;
+  padding: 8px 20px;
   border: 1px solid var(--accent-normal);
 }
 
@@ -77,7 +78,7 @@ img {
 }
 
 .card__right a.card__button:not(.disabled).primary:hover {
-  border-color: var(--accent-dark);
+  background: var(--accent-dark);
 }
 
 .card__right a.card__button:not(.disabled).primary:active {
