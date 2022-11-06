@@ -102,14 +102,14 @@ header>a {
   font-weight: 700;
 
   transition: background 0.4s ease;
-  background-color: rgba(36, 224, 127, 0);
+  background-color: hsla(149, 75%, 51%, 0);
   padding: 6px 0;
   border-radius: 24px;
 }
 
 header>a:hover {
   transition: background 0.4s ease;
-  background-color: rgba(36, 224, 127, 0.4);
+  background-color: hsla(149, 75%, 51%, 0.4);
 }
 
 .lawnchair__logo img {
@@ -193,7 +193,7 @@ footer a:hover {
 
     --lawnchair-background-color: hsl(206deg 81% 14%);
     --lawnchair-background-color--lighter: hsl(206deg 78% 20%);
-    --lawnchair-background: linear-gradient(rgb(0 0 0 / 70%), rgb(0 0 0 / 70%)),
+    --lawnchair-background: linear-gradient(hsla(0, 0%, 0%, 0.7), hsla(0, 0%, 0%, 0.7)),
       url(/images/hero-background.svg);
   }
 }

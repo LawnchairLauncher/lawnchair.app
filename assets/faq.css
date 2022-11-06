@@ -33,6 +33,7 @@ main>div {
   width: 90%;
   max-width: 1000px;
   margin: auto;
+  line-height: 1.4em;
 }
 
 a {

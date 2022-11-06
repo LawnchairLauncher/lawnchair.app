@@ -314,16 +314,16 @@ main>section:not(:first-child) {
 @media screen and (min-width: 1700px) and (max-height: 900px) {
   section.hero {
     background: linear-gradient(180deg,
-        rgba(27, 127, 219, 1) 30%,
-        rgba(0, 165, 88, 1) 100%);
+        hsl(209, 78%, 48%) 30%,
+        hsl(152, 100%, 32%) 100%);
   }
 }
 
 @media screen and (min-width: 1700px) and (max-height: 900px) and (prefers-color-scheme: dark) {
   section.hero {
-    background: linear-gradient(rgb(0 0 0 / 70%), rgb(0 0 0 / 70%)),
+    background: linear-gradient(hsla(0, 0%, 0%, 0.7), hsla(0, 0%, 0%, 0.7)),
       linear-gradient(180deg,
-        rgba(27, 127, 219, 1) 30%,
-        rgba(0, 165, 88, 1) 100%);
+        hsl(209, 78%, 48%) 30%,
+        hsl(152, 100%, 32%) 100%);
   }
 }
