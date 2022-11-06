@@ -11,8 +11,8 @@
   --text-color: hsl(220deg, 5%, 10%);
   --text-disabled: hsl(220deg 5% 10% / 60%);
 
-  --footer-color: #24e07f;
-  --footer-color--darker: #00000018;
+  --footer-color: hsl(149, 75%, 51%);
+  --footer-color--darker: hsla(0, 0%, 0%, 0.094);
 
   --lawnchair-background-color: hsl(209deg, 78%, 48%);
   --lawnchair-background-color--lighter: hsl(209deg 70% 55%);
@@ -46,8 +46,8 @@
 }
 
 ::selection {
-  background-color: #00d663;
-  color: white;
+  background-color: hsl(148, 100%, 42%);
+  color: hsl(0, 0%, 100%);
 }
 
 * {
@@ -133,7 +133,7 @@ header nav a {
   transition: all 0.2s;
   border-radius: 20px;
   padding: 8px 16px;
-  border: 1px solid #00000000;
+  border: 1px solid hsla(0, 0%, 0%, 0);
 }
 
 header nav a:hover,
