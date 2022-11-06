@@ -133,7 +133,7 @@ header nav a {
   transition: all 0.2s;
   border-radius: 20px;
   padding: 8px 16px;
-  border: 1px solid hsla(0, 0%, 0%, 0);
+  border: 1px solid transparent;
 }
 
 header nav a:hover,

@@ -32,16 +32,21 @@ img {
   margin-bottom: 10px;
 }
 
+.card__right {
+  padding-top: 10px;
+}
+
 .card__name {
   font-size: 1.1em;
   margin: 0;
   font-weight: 600;
+  padding-top: 10px;
 }
 
 .card__right a {
   text-decoration: none;
   color: var(--text-color);
-  padding: 5px 10px;
+  padding: 5px 12px;
   transition: background 0.4s ease;
   border-radius: 20px;
 }
@@ -98,7 +103,8 @@ img {
   gap: 10px;
   flex-direction: column;
   text-align: center;
-  margin-top: 100px
+  margin-top: 80px;
+  padding: 40px 0px;
 }
 
 .card.card__main .card__right {

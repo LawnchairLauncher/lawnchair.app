@@ -37,7 +37,7 @@ main>div {
 }
 
 a {
-  color: #0400ff;
+  color: hsl(241, 100%, 50%);
   text-decoration: none;
   outline-offset: 4px;
 }
@@ -47,11 +47,11 @@ a:hover:not(.lawnchair__logo) :not(#nav) {
 }
 
 a:active:not(.lawnchair__logo) :not(#nav) {
-  background: #11111111;
+  background: hsla(0, 0%, 7%, 0.067);
 }
 
 a:visited:not(.lawnchair__logo) :not(#nav) {
-  color: #5600ff;
+  color: hsl(260, 100%, 50%);
 }
 
 #toc:not(:empty) {
@@ -174,11 +174,11 @@ code {
 
 @media screen and (prefers-color-scheme: dark) {
   a {
-    color: #5996ff;
+    color: hsl(218, 100%, 67%);
   }
 
   a:visited {
-    color: #a54aff;
+    color: hsl(270, 100%, 65%);
   }
 }
 
