@@ -11,8 +11,8 @@
   --text-color: hsl(220deg, 5%, 10%);
   --text-disabled: hsl(220deg 5% 10% / 60%);
 
-  --footer-color: hsl(149deg 98% 40%);
-  --footer-color--darker: hsl(149deg 87% 37%);
+  --footer-color: hsl(149, 75%, 51%);
+  --footer-color--darker: hsla(0, 0%, 0%, 0.094);
 
   --lawnchair-background-color: hsl(209deg, 78%, 48%);
   --lawnchair-background-color--lighter: hsl(209deg 70% 55%);
@@ -45,6 +45,11 @@
   background: var(--accent-dark);
 }
 
+::selection {
+  background-color: hsl(148, 100%, 42%);
+  color: hsl(0, 0%, 100%);
+}
+
 * {
   box-sizing: border-box;
   transition: outline 0s;
@@ -64,18 +69,21 @@ body {
   color: var(--text-color);
   scroll-behavior: smooth;
   scroll-padding-top: 60px;
+  margin: 0;
 }
 
 /* Header */
 header {
   background-color: var(--lawnchair-background-color);
-  padding: 10px;
+  padding: 14px;
   position: sticky;
   top: 0;
-  height: 50px;
+  height: 56px;
   display: flex;
+  align-items: center;
   transition: background 1s;
   z-index: 20;
+  color: white;
 }
 
 header a {
@@ -83,34 +91,49 @@ header a {
   text-decoration: none;
 }
 
-header > a img {
+header>a img {
   border-radius: 50%;
 }
 
-header > a {
+header>a {
   display: flex;
   align-items: center;
   gap: 10px;
   font-weight: 700;
+
+  transition: background 0.4s ease;
+  background-color: hsla(149, 75%, 51%, 0);
+  padding: 6px 0;
+  border-radius: 24px;
 }
 
-header > a:hover {
-  border-bottom: 1px solid var(--accent-dark);
+header>a:hover {
+  transition: background 0.4s ease;
+  background-color: hsla(149, 75%, 51%, 0.4);
+}
+
+.lawnchair__logo img {
+  height: 30px;
+  width: 30px;
+}
+
+.lawnchair__logo span {
+  padding-right: 14px;
 }
 
 header nav {
   margin-left: auto;
   display: flex;
   align-items: center;
-  margin-right: 10px;
+  /* margin-right: 10px; */
   gap: 5px;
 }
 
 header nav a {
   transition: all 0.2s;
   border-radius: 20px;
-  padding: 10px;
-  border: 1px solid #00000000;
+  padding: 8px 16px;
+  border: 1px solid transparent;
 }
 
 header nav a:hover,
@@ -126,16 +149,17 @@ header nav a.active {
 /* Footer */
 footer {
   background: var(--footer-color);
-  padding: 10px;
+  padding: 8px;
+  text-align: center;
 }
 
 footer span {
   display: block;
   margin: auto;
-  width: 80%;
-  background: var(--footer-color--darker);
-  padding: 10px;
+  background-color: var(--footer-color--darker);
   border-radius: 20px;
+  width: 80%;
+  padding: 10px 20px;
   max-width: 840px;
 }
 
@@ -169,13 +193,24 @@ footer a:hover {
 
     --lawnchair-background-color: hsl(206deg 81% 14%);
     --lawnchair-background-color--lighter: hsl(206deg 78% 20%);
-    --lawnchair-background: linear-gradient(rgb(0 0 0 / 70%), rgb(0 0 0 / 70%)),
+    --lawnchair-background: linear-gradient(hsla(0, 0%, 0%, 0.7), hsla(0, 0%, 0%, 0.7)),
       url(/images/hero-background.svg);
   }
 }
 
+@media screen and (max-width: 520px) {
+  footer {
+    font-size: .8em;
+  }
+
+  .lawnchair__logo {
+    gap: 0;
+    padding: 6px 6px;
+  }
+}
+
 @media screen and (max-width: 400px) {
-  header > a span {
+  header>a span {
     display: none;
   }
 }
