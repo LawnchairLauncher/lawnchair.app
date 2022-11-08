@@ -1,6 +1,7 @@
 :root {
   --body-color: hsl(0deg, 100%, 100%);
-  --accent-background: hsl(222deg, 100%, 98%);
+  --accent-background: hsl(222, 100%, 98%);
+  --section-background: hsla(209, 78%, 48%, 0.4);
   --accent-light: hsl(222deg, 100%, 95%);
   --accent-normal: hsl(222deg, 100%, 90%);
   --accent-dark: hsl(226deg 100% 85%);
@@ -20,7 +21,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 14px;
 }
 
 #toc::-webkit-scrollbar {
@@ -29,11 +30,10 @@
 
 ::-webkit-scrollbar-track {
   background: var(--accent-light);
-  border-radius: 20px;
 }
 
 ::-webkit-scrollbar-button {
-  visibility: hidden;
+  display: none;
 }
 
 ::-webkit-scrollbar-thumb {
