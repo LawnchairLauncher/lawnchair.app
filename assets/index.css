@@ -301,15 +301,11 @@ main>section:not(:first-child) {
   }
 
   .link__card {
-    /* flex: 1 1 auto;
-    min-width: -webkit-fill-available; */
+    min-width: -webkit-fill-available;
     min-width: fill-available;
     padding: 16px 20px;
   }
 
-  .link__card span {
-    display: none;
-  }
 
   .hero__content__downloads .button {
     width: fill-available;
