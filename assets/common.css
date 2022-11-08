@@ -1,3 +1,6 @@
+/* Global fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
   --body-color: hsl(0deg, 100%, 100%);
   --accent-background: hsl(222, 100%, 98%);
@@ -52,7 +55,6 @@
 
 * {
   box-sizing: border-box;
-  transition: outline 0s;
 }
 
 *:focus-visible {
@@ -62,14 +64,17 @@
 
 html,
 body {
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.2;
-  font-weight: 400;
   background-color: var(--body-color);
   color: var(--text-color);
   scroll-behavior: smooth;
   scroll-padding-top: 60px;
   margin: 0;
+}
+
+p {
+  font-weight: 300;
 }
 
 /* Header */
@@ -102,7 +107,7 @@ header>a {
   font-weight: 700;
   transition: background 0.4s ease;
   background-color: hsla(149, 75%, 51%, 0);
-  padding: 6px;
+  padding: 6px 10px 6px 6px;
   border-radius: 24px;
 }
 
@@ -111,9 +116,17 @@ header>a:hover {
   background-color: hsla(149, 75%, 51%, 0.4);
 }
 
-.lawnchair__logo img {
+header a, header a:visited, header a:hover, header a:active {
+  color: inherit;
+}
+
+.lawnchair__logo img, .lawnchair__logo picture {
   height: 30px;
   width: 30px;
+}
+
+.lawnchair__logo span {
+  font-weight: 600;
 }
 
 header nav {
@@ -153,14 +166,15 @@ footer span {
   margin: auto;
   background-color: var(--footer-color--darker);
   border-radius: 20px;
-  width: 80%;
+  width: 90%;
   padding: 10px 20px;
   max-width: 840px;
+  font-size: .9em;
 }
 
 footer a,
 footer a:visited {
-  font-weight: 450;
+  font-weight: 500;
   color: var(--text-color);
   text-decoration: none;
 }

@@ -60,8 +60,7 @@ main>*:not(:first-child) {
 }
 
 .hero__content__name {
-  font-weight: 1000;
-  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
   margin-block: 5px;
 }
 
@@ -240,12 +239,6 @@ main>section:not(:first-child) {
   max-width: 840px;
 }
 
-.about__header,
-.features__header,
-.links__header {
-  font-weight: 500;
-}
-
 @media screen and (prefers-color-scheme: dark) {
   .hero__content {
     color: var(--text-color);
@@ -257,6 +250,10 @@ main>section:not(:first-child) {
 
   .hero__content__description {
     margin-bottom: 30px;
+  }
+
+  .about__info {
+    width: 100%;
   }
 
   .link__card img {
@@ -300,10 +297,16 @@ main>section:not(:first-child) {
     text-align: center;
   }
 
+  .links__cards {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
   .link__card {
     min-width: -webkit-fill-available;
     min-width: fill-available;
     padding: 16px 20px;
+    max-width: inherit;
   }
 
 
