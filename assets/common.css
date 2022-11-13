@@ -55,6 +55,7 @@
 
 * {
   box-sizing: border-box;
+  transition: outline 0s;
 }
 
 *:focus-visible {

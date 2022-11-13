@@ -19,7 +19,7 @@ main>*:not(:first-child) {
   background-color: var(--lawnchair-background-color);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 90vh;
   max-height: 100%;
   color: var(--accent-background);
   flex: auto;
@@ -201,7 +201,8 @@ main>*:not(:first-child) {
   margin-top: 30px;
   gap: 6px 14px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-direction: column;
 }
 
 .link__card {
@@ -218,6 +219,7 @@ main>*:not(:first-child) {
   display: flex;
   align-items: center;
   gap: 14px;
+  max-width: inherit;
 }
 
 .link__card:hover {
@@ -248,14 +250,6 @@ main>section:not(:first-child) {
     filter: brightness(90%);
   }
 
-  .hero__content__description {
-    margin-bottom: 30px;
-  }
-
-  .about__info {
-    width: 100%;
-  }
-
   .link__card img {
     filter: invert(1);
   }
@@ -270,6 +264,15 @@ main>section:not(:first-child) {
 }
 
 @media screen and (max-width: 800px) {
+
+  .hero__content__description {
+    margin-bottom: 30px;
+  }
+
+  .about__info {
+    width: 100%;
+  }
+
   .hero {
     min-height: 70vh
   }
