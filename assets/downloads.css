@@ -32,7 +32,12 @@ img {
   margin-bottom: 10px;
 }
 
-.card__right {
+.card__main .card__right {
+  padding-top: 10px;
+}
+
+/* #card_main_cta*/
+.card__main h2 { 
   padding-top: 10px;
 }
 
@@ -40,7 +45,6 @@ img {
   font-size: 1.1em;
   margin: 0;
   font-weight: 600;
-  padding-top: 10px;
 }
 
 .card__right a {
