@@ -1,24 +1,29 @@
-# Lawnchair
-No clever tagline needed.
+import Image from "next/image"
+import Link from "next/link";
 
-todo image
-
-## No clever tagline needed
-Yup. Get it?
-<span title="A pun of the word Launcher, if you didn't get it...">Lawnchair</span>.
-It's a bad pun, we know.
-Lawnchair is a supercharged version of the Pixel Launcher you know and love. Being an open-source project, you get all the latest Pixel Launcher features shipped by Google in
-their latest Android release, plus added customisablity. The best part? No root required!
-
-## Features
-### Customizable Pixel Launcher
-Lawnchair has a design similar to the Pixel Launcher, with added customizability.
-
-### Latest Android features
-Lawnchair has the latest Android features, like Material You and the new At a Glance widget.
-
-### QuickSwitch support
-Lawnchair has support for QuickSwitch, a Magisk module that adds Recents customization.
-
-## Links
-If you have an issue with Lawnchair, we're more than happy to help. Ask around in our Telegram Group or mention us on Twitter. Follow us on Twitter for announcements as well.
+<section className="m-auto w-10/12 max-w-4xl pt-4 text-xl flex gap-2 justify-between items-center text-center flex-col md:flex-row md:text-left">
+  <div>
+    <Image
+      className="rounded-full mb-2 m-auto md:m-0"
+      src="/images/lawnchair.png"
+      alt=""
+      height={150}
+      width={150}
+    />
+    <h1 className="nx-text-4xl font-extrabold mb-2">Lawnchair</h1>
+    <p className="mb-2">No clever tagline needed.</p>
+    <div className="flex flex-col gap-2 md:flex-row d:gap-5">
+      <Link href="/downloads" className="py-4 px-6 rounded-3xl bg-blue-300 hover:bg-sky-200">Downloads</Link>
+      <a href="https://play.google.com/store/apps/details?id=ch.deletescape.lawnchair.plah" className="py-4 px-6 rounded-3xl bg-sky-100 hover:bg-sky-50">Lawnchair 2 on Play Store</a>
+    </div>
+  </div>
+  <div>
+    <Image
+      className=""
+      src="/images/phone-pixel.png"
+      alt=""
+      height={300}
+      width={300}
+    />
+  </div>
+</section>

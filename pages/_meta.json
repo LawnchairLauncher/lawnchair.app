@@ -9,12 +9,16 @@
       "pagination": false
     }
   },
-  "about": {
-    "title": "About",
+  "downloads": {
+    "title": "Downloads",
     "type": "page"
   },
   "docs": {
-    "title": "Documentation",
+    "title": "Docs",
+    "type": "page"
+  },
+  "faq": {
+    "title": "FAQ",
     "type": "page"
   }
 }
