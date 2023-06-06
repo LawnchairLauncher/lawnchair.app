@@ -4,7 +4,7 @@ import Link from "next/link";
 <section className="m-auto w-10/12 max-w-4xl pt-4 text-xl flex gap-2 justify-between items-center text-center flex-col md:flex-row md:text-left">
   <div>
     <Image
-      className="rounded-full mb-2 m-auto md:m-0"
+      className="rounded-full mb-4 m-auto md:m-0 md:mb-2"
       src="/images/lawnchair.png"
       alt=""
       height={150}
@@ -12,9 +12,10 @@ import Link from "next/link";
     />
     <h1 className="nx-text-4xl font-extrabold mb-2">Lawnchair</h1>
     <p className="mb-2">No clever tagline needed.</p>
-    <div className="flex flex-col gap-2 md:flex-row d:gap-5">
-      <Link href="/downloads" className="py-4 px-6 rounded-3xl bg-blue-300 hover:bg-sky-200">Downloads</Link>
-      <a href="https://play.google.com/store/apps/details?id=ch.deletescape.lawnchair.plah" className="py-4 px-6 rounded-3xl bg-sky-100 hover:bg-sky-50">Lawnchair 2 on Play Store</a>
+    <div className="flex flex-col gap-2 md:flex-row d:gap-5 mt-6">
+      <Link href="/downloads" className="py-4 px-6 rounded-3xl bg-blue-300 hover:bg-sky-200 dark:bg-blue-700 dark:hover:bg-blue-600 text-gray-900 dark:text-white">Downloads</Link>
+      <Link href="/docs" className="py-4 px-6 rounded-3xl bg-sky-100 hover:bg-sky-50 dark:bg-slate-700 dark:hover:bg-slate-600">View Docs</Link>
+
     </div>
   </div>
   <div>
@@ -26,4 +27,8 @@ import Link from "next/link";
       width={300}
     />
   </div>
+</section>
+<section className="h-96 m-auto w-10/12 max-w-4xl pt-4 text-xl flex gap-2 justify-start items-center text-center flex-col md:flex-row md:text-left md:justify-between">
+  <h1 className="nx-text-3xl font-extrabold mb-2 whitespace-pre-wrap">No clever tagline needed</h1>
+  <p className="max-w-md">Yup. Get it? <span title="A pun of the word Launcher, if you didn't get it...">Lawnchair</span>. It's a bad pun, we know. Lawnchair is a supercharged version of the Pixel Launcher you know and love. Being an open-source project, you get all the latest Pixel Launcher features shipped by Google in their latest Android release, plus added customisablity. The best part? No root required!</p>
 </section>
