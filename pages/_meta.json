@@ -20,5 +20,9 @@
   "faq": {
     "title": "FAQ",
     "type": "page"
+  },
+  "downloads_all": {
+    "display": "hidden",
+    "type": "page"
   }
 }
