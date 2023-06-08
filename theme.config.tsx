@@ -4,6 +4,11 @@ import { DocsThemeConfig } from 'nextra-theme-docs'
 import Link from 'next/link'
 
 const config: DocsThemeConfig = {
+  useNextSeoProps() {
+    return {
+      titleTemplate: "%s - Lawnchair"
+    }
+  },
   logo: <span className='gap-2 flex items-center'>
       <Image
       className="rounded-full"

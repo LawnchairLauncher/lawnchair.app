@@ -1,28 +1,39 @@
 import Image from 'next/image'
+import 'components/downloads.ts'
 import { Callout } from 'nextra/components'
 
 <Callout type="info">
   Looking for older versions? See the [extended downloads page](/downloads_all).
 </Callout>
 
-<div class="bg-slate-100 dark:bg-slate-800 rounded-3xl max-w-lg m-auto mb-3 flex items-center justify-between text-center gap-3 flex-col mt-10 py-10">
+<div className="card_1 bg-slate-100 dark:bg-slate-800 rounded-3xl max-w-lg m-auto mb-3 flex items-center justify-between text-center gap-3 flex-col mt-10 py-10">
   <div>
     <Image src="/images/lawnchair.png" alt="The Lawnchair Logo" width="96" height="96" className="rounded-full m-auto"/>
-    <h2 title="The actual launcher." class="text-xl font-bold">Lawnchair</h2>
-    <span id="js-lawnchair-version">Version 12.1.0 Alpha 4</span>
+    <h2 title="The actual launcher." className="text-xl font-bold">Lawnchair</h2>
+    <span id="js-lawnchair-version">Loading...</span>
     </div>
-    <div class="flex flex-row gap-3">
-      <a id="js-lawnchair-download" class="py-2 px-5 rounded-3xl border border-blue-300 bg-blue-300 hover:bg-blue-200 hover:border-blue-200 dark:border-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 dark:hover:border-blue-600" href="https://github.com/LawnchairLauncher/lawnchair/releases/download/v12.1.0-alpha.4/Lawnchair.12.1.0.Alpha.4.apk">Download</a>
-      <a class="py-2 px-5 rounded-3xl border border-blue-300 hover:bg-blue-100 dark:border-slate-600 dark:hover:bg-slate-600">History</a>
+    <div className="flex flex-row gap-3">
+      <a id="js-lawnchair-download" className="py-2 px-5 rounded-3xl border border-blue-300 bg-blue-300 hover:bg-blue-200 hover:border-blue-200 dark:border-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 dark:hover:border-blue-600 disabled">Download</a>
+      <a className="py-2 px-5 rounded-3xl border border-blue-300 hover:bg-blue-100 dark:border-slate-600 dark:hover:bg-slate-600" href="https://github.com/lawnchairlauncher/lawnchair/releases">History</a>
   </div>
 </div>
-<div class="bg-slate-100 dark:bg-slate-800 rounded-3xl max-w-lg m-auto mb-3 flex items-center justify-between px-6 py-5">
+<div className="card_2 bg-slate-100 dark:bg-slate-800 rounded-3xl max-w-lg m-auto mb-3 flex items-center justify-between px-6 py-5">
   <div>
-    <h2 class="font-bold" title="Used to integrate Google Discover to Lawnchair.">Lawnfeed</h2>
-    <span class="card__version" id="js-lawnfeed-version">Version 3</span>
+    <h2 className="font-bold" title="Adds themed icons to Lawnchair and supported launchers.">Lawnicons</h2>
+    <span className="card__version" id="js-lawnicons-version">Loading...</span>
   </div>
-  <div class="card__right">
-  <a id="js-lawnfeed-download" class="py-2 px-3 rounded-3xl hover:bg-slate-200 dark:hover:bg-slate-700 material-symbols-outlined">download</a>&nbsp;
-  <a class="py-2 px-3 rounded-3xl hover:bg-slate-200 dark:hover:bg-slate-700 material-symbols-outlined" href="https://github.com/lawnchairlauncher/lawnfeed/releases">history</a>
+  <div className="card__right">
+  <a id="js-lawnicons-download" className="py-2 px-3 rounded-3xl hover:bg-slate-200 dark:hover:bg-slate-700 material-symbols-outlined disabled">download</a>&nbsp;
+  <a className="py-2 px-3 rounded-3xl hover:bg-slate-200 dark:hover:bg-slate-700 material-symbols-outlined" href="https://github.com/lawnchairlauncher/lawnicons/releases">history</a>
+  </div>
+</div>
+<div className="card_3 bg-slate-100 dark:bg-slate-800 rounded-3xl max-w-lg m-auto mb-3 flex items-center justify-between px-6 py-5">
+  <div>
+    <h2 className="font-bold" title="Used to integrate Google Discover to Lawnchair.">Lawnfeed</h2>
+    <span className="card__version" id="js-lawnfeed-version">Loading...</span>
+  </div>
+  <div>
+  <a id="js-lawnfeed-download" className="py-2 px-3 rounded-3xl hover:bg-slate-200 dark:hover:bg-slate-700 material-symbols-outlined disabled">download</a>&nbsp;
+  <a className="py-2 px-3 rounded-3xl hover:bg-slate-200 dark:hover:bg-slate-700 material-symbols-outlined" href="https://github.com/lawnchairlauncher/lawnfeed/releases">history</a>
   </div>
 </div>
