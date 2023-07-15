@@ -1,4 +1,4 @@
-import { Octokit } from "https://cdn.skypack.dev/@octokit/core";
+import { Octokit } from "https://esm.sh/octokit";
 
 const octokit = new Octokit();
 
