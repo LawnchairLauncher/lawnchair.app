@@ -3,7 +3,8 @@
        {
           "text":"Lorem ipsum dolor sit amet!",
           "url":"https://lawnchair.app/",
-          "active":true
+          "active":true,
+          "test":true,
        }
     ]
  }
