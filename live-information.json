@@ -1,10 +1,20 @@
 {
-    "announcements":[
-       {
-          "text":"Lorem ipsum dolor sit amet!",
-          "url":"https://lawnchair.app/",
-          "active":true,
-          "test":true
-       }
-    ]
- }
+   "announcements":[
+      {
+         "text":"Very important announcement",
+         "url":"https://lawnchair.app/",
+         "active":true,
+         "test":true
+      },
+      {
+         "text":"Another very important announcement",
+         "active":true,
+         "test":true
+      },
+      {
+         "text":"Inactive announcement",
+         "active":false,
+         "test":true
+      }
+   ]
+}
