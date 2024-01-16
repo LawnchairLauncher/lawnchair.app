@@ -1,19 +1,16 @@
+main > * {
+  flex: 1 1 fit-content;
+}
+
+main > *:not(:first-child) {
+  font-size: 1.2em;
+}
+
 main {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
-}
-
-main>* {
-  flex: 1 1 fit-content;
-}
-
-main>*:not(:first-child) {
-  font-size: 1.2em;
-}
-
-main {
   background-image: var(--lawnchair-background);
   background-color: var(--lawnchair-background-color);
   background-repeat: no-repeat;
@@ -25,32 +22,33 @@ main {
   padding-bottom: 10px;
 }
 
-main>div {
+main > div {
   background: var(--accent-background);
   color: var(--text-color);
   padding: 12px 40px;
-  border-radius: 20px;
+  border-radius: 10px;
   width: 90%;
   max-width: 1000px;
   margin: auto;
   line-height: 1.4em;
+  margin: 20px auto;
 }
 
-a {
+main a {
   color: hsl(241, 100%, 50%);
   text-decoration: none;
   outline-offset: 4px;
 }
 
-a:hover:not(.lawnchair__logo) :not(#nav) {
+main a:hover {
   border-bottom: 1px dashed;
 }
 
-a:active:not(.lawnchair__logo) :not(#nav) {
+main a:active {
   background: hsla(0, 0%, 7%, 0.067);
 }
 
-a:visited:not(.lawnchair__logo) :not(#nav) {
+main a:visited {
   color: hsl(260, 100%, 50%);
 }
 
@@ -131,11 +129,11 @@ h4 {
   margin-block-end: 5px;
 }
 
-h2+h3 {
+h2 + h3 {
   margin-block-start: 0px;
 }
 
-:is(h3, h4)+ :is(p, ul, ol) {
+:is(h3, h4) + :is(p, ul, ol) {
   margin-block-start: 0;
 }
 
@@ -157,7 +155,6 @@ h2+h3 {
   text-decoration: none;
 }
 
-
 @keyframes highlight {
   0% {
     background: var(--accent-dark);
@@ -173,20 +170,22 @@ code {
 }
 
 @media screen and (prefers-color-scheme: dark) {
-  a {
+  main a {
     color: hsl(218, 100%, 67%);
   }
 
-  a:visited {
+  main a:visited {
     color: hsl(270, 100%, 65%);
   }
 }
 
 @media screen and (max-width: 700px) {
+  main > div {
+    margin: 0;
+  }
   main div:first-child {
     border-radius: 0;
     width: 100%;
-    background: none;
   }
 
   #toc:not(:empty) {

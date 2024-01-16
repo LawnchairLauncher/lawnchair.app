@@ -5,6 +5,10 @@ body {
   flex-direction: column;
 }
 
+header {
+  background-color: var(--lawnchair-background-color)
+}
+
 main {
   background-image: var(--lawnchair-background);
   background-color: var(--lawnchair-background-color);
@@ -30,6 +34,10 @@ img {
   justify-content: space-between;
   margin: auto;
   margin-bottom: 10px;
+}
+
+.card:hover {
+  background: var(--accent-background--lighter)
 }
 
 .card__main .card__right {

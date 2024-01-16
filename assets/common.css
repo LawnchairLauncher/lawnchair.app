@@ -1,9 +1,10 @@
 /* Global fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
   --body-color: hsl(0deg, 100%, 100%);
   --accent-background: hsl(222, 100%, 98%);
+  --accent-background--lighter: hsl(222, 100%, 95%);
   --section-background: hsla(209, 78%, 48%, 0.4);
   --accent-light: hsl(222deg, 100%, 95%);
   --accent-normal: hsl(222deg, 100%, 90%);
@@ -15,12 +16,23 @@
   --text-color: hsl(220deg, 5%, 10%);
   --text-disabled: hsl(220deg 5% 10% / 60%);
 
-  --footer-color: hsl(149, 75%, 51%);
+  --footer-color: hsl(149, 100%, 51%);
   --footer-color--darker: hsla(0, 0%, 0%, 0.094);
 
-  --lawnchair-background-color: hsl(209deg, 78%, 48%);
-  --lawnchair-background-color--lighter: hsl(209deg 70% 55%);
+  --lawnchair-background-color: hsl(208deg 78% 48%);
+  --lawnchair-background-color--lighter: hsl(209deg 73% 70%);
   --lawnchair-background: url(/images/hero-background.svg);
+}
+
+@media screen and (prefers-color-scheme: light) {
+  :root {
+    --lawnchair-background-color: hsl(209deg 73% 64%);
+    --lawnchair-background: linear-gradient(
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.3)
+      ),
+      url(/images/hero-background.svg);
+  }
 }
 
 ::-webkit-scrollbar {
@@ -49,7 +61,7 @@
 }
 
 ::selection {
-  background-color: hsl(148, 100%, 42%);
+  background-color: hsl(148, 100%, 42% / 0.5);
   color: hsl(0, 0%, 100%);
 }
 
@@ -80,7 +92,7 @@ p {
 
 /* Header */
 header {
-  background-color: var(--lawnchair-background-color);
+  background-color: var(--accent-light);
   padding: 14px;
   position: sticky;
   top: 0;
@@ -89,19 +101,19 @@ header {
   align-items: center;
   transition: background 1s;
   z-index: 20;
-  color: white;
+  color: var(--text-color);
 }
 
 header a {
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
 }
 
-header>a img {
+header > a img {
   border-radius: 50%;
 }
 
-header>a {
+header > a {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -112,16 +124,17 @@ header>a {
   border-radius: 24px;
 }
 
-header>a:hover {
+header > a:hover {
   transition: background 0.4s ease;
   background-color: hsla(149, 75%, 51%, 0.4);
 }
 
-header a, header a:visited, header a:hover, header a:active {
-  color: inherit;
+header > a:visited {
+  color: var(--text-color)
 }
 
-.lawnchair__logo img, .lawnchair__logo picture {
+.lawnchair__logo img,
+.lawnchair__logo picture {
   height: 30px;
   width: 30px;
 }
@@ -134,25 +147,24 @@ header nav {
   margin-left: auto;
   display: flex;
   align-items: center;
-  /* margin-right: 10px; */
   gap: 5px;
 }
 
 header nav a {
-  transition: all 0.2s;
-  border-radius: 20px;
+  transition: all 0.04s;
   padding: 8px 16px;
-  border: 1px solid transparent;
+  border-bottom: 4px solid transparent;
 }
 
-header nav a:hover,
-header nav a.active {
-  border-color: var(--accent-dark);
+header nav a:hover {
+  border-bottom-color: var(--text-disabled)
 }
+
 
 header nav a:active,
 header nav a.active {
-  background: var(--accent-normal--transparent);
+  font-weight: bold;
+  border-bottom-color: var(--text-disabled)
 }
 
 /* Footer */
@@ -170,7 +182,7 @@ footer span {
   width: 90%;
   padding: 10px 20px;
   max-width: 840px;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 
 footer a,
@@ -188,6 +200,7 @@ footer a:hover {
   :root {
     --body-color: hsl(228deg 5% 10%);
     --accent-background: hsl(230deg 8% 15%);
+    --accent-background--lighter: hsl(230deg 8% 17%);
     --accent-light: hsl(230deg 35% 25%);
     --accent-normal: hsl(230deg 35% 35%);
     --accent-dark: hsl(225deg 40% 40%);
@@ -199,23 +212,26 @@ footer a:hover {
     --text-disabled: hsl(240deg 4% 77% / 60%);
 
     --footer-color: hsl(152deg 100% 10%);
-    --footer-color--darker: hsl(152deg 98% 14%);
+    --footer-color--darker: hsl(152deg 100% 14%);
 
-    --lawnchair-background-color: hsl(206deg 81% 14%);
+    --lawnchair-background-color: hsl(210, 76%, 15%);
     --lawnchair-background-color--lighter: hsl(206deg 78% 20%);
-    --lawnchair-background: linear-gradient(hsla(0, 0%, 0%, 0.7), hsla(0, 0%, 0%, 0.7)),
+    --lawnchair-background: linear-gradient(
+        hsla(0, 0%, 0%, 0.7),
+        hsla(0, 0%, 0%, 0.7)
+      ),
       url(/images/hero-background.svg);
   }
 }
 
 @media screen and (max-width: 520px) {
   footer {
-    font-size: .8em;
+    font-size: 0.8em;
   }
 }
 
 @media screen and (max-width: 400px) {
-  header>a span {
+  header > a span {
     display: none;
   }
 }

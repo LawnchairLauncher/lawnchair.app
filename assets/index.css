@@ -1,3 +1,7 @@
+header {
+  background-color: transparent
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -5,25 +9,45 @@ main {
   gap: 20px;
 }
 
-main>* {
+main > * {
   flex: 1 1 fit-content;
 }
 
-main>*:not(:first-child) {
+main > *:not(:first-child) {
   font-size: 1.2em;
 }
 
 /* Hero content */
 .hero {
+  z-index: 0;
+  width: 100%;
+}
+
+.hero__background {
   background-image: var(--lawnchair-background);
   background-color: var(--lawnchair-background-color);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 90vh;
-  max-height: 100%;
-  color: var(--accent-background);
+  border-radius: 20px;
+  margin: 20px auto;
   flex: auto;
-  z-index: 0;
+  width: 90%;
+  min-height: 85vh;
+  max-height: 100%;
+  transition: all 0.3s
+}
+
+.hero__background:hover {
+  border-radius: 0 0 20px 20px;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: -1px;
+  min-height: 90vh;
+}
+
+:has(.hero__background:hover) header {
+  background-color: var(--lawnchair-background-color);
+  border-bottom-color: var(--lawnchair-background-color);
 }
 
 .hero__wrapper {
@@ -35,7 +59,6 @@ main>*:not(:first-child) {
 }
 
 .hero__notice {
-  display: none;
   background: var(--accent-background);
   color: var(--text-color);
   padding: 20px;
@@ -43,6 +66,19 @@ main>*:not(:first-child) {
   width: 85%;
   max-width: 840px;
   margin: 20px auto 0 auto;
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 10px;
+	align-items: center;
+	justify-content: space-between;
+  border: 2px solid var(--accent-dark)
+}
+
+.hero__notice:hover {
+  background: var(--accent-background--lighter)
 }
 
 .hero__notice a {
@@ -50,8 +86,26 @@ main>*:not(:first-child) {
   text-decoration: none;
 }
 
+.hero__notice .inactive {
+  color: var(--text-disabled)
+}
+
+.hero__notice__button {
+  all: unset;
+  background-color: var(--accent-normal);
+  border-radius: 20px;
+  padding: 10px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.hero__notice__button:hover {
+  background-color: var(--accent-dark);
+}
+
 .hero__content {
   font-size: 1.2em;
+  color: var(--text-color);
 }
 
 .hero__content__icon {
@@ -82,14 +136,14 @@ main>*:not(:first-child) {
   background: var(--accent-background);
   color: var(--text-color);
   padding: 16px 20px;
-  border-radius: 20px;
+  border-radius: 50px;
   text-decoration: none;
   transition: background 0.3s;
   display: flex;
   align-items: center;
   text-align: left;
   gap: 10px;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 
 .hero__content__downloads .button:hover {
@@ -141,6 +195,13 @@ main>*:not(:first-child) {
 
 /* Features */
 .features {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--accent-light);
+  max-width: 100%!important
+}
+
+.features__wrapper {
   width: 85%;
   margin: 20px auto;
   display: flex;
@@ -149,7 +210,6 @@ main>*:not(:first-child) {
   font-size: 1.05em;
   justify-content: center;
   gap: 2em;
-  height: 100vh;
 }
 
 .features__container {
@@ -181,12 +241,9 @@ main>*:not(:first-child) {
 }
 
 .features__header {
-  color: white;
-  background-color: var(--section-background);
   width: 100%;
   padding: 14px 0;
   text-align: center;
-  border-radius: 40px;
 }
 
 /* Links section */
@@ -201,8 +258,8 @@ main>*:not(:first-child) {
   margin-top: 30px;
   gap: 6px 14px;
   display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .link__card {
@@ -215,11 +272,11 @@ main>*:not(:first-child) {
   width: 100%;
   text-decoration: none;
   margin-bottom: 10px;
+  min-width: 200px;
   max-width: fit-content;
   display: flex;
   align-items: center;
   gap: 14px;
-  max-width: inherit;
 }
 
 .link__card:hover {
@@ -237,7 +294,7 @@ main>*:not(:first-child) {
 }
 
 /* Other */
-main>section:not(:first-child) {
+main > section:not(:first-child) {
   max-width: 840px;
 }
 
@@ -257,6 +314,10 @@ main>section:not(:first-child) {
   .hero__notice a {
     color: hsl(222deg, 100%, 85%);
   }
+  
+  .features {
+    background: hsl(230deg 35% 25% / 50%)
+  }
 
   .features__container .feature :is(span, svg) {
     color: hsl(230deg 75% 65%);
@@ -264,7 +325,6 @@ main>section:not(:first-child) {
 }
 
 @media screen and (max-width: 800px) {
-
   .hero__content__description {
     margin-bottom: 30px;
   }
@@ -273,8 +333,8 @@ main>section:not(:first-child) {
     width: 100%;
   }
 
-  .hero {
-    min-height: 70vh
+  .hero__background {
+    min-height: 70vh;
   }
 
   .hero__wrapper {
@@ -312,7 +372,6 @@ main>section:not(:first-child) {
     max-width: inherit;
   }
 
-
   .hero__content__downloads .button {
     width: fill-available;
     width: -webkit-fill-available;
@@ -320,18 +379,18 @@ main>section:not(:first-child) {
 }
 
 @media screen and (min-width: 1700px) and (max-height: 900px) {
-  section.hero {
-    background: linear-gradient(180deg,
-        hsl(209, 78%, 48%) 30%,
-        hsl(152, 100%, 32%) 100%);
+  section.hero .hero__background {
+    background-image: linear-gradient(
+      180deg,
+      hsl(209, 78%, 48%) 30%,
+      hsl(152, 100%, 32%) 100%
+    );
   }
 }
 
 @media screen and (min-width: 1700px) and (max-height: 900px) and (prefers-color-scheme: dark) {
-  section.hero {
-    background: linear-gradient(hsla(0, 0%, 0%, 0.7), hsla(0, 0%, 0%, 0.7)),
-      linear-gradient(180deg,
-        hsl(209, 78%, 48%) 30%,
-        hsl(152, 100%, 32%) 100%);
+  section.hero .hero__background {
+    background-image: linear-gradient(hsla(0, 0%, 0%, 0.7), hsla(0, 0%, 0%, 0.7)),
+      linear-gradient(180deg, hsl(209, 78%, 48%) 30%, hsl(152, 100%, 32%) 100%);
   }
 }

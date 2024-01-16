@@ -25,8 +25,8 @@
   <meta name="msapplication-TileColor" content="#15c666" >
   <meta name="theme-color" content="#02d663" >
 
-  <link href="/assets/common.css?cache_reload_2" rel="stylesheet" >
-  <link href="/assets/index.css?cache_reload_2" rel="stylesheet" >
+  <link href="/assets/common.css?new" rel="stylesheet" >
+  <link href="/assets/index.css?new" rel="stylesheet" >
 
   <script type="application/ld+json">
       {
@@ -52,14 +52,6 @@
 <body>
 
   <header>
-    <!--       <a href="#" class="lawnchair__logo">
-        <source type="image/webp" srcset="/images/lawnchair.webp" >
-          <img
-            src="/images/lawnchair.png"
-            alt="The Lawnchair Logo"
-          ></picture>
-        <span>Lawnchair</span>
-      </a> -->
     <nav id="nav">
       <a href="/downloads">Downloads</a>
       <a href="/faq">FAQ</a>
@@ -69,37 +61,45 @@
   <main>
     <section class="hero">
       <div class="hero__notice">
-        <!-- We now have a FAQ section! Find the answers to life's common
+        <p>
+          We now have a FAQ section! Find the answers to life's common
           questions, like how to get themed icons or enabling Google Discover.
-          <a href="/faq">Visit the FAQ now</a> -->
+          <a href="/faq">Visit the FAQ now</a>
+        </p>
+        <button class="hero__notice__button">
+          X
+        </button>
       </div>
-      <div class="hero__wrapper">
-        <div class="hero__left hero__content">
-          <picture>
-            <source type="image/webp" srcset="/images/lawnchair.webp" >
-            <img class="hero__content__icon" src="/images/lawnchair.png" width="150" height="150"
-              alt="The Lawnchair Logo" >
-          </picture>
-          <h1 class="hero__content__name">Lawnchair</h1>
-          <div class="hero__content__description">
-            No clever tagline needed.
-          </div>
-          <div class="hero__content__downloads">
-            <a href="/downloads" class="button primary">
-              <span class="icon-button material-symbols-outlined">download</span>
-              Download Lawnchair 12.1
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=ch.deletescape.lawnchair.plah" class="button">
-              <svg width="24" height="24" fill="none" stroke="var(--text-color)" stroke-width="12" version="1.1"
-                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-                <path
-                  d="M 3.6429272,3.9676769 V 20.031943 a 1.3975569,1.3975569 0 0 0 2.095317,1.210961 L 19.683265,13.207461 a 1.3936111,1.3936111 0 0 0 0,-2.414922 L 5.7382442,2.7570969 a 1.3975569,1.3975569 0 0 0 -2.095317,1.210834 z"
-                  style="stroke-width: 1.52738" />
-                <path d="M 3.7702092,19.636605 15.225593,8.1812219 M 3.7702092,4.3627599 15.225593,15.818143"
-                  style="stroke-width: 1.52738" />
-              </svg>
-              View Lawnchair 2
-            </a>
+      <div class="hero__background">
+
+        <div class="hero__wrapper">
+          <div class="hero__left hero__content">
+            <picture>
+              <source type="image/webp" srcset="/images/lawnchair.webp" >
+              <img class="hero__content__icon" src="/images/lawnchair.png" width="150" height="150"
+                alt="The Lawnchair Logo" >
+            </picture>
+            <h1 class="hero__content__name">Lawnchair</h1>
+            <div class="hero__content__description">
+              No clever tagline needed.
+            </div>
+            <div class="hero__content__downloads">
+              <a href="/downloads" class="button primary">
+                <span class="icon-button material-symbols-outlined">download</span>
+                Download Lawnchair 12.1
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=ch.deletescape.lawnchair.plah" class="button">
+                <svg width="24" height="24" fill="none" stroke="var(--text-color)" stroke-width="12" version="1.1"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                  <path
+                    d="M 3.6429272,3.9676769 V 20.031943 a 1.3975569,1.3975569 0 0 0 2.095317,1.210961 L 19.683265,13.207461 a 1.3936111,1.3936111 0 0 0 0,-2.414922 L 5.7382442,2.7570969 a 1.3975569,1.3975569 0 0 0 -2.095317,1.210834 z"
+                    style="stroke-width: 1.52738" />
+                  <path d="M 3.7702092,19.636605 15.225593,8.1812219 M 3.7702092,4.3627599 15.225593,15.818143"
+                    style="stroke-width: 1.52738" />
+                </svg>
+                View Lawnchair 2
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -114,7 +114,7 @@
         <h2 class="about__header">No clever tagline needed</h2>
         <div class="about__description">
           Yup. Get it?
-          <span title="A pun of the word Launcher, if you didn't get it...">Lawnchair</span>. It's a bad pun, we know.
+          <span title="A pun of the word 'Launcher', if you didn't get it..." style="border-bottom: 1px dotted var(--text-color);">Lawnchair</span>. It's a bad pun, we know.
           Lawnchair is a supercharged version of
           the Pixel Launcher you know and love. Being an open-source project,
           you get all the latest Pixel Launcher features shipped by Google in
@@ -124,7 +124,8 @@
       </div>
     </section>
     <section class="features">
-      <h2 class="features__header">FEATURES</h2>
+      <div class="features__wrapper">
+      <h2 class="features__header">Features</h2>
       <div class="features__container">
         <div class="feature">
           <span class="material-symbols-outlined">smartphone</span>
@@ -154,7 +155,7 @@
           </p>
         </div>
       </div>
-    </section>
+      </div></section>
     <section class="links">
       <h2 class="links__header">Links</h2>
       <div class="links__description">
@@ -197,7 +198,8 @@
       <a href="https://simpleanalytics.com/lawnchair.app">Simple Analytics</a>
       - View <a href="/privacy_policy">Privacy Policy</a></span>
   </footer>
-  <script src="/assets/common.js?cache"></script>
+  <script src="/assets/common.js?new"></script>
+  <script src="/assets/index.js?new"></script>
 
   <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
   <noscript>
