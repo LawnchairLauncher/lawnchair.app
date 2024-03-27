@@ -180,9 +180,17 @@ code {
 }
 
 @media screen and (max-width: 700px) {
+  :root {
+    --lawnchair-background: var(--accent-background);
+    --lawnchair-background-color: var(--accent-background);
+    --footer-color: var(--accent-background);
+    --footer-color--darker: var(--accent-light);
+  }
+  
   main > div {
     margin: 0;
   }
+
   main div:first-child {
     border-radius: 0;
     width: 100%;
