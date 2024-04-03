@@ -1,6 +1,12 @@
 {
    "announcements":[
       {
+         "text":"Lawnchair 14 Beta 1 is here!",
+         "url":"https://lawnchair.app/blog/lawnchair-14",
+         "active":true,
+         "test":false
+      },
+      {
          "text":"Very important announcement",
          "url":"https://lawnchair.app/",
          "active":true,
