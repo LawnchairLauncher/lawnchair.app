@@ -1,4 +1,4 @@
-let url = "https://lawnchair-launcher-site.glitch.me/live-information.json";
+let url = "https://lawnchair.app/live-information.json";
 
 async function getElements(urlParams) {
   const response = await fetch(url);
