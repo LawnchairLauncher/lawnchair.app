@@ -2,7 +2,7 @@
 
 This is the official Lawnchair website made by [SuperDragonXD](https://github.com/SuperDragonXD). Provides information about us, the launcher, and more.
 
-The website can be found at https://lawnchair.app; a development version can be found at https://lawnchair-launcher-site.glitch.me/.
+The website can be found at https://lawnchair.app; a development version can be found at https://lawnchair.glitch.me/.
 
 ## To-do list
 
