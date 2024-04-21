@@ -41,7 +41,7 @@ const getFallbackDownloadLink = (repo) =>
 repoNames.forEach(async (it) => {
   let latestRelease = await getLatestRelease(it);
   if (latestRelease.version == "y") {
-    latestRelease = await getLatestRelease(it, 1)
+    latestRelease = await getLatestRelease(it, 1);
   }
   const versionSpan = document.querySelector(`#js-${it}-version`);
   const downloadAnchor = document.querySelector(`#js-${it}-download`);

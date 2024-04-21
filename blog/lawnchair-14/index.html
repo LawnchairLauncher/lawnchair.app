@@ -28,39 +28,46 @@
 
   <link href="/assets/common.css?new" rel="stylesheet" >
   <style>
-    :root {
-      --lawnchair-background-color: var(--accent-background);
-      --lawnchair-background-color--lighter: var(--accent-light);
-      --footer-color: var(--accent-background);
-      --footer-color--darker: var(--accent-light);
-    }
-
-    body {
-      background: var(--accent-background);
-    }
-
-    header a,
-    header a:visited {
-      color: var(--text-color);
-    }
-
     main {
+      background: var(--surface-container);
+      border-radius: var(--shape-xl);
       margin: auto;
-      padding: 1em;
+      margin-top: 20px;
       max-width: 900px;
+      width: 80%;
+      padding: 12px 40px;
     }
-
+    
+    p {
+      line-height: 1.5rem;
+    }
+    
+    h2 {
+      font-weight: 700;
+      margin-block-start: 30px;
+      margin-block-end: 5px;
+    }
+    
+    h3,
+    h4 {
+      font-weight: 500;
+      margin-block-end: 5px;
+    }
+    
+    @media screen and (max-width: 700px) {
+      main {
+         margin: 0;
+         background-color: var(--surface)
+      }
+    }
+    
     @media screen and (prefers-color-scheme: dark) {
-      body {
-        color: hsl(0, 0%, 94%);
+      main a {
+        color: hsl(218, 100%, 67%);
       }
 
-      a {
-        color: hsl(218deg, 100%, 67%);
-      }
-
-      a:visited {
-        color: hsl(270deg, 100%, 65%);
+      main a:visited {
+        color: hsl(270, 100%, 65%);
       }
     }
   </style>

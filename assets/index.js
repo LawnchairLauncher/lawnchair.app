@@ -1,9 +1,9 @@
-let url = "https://lawnchair.app/live-information.json";
+let url = "https://lawnchair.glitch.me/live-information.json";
 
 async function getElements(urlParams) {
   const response = await fetch(url);
   const json = await response.json();
-  const testMode = urlParams.get("showTests") ? true : false
+  const testMode = urlParams.get("showTests") ? true : false;
 
   let empty = [];
 
@@ -24,8 +24,10 @@ async function getElements(urlParams) {
   if (empty.length == 0) return;
 
   function buildEntry(text, url, active, test) {
-    if (!testMode) { if (test) return }
-    
+    if (!testMode) {
+      if (test) return;
+    }
+
     return `<${url ? `a href="${url}"` : "span"} class="${
       active ? "" : "in"
     }active">${text}</${url ? "a" : "span"}>`;
@@ -44,7 +46,7 @@ async function getElements(urlParams) {
       links += link;
     });
 
-    return `<ul>${links}</ul><button class="hero__notice__button" title="Close this announcement">X</button>`;
+    return `<ul>${links}</ul><button class="hero__notice__button" title="Close this announcement">Dismiss</button>`;
   }
 
   const obj = await buildAllEntries(json);

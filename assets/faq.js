@@ -34,7 +34,8 @@ if (urlParams.get("disabletoc")) {
   }
 
   tocContents =
-    "<p><span>Table of Contents</span><button title=\"Show/Hide the Table of Contents.\">Show</button></p>" + tocContents;
+    '<p><span>Table of Contents</span><button title="Show/Hide the Table of Contents.">Show</button></p>' +
+    tocContents;
 
   const toc = document.getElementById("toc");
   toc.innerHTML = tocContents;

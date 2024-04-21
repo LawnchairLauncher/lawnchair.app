@@ -1,0 +1,9 @@
+:root {
+  --shape-full: 50%;
+  --shape-xl: 28px;
+  --shape-l: 16px;
+  --shape-m: 12px;
+  --shape-s: 8px;
+  --shape-xs: 4px;
+  --shape-none: 0px;
+}

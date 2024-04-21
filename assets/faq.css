@@ -1,64 +1,10 @@
-main > * {
-  flex: 1 1 fit-content;
-}
-
-main > *:not(:first-child) {
-  font-size: 1.2em;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 20px;
-  background-image: var(--lawnchair-background);
-  background-color: var(--lawnchair-background-color);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  min-height: 100vh;
-  max-height: 100%;
-  color: var(--accent-background);
-  padding-bottom: 10px;
-}
-
-main > div {
-  background: var(--accent-background);
-  color: var(--text-color);
-  padding: 12px 40px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 1000px;
-  margin: auto;
-  line-height: 1.4em;
-  margin: 20px auto;
-}
-
-main a {
-  color: hsl(241, 100%, 50%);
-  text-decoration: none;
-  outline-offset: 4px;
-}
-
-main a:hover {
-  border-bottom: 1px dashed;
-}
-
-main a:active {
-  background: hsla(0, 0%, 7%, 0.067);
-}
-
-main a:visited {
-  color: hsl(260, 100%, 50%);
-}
-
 #toc:not(:empty) {
-  border: 2px solid var(--accent-normal);
   border-radius: 20px;
   max-width: 300px;
   float: right;
   margin-left: 20px;
-  background: var(--accent-background);
+  background: var(--secondary-container);
+  color: var(--on-secondary-container);
   z-index: 30;
 }
 
@@ -72,7 +18,7 @@ main a:visited {
   justify-content: space-between;
   gap: 10px;
   margin-block: 0;
-  border-bottom: 2px solid var(--accent-normal);
+  border-bottom: 2px solid var(--outline);
 }
 
 #toc span {
@@ -84,25 +30,26 @@ main a:visited {
 
 #toc button {
   background: none;
-  border: 1px solid var(--accent-normal);
+  border: 1px solid var(--outline);
   border-radius: 20px;
-  color: var(--text-color);
+  color: var(--on-surface);
   padding: 6px 16px;
 }
 
 #toc button:hover {
-  background: var(--accent-light);
+  background: var(--secondary-container);
+  color: var(--on-secondary-container);
 }
 
 #toc button:active {
-  background: var(--accent-dark);
+  background: var(--secondary-container);
 }
 
 #toc ul {
   margin: 0;
   padding-inline-start: 20px;
   list-style-type: decimal;
-  color: var(--text-disabled);
+  color: var(--on-surface-variant);
 }
 
 #toc.collapsed ul {
@@ -114,27 +61,7 @@ main a:visited {
 }
 
 #toc ul a {
-  color: var(--text-color);
-}
-
-h2 {
-  font-weight: 700;
-  margin-block-start: 30px;
-  margin-block-end: 5px;
-}
-
-h3,
-h4 {
-  font-weight: 500;
-  margin-block-end: 5px;
-}
-
-h2 + h3 {
-  margin-block-start: 0px;
-}
-
-:is(h3, h4) + :is(p, ul, ol) {
-  margin-block-start: 0;
+  color: var(--on-surface);
 }
 
 :is(h2, h3, h4):target {
@@ -142,11 +69,11 @@ h2 + h3 {
 }
 
 :is(h2, h3, h4) a:is(:visited, :link) {
-  color: var(--text-color);
+  color: var(--on-surface);
 }
 
 :is(h2, h3, h4) a:is(:active, :hover):after {
-  color: var(--text-disabled);
+  color: var(--on-surface-variant);
   content: "#";
   display: inline-flex;
   font-size: 0.7em;
@@ -157,7 +84,7 @@ h2 + h3 {
 
 @keyframes highlight {
   0% {
-    background: var(--accent-dark);
+    background: var(--secondary-container);
   }
 
   100% {
@@ -170,32 +97,12 @@ code {
 }
 
 @media screen and (prefers-color-scheme: dark) {
-  main a {
-    color: hsl(218, 100%, 67%);
-  }
-
-  main a:visited {
-    color: hsl(270, 100%, 65%);
+  :is(h2, h3, h4) a {
+    color: var(--on-surface) !important;
   }
 }
 
 @media screen and (max-width: 700px) {
-  :root {
-    --lawnchair-background: var(--accent-background);
-    --lawnchair-background-color: var(--accent-background);
-    --footer-color: var(--accent-background);
-    --footer-color--darker: var(--accent-light);
-  }
-  
-  main > div {
-    margin: 0;
-  }
-
-  main div:first-child {
-    border-radius: 0;
-    width: 100%;
-  }
-
   #toc:not(:empty) {
     float: none;
     max-width: none;

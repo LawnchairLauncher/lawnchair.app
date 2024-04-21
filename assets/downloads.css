@@ -1,20 +1,14 @@
 html,
 body {
-  height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 header {
-  background-color: var(--lawnchair-background-color)
+  background-color: var(--surface);
 }
 
 main {
-  background-image: var(--lawnchair-background);
-  background-color: var(--lawnchair-background-color);
-  background-repeat: no-repeat;
-  /* background-attachment: fixed; */
-  background-size: cover;
   height: 100%;
   padding-bottom: 10px;
 }
@@ -24,29 +18,22 @@ img {
 }
 
 .card {
-  background: var(--accent-background);
-  color: var(--text-color);
+  background: var(--surface-container);
+  color: var(--on-surface-container);
   padding: 20px 24px;
-  border-radius: 20px;
+  border-radius: var(--shape-l);
   width: 500px;
   align-items: center;
   display: flex;
   justify-content: space-between;
   margin: auto;
   margin-bottom: 10px;
+  transition: background 0.2s ease, border-radius 0.2s ease;
 }
 
 .card:hover {
-  background: var(--accent-background--lighter)
-}
-
-.card__main .card__right {
-  padding-top: 10px;
-}
-
-/* #card_main_cta*/
-.card__main h2 { 
-  padding-top: 10px;
+  background: var(--surface-container-high);
+  border-radius: var(--shape-xl);
 }
 
 .card__name {
@@ -55,60 +42,61 @@ img {
   font-weight: 600;
 }
 
-.card__right a {
+.card__version {
+  color: var(--on-surface-variant);
+}
+
+.card__downloads a {
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--on-surface);
   padding: 5px 12px;
   transition: background 0.4s ease;
   border-radius: 20px;
 }
 
-.card__right a.disabled {
+.card__downloads a.disabled {
   cursor: not-allowed;
 }
 
-.card__right .icon-button.disabled {
-  color: var(--text-disabled);
+.card__downloads .icon-button.disabled {
+  color: var(--on-surface-variant);
 }
 
-.card__right .icon-button:not(.disabled):hover {
+.card__downloads .icon-button:not(.disabled):hover {
   transition: background 0.4s ease;
-  background: var(--accent-light);
+  background: var(--secondary-container);
 }
 
-.card__right .icon-button:not(.disabled):active {
+.card__downloads .icon-button:not(.disabled):active {
   background: var(--accent-normal);
 }
 
-.card__right a.card__button {
+.card__downloads a.card__button {
   padding: 8px 20px;
-  border: 1px solid var(--accent-normal);
+  border: 1px solid var(--outline);
 }
 
-.card__right a.card__button.primary {
-  background: var(--accent-normal);
+.card__downloads a.card__button.primary {
+  background: var(--primary);
+  color: var(--on-primary);
+  border: 0;
 }
 
-.card__right a.card__button.disabled {
-  background: var(--accent-light);
-  border-color: var(--accent-light);
+.card__downloads a.card__button.disabled {
+  background: var(--surface-variant);
+  color: var(--on-surface-variant);
 }
 
-.card__right a.card__button:not(.disabled).primary:hover {
-  background: var(--accent-dark);
+.card__downloads a.card__button:not(.disabled).primary:hover {
+  filter: brightness(1.1);
 }
 
-.card__right a.card__button:not(.disabled).primary:active {
-  background: var(--accent-dark);
+.card__downloads a.card__button:not(.disabled).primary:active {
+  filter: brightness(0.9);
 }
 
-.card__right a.card__button:not(.disabled):not(.primary):hover {
-  background: var(--accent-normal--transparent);
-}
-
-.card__right a.card__button:not(.disabled):not(.primary):active {
-  background: var(--accent-light);
-  border-color: var(--accent-dark);
+.card__downloads a.card__button:not(.disabled):not(.primary):hover {
+  background: var(--secondary-container);
 }
 
 .card.card__main {
@@ -119,7 +107,15 @@ img {
   padding: 40px 0px;
 }
 
-.card.card__main .card__right {
+.card.card__main .card__downloads {
+  padding-top: 10px;
+}
+
+.card.card__main h2 {
+  padding-top: 10px;
+}
+
+.card.card__main .card__downloads {
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -131,6 +127,6 @@ img {
 
 @media screen and (max-width: 700px) {
   .card {
-    width: 70%
+    width: 70%;
   }
 }

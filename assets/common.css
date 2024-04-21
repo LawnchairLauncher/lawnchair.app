@@ -1,68 +1,23 @@
 /* Global fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("/assets/m3/colors.css");
+@import url("/assets/m3/shapes.css");
 
 :root {
-  --body-color: hsl(0deg, 100%, 100%);
-  --accent-background: hsl(222, 100%, 98%);
-  --accent-background--lighter: hsl(222, 100%, 95%);
-  --section-background: hsla(209, 78%, 48%, 0.4);
-  --accent-light: hsl(222deg, 100%, 95%);
-  --accent-normal: hsl(222deg, 100%, 90%);
-  --accent-dark: hsl(226deg 100% 85%);
-  --accent-darker: hsl(230deg 100% 80%);
-
-  --accent-normal--transparent: hsla(222deg 100% 90% / 25%);
-
-  --text-color: hsl(220deg, 5%, 10%);
-  --text-disabled: hsl(220deg 5% 10% / 60%);
-
-  --footer-color: hsl(149, 100%, 51%);
-  --footer-color--darker: hsla(0, 0%, 0%, 0.094);
-
-  --lawnchair-background-color: hsl(208deg 78% 48%);
-  --lawnchair-background-color--lighter: hsl(209deg 73% 70%);
-  --lawnchair-background: url(/images/hero-background.svg);
+  --footer: #b5f1bc;
+  --on-footer: #00210a;
 }
 
-@media screen and (prefers-color-scheme: light) {
+@media screen and (prefers-color-scheme: dark) {
   :root {
-    --lawnchair-background-color: hsl(209deg 73% 64%);
-    --lawnchair-background: linear-gradient(
-        rgba(255, 255, 255, 0.3),
-        rgba(255, 255, 255, 0.3)
-      ),
-      url(/images/hero-background.svg);
+    --footer: #19512a;
+    --on-footer: #b5f1bc;
   }
 }
 
-::-webkit-scrollbar {
-  width: 14px;
-}
-
-#toc::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--accent-light);
-}
-
-::-webkit-scrollbar-button {
-  display: none;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--accent-normal);
-  border-radius: 20px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-dark);
-}
-
 ::selection {
-  background-color: hsl(148, 100%, 42% / 0.5);
-  color: hsl(0, 0%, 100%);
+  background-color: var(--footer);
+  color: var(--on-footer);
 }
 
 * {
@@ -71,7 +26,7 @@
 }
 
 *:focus-visible {
-  outline: 1px solid var(--text-color);
+  outline: 1px solid var(--on-background);
   border-radius: 20px;
 }
 
@@ -79,8 +34,8 @@ html,
 body {
   font-family: "Inter", sans-serif;
   line-height: 1.2;
-  background-color: var(--body-color);
-  color: var(--text-color);
+  background-color: var(--surface);
+  color: var(--on-surface);
   scroll-behavior: smooth;
   scroll-padding-top: 60px;
   margin: 0;
@@ -92,7 +47,7 @@ p {
 
 /* Header */
 header {
-  background-color: var(--accent-light);
+  background-color: var(--surface-container);
   padding: 14px;
   position: sticky;
   top: 0;
@@ -101,11 +56,11 @@ header {
   align-items: center;
   transition: background 1s;
   z-index: 20;
-  color: var(--text-color);
+  color: var(--on-surface-container);
 }
 
 header a {
-  color: var(--text-color);
+  color: var(--on-surface-container);
   text-decoration: none;
 }
 
@@ -130,7 +85,7 @@ header > a:hover {
 }
 
 header > a:visited {
-  color: var(--text-color)
+  color: var(--on-surface-container);
 }
 
 .lawnchair__logo img,
@@ -151,25 +106,24 @@ header nav {
 }
 
 header nav a {
-  transition: all 0.04s;
+  transition: all 0.1s;
   padding: 8px 16px;
-  border-bottom: 4px solid transparent;
+  border-radius: 20px;
 }
 
 header nav a:hover {
-  border-bottom-color: var(--text-disabled)
+  background: var(--primary-container);
+  color: var(--on-primary-container);
 }
 
-
-header nav a:active,
 header nav a.active {
   font-weight: bold;
-  border-bottom-color: var(--text-disabled)
+  background: var(--primary-fixed);
+  color: var(--on-primary-fixed);
 }
 
 /* Footer */
 footer {
-  background: var(--footer-color);
   padding: 8px;
   text-align: center;
 }
@@ -177,8 +131,9 @@ footer {
 footer span {
   display: block;
   margin: auto;
-  background-color: var(--footer-color--darker);
-  border-radius: 20px;
+  background-color: var(--footer);
+  color: var(--on-footer);
+  border-radius: var(--shape-xl);
   width: 90%;
   padding: 10px 20px;
   max-width: 840px;
@@ -188,46 +143,12 @@ footer span {
 footer a,
 footer a:visited {
   font-weight: 500;
-  color: var(--text-color);
+  color: var(--on-footer);
   text-decoration: none;
 }
 
 footer a:hover {
   text-decoration: underline;
-}
-
-@media screen and (prefers-color-scheme: dark) {
-  :root {
-    --body-color: hsl(228deg 5% 10%);
-    --accent-background: hsl(230deg 8% 15%);
-    --accent-background--lighter: hsl(230deg 8% 17%);
-    --accent-light: hsl(230deg 35% 25%);
-    --accent-normal: hsl(230deg 35% 35%);
-    --accent-dark: hsl(225deg 40% 40%);
-    --accent-darker: hsl(220deg 50% 50%);
-
-    --accent-normal--transparent: hsl(230deg 30% 35% / 25%);
-
-    --text-color: hsl(240deg 4% 83%);
-    --text-disabled: hsl(240deg 4% 77% / 60%);
-
-    --footer-color: hsl(152deg 100% 10%);
-    --footer-color--darker: hsl(152deg 100% 14%);
-
-    --lawnchair-background-color: hsl(210, 76%, 15%);
-    --lawnchair-background-color--lighter: hsl(206deg 78% 20%);
-    --lawnchair-background: linear-gradient(
-        hsla(0, 0%, 0%, 0.7),
-        hsla(0, 0%, 0%, 0.7)
-      ),
-      url(/images/hero-background.svg);
-  }
-}
-
-@media screen and (max-width: 520px) {
-  footer {
-    font-size: 0.8em;
-  }
 }
 
 @media screen and (max-width: 400px) {
