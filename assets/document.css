@@ -13,6 +13,7 @@ main {
   main {
     margin: 0;
     background-color: var(--surface);
+    width: 100%;
   }
 }
 
