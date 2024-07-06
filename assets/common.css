@@ -4,15 +4,9 @@
 @import url("/assets/m3/shapes.css");
 
 :root {
-  --footer: #b5f1bc;
-  --on-footer: #00210a;
-}
+  --footer: var(--lawnchair-green-color-container);
+  --on-footer: var(--lawnchair-green-on-color-container);
 
-@media screen and (prefers-color-scheme: dark) {
-  :root {
-    --footer: #19512a;
-    --on-footer: #b5f1bc;
-  }
 }
 
 ::selection {
@@ -39,6 +33,7 @@ body {
   scroll-behavior: smooth;
   scroll-padding-top: 60px;
   margin: 0;
+  min-height: 100vh;
 }
 
 p {

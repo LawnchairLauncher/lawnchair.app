@@ -315,12 +315,12 @@ main > *:not(:first-child) {
 }
 
 .link__card:hover {
-  filter: brightness(1.1);
+  filter: brightness(0.9);
   border-radius: var(--shape-xl);
 }
 
 .link__card:focus {
-  filter: brightness(0.9);
+  filter: brightness(0.8);
 }
 
 .link__card img {
@@ -370,6 +370,10 @@ main > section:not(:first-child) {
 
   .features__container {
     grid-auto-flow: row;
+  }
+  
+  .link__card:hover {
+    filter: brightness(1.1);
   }
 }
 

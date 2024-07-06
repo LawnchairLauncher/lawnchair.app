@@ -1,6 +1,10 @@
 /* container */
-main {
+body {
   background: var(--surface-container);
+}
+
+main {
+  background-color: var(--surface);
   border-radius: var(--shape-xl);
   margin: auto;
   margin-top: 20px;
@@ -10,10 +14,23 @@ main {
 }
 
 @media screen and (max-width: 700px) {
+  body {
+    background: var(--surface);
+  }
+
+  
   main {
     margin: 0;
-    background-color: var(--surface);
     width: 100%;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) and (min-width: 700px) {
+  body {
+    background: var(--surface);
+  }
+  main {
+    background: var(--surface-container)
   }
 }
 

@@ -109,3 +109,11 @@ code {
     margin: 0;
   }
 }
+
+.notice {
+  background: var(--tertiary-container);
+  color: var(--on-tertiary-container);
+  padding: 16px;
+  border-radius: var(--shape-xl);
+  margin: 16px 0px;
+}
