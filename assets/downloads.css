@@ -2,10 +2,11 @@ html,
 body {
   display: flex;
   flex-direction: column;
+  background-color: var(--surface-container)
 }
 
 header {
-  background-color: var(--surface);
+  background-color: var(--surface-container);
 }
 
 main {
@@ -18,8 +19,8 @@ img {
 }
 
 .card {
-  background: var(--surface-container);
-  color: var(--on-surface-container);
+  background: var(--surface);
+  color: var(--on-surface);
   padding: 20px 24px;
   border-radius: var(--shape-l);
   width: 500px;
@@ -32,7 +33,6 @@ img {
 }
 
 .card:hover {
-  background: var(--surface-container-high);
   border-radius: var(--shape-xl);
 }
 
@@ -123,6 +123,17 @@ img {
 
 .card__main h2.card__name {
   font-size: 1.3em;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html,
+  body {
+    background-color: var(--surface)
+  }
+
+  .card {
+    background-color: var(--surface-container)
+  }
 }
 
 @media screen and (max-width: 700px) {
