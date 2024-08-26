@@ -31,6 +31,7 @@
   --inverse-surface: rgb(47 48 54);
   --inverse-on-surface: rgb(240 240 247);
   --inverse-primary: rgb(173 198 255);
+  --inverse-primary-rgb: 173, 198, 255;
   --primary-fixed: rgb(216 226 255);
   --on-primary-fixed: rgb(0 26 65);
   --primary-fixed-dim: rgb(173 198 255);
@@ -88,6 +89,7 @@
     --inverse-surface: rgb(226 226 233);
     --inverse-on-surface: rgb(47 48 54);
     --inverse-primary: rgb(68 94 145);
+    --inverse-primary-rgb: 68, 94, 145;
     --primary-fixed: rgb(216 226 255);
     --on-primary-fixed: rgb(0 26 65);
     --primary-fixed-dim: rgb(173 198 255);
