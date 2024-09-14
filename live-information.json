@@ -2,7 +2,13 @@
    "version": 1,
    "announcements": [
       {
-         "text":"Support Lawnchair's development via Open Collective.",
+         "text":"Lawnchair is live on Play Store!",
+         "url":"https://play.google.com/store/apps/details?id=app.lawnchair.play",
+         "active":true,
+         "test":false
+      },
+      {
+         "text":"Support Lawnchair's development via Open Collective",
          "url":"https://opencollective.com/lawnchair",
          "active":true,
          "test":false
