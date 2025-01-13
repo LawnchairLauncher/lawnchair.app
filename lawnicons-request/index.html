@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <meta http-equiv="X-UA-Compatible" content="ie=edge" >
     <title>Lawnicons Icon Request form</title>
-    <meta http-equiv="Refresh" content="0; url='https://docs.google.com/forms/d/e/1FAIpQLSez5LqhhGPSp4evrj2vjvf-vGSLLPE5OvvpwktRQv6aCP4Nsg/viewform'" >
   </head>
   <body style="background: hsl(209deg, 78%, 48%); color: white; font-family: sans-serif">
     Request icons for Lawnicons at the
@@ -15,6 +14,30 @@
       defer
       src="https://scripts.simpleanalyticscdn.com/latest.js"
     ></script>
+    <script>
+        function getUrlParameter(name) {
+            name = name.replace(/[$$]/, '\\[').replace(/[$$]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Redirecting logic
+        window.onload = function() {
+            var param = getUrlParameter('request');
+            var newUrl;
+
+            if (param) {
+                // Construct the new URL with the desired parameter
+                newUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSez5LqhhGPSp4evrj2vjvf-vGSLLPE5OvvpwktRQv6aCP4Nsg/viewform?entry.1400319382=' + encodeURIComponent(exampleParam);
+            } else {
+                newUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSez5LqhhGPSp4evrj2vjvf-vGSLLPE5OvvpwktRQv6aCP4Nsg/viewform';
+            }
+
+            // Redirect to the new URL
+            window.location.href = newUrl;
+        };
+    </script>
     <noscript>
      <img
          src="https://queue.simpleanalyticscdn.com/noscript.gif"
