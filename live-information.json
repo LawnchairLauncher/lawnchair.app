@@ -35,5 +35,15 @@
          "active":false,
          "test":true
       }
+   ],
+   "features": [
+      {
+         "key":"dock_search_bar_provider",
+         "value":"google"
+      },
+      {
+         "key":"web_suggestion_provider",
+         "value":"google"
+      }
    ]
 }
