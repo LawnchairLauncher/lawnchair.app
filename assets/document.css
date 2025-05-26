@@ -42,22 +42,38 @@ main p {
 /* headings */
 main h2 {
   font-weight: 700;
-  margin-block-start: 30px;
-  margin-block-end: 5px;
+  margin-block-start: 2rem;
+  margin-block-end: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--surface-variant);
 }
 
 main h3,
 main h4 {
   font-weight: 500;
-  margin-block-end: 5px;
-}
-
-main h2 + h3 {
-  margin-block-start: 0px;
+  margin-block-end: 0.5rem;
 }
 
 main :is(h3, h4) + main :is(p, ul, ol) {
-  margin-block-start: 0;
+  margin-block-start:0px;
+}
+
+:is(p, ol, ul) + h3 {
+  margin-block-start: 2rem
+}
+
+p + :is(ul, ol) {
+  margin-block-start: 0px
+}
+
+main li {
+  line-height: 1.5rem;
+  font-weight: 300;
+  margin-block-start: 0.5rem
+}
+
+main ol li > ul {
+  margin: 0.5rem 0;
 }
 
 /* links */

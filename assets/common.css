@@ -40,6 +40,10 @@ p {
   font-weight: 300;
 }
 
+b, strong {
+  font-weight: 600
+}
+
 /* Header */
 header {
   background-color: var(--surface-container);

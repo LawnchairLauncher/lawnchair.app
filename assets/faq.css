@@ -1,8 +1,6 @@
 #toc:not(:empty) {
   border-radius: 20px;
   max-width: 300px;
-  float: right;
-  margin-left: 20px;
   background: var(--secondary-container);
   color: var(--on-secondary-container);
   z-index: 30;
@@ -10,6 +8,10 @@
 
 #toc :is(p, ul) {
   padding: 8px 10px;
+}
+
+#toc li {
+  margin: 0
 }
 
 #toc p {
@@ -102,18 +104,23 @@ code {
   }
 }
 
-@media screen and (max-width: 700px) {
-  #toc:not(:empty) {
-    float: none;
-    max-width: none;
-    margin: 0;
-  }
+.markdown-alert {
+  background: var(--surface-container-high);
+  padding: 8px 16px;
 }
 
-.notice {
-  background: var(--tertiary-container);
+.markdown-alert.markdown-alert-important {
+  border-left: 8px solid var(--tertiary-container);
   color: var(--on-tertiary-container);
-  padding: 16px;
-  border-radius: var(--shape-xl);
-  margin: 16px 0px;
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.markdown-alert-title .octicon.octicon-report {
+  fill: var(--on-tertiary-container);
+  margin-right: 6px;
 }

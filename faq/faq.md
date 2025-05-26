@@ -64,7 +64,7 @@ To use themed icons, [download Lawnicons](#Lawnicons) and enabled Themed Icons i
 
 To use Smartspacer on Lawnchair, go to *Home settings > At a Glance > At a Glance provider*, then select "Smartspacer".
 
-## How to enable the Google Feed?
+### How to enable the Google Feed?
 
 First, turn on "Show feed" under *Home settings > Home screen*. The next steps depend on your downloaded version:
 
@@ -83,7 +83,7 @@ If Google Feed still doesn't work, try the following steps:
 
 If it still doesn't work after you tried the above steps, try waiting. The issue sometimes fixes itself over time. 
 
-## How do I hide applications from my app drawer?
+### How do I hide applications from my app drawer?
 
 Long-press on the app you want to hide, tap on "Customize" or the pencil icon, then select "Hide from App Drawer" 
 
@@ -106,7 +106,7 @@ Due to security reasons, Android 13+ disallows notifications access and accessib
 1. Ensure that you have seen the "restricted settings" pop-up first, by either turning on notification access or the accessibility service.
 1. Go to *Home settings > Three-dots at the top right > App info*
 1. On the system settings screen, click the three dots at the top right, and tap "Allow restricted settings"
-  - It is important that you seen the pop-up at least once for this menu to show up.
+    - It is important that you seen the pop-up at least once for this menu to show up.
 1. Go back to the setting that you want to turn on. You should be able to turn these on.
 
 See [the support page on Google](https://support.google.com/android/answer/12623953#allowrestrictedsettings) for more information.
