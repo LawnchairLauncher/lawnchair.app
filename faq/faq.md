@@ -2,7 +2,7 @@
 
 Welcome to the Lawnchair FAQ! This page provides answers to frequently asked questions about projects relating to Lawnchair, including Lawnicons.
 
-Last updated: May 26, 2025
+Last updated: July 14, 2025
 
 ## Getting started
 
@@ -42,7 +42,7 @@ Lawnicons is an icon pack that aims to recreate themed icons for many launchers.
 
 ### What's the latest version of Lawnchair?
 
-The latest official release is [Lawnchair 14 Beta 3](https://github.com/LawnchairLauncher/lawnchair/releases/tag/v14.0.0-beta3). We are also developing Lawnchair 15 in our nightly builds.
+The latest official release is [Lawnchair 15 Beta 1](https://github.com/LawnchairLauncher/lawnchair/releases/tag/v15.0.0-beta1). We are also developing newer versions of Lawnchair 15 in our nightly builds.
 
 ### What happened to Lawnchair Legacy?
 
@@ -91,7 +91,7 @@ Long-press on the app you want to hide, tap on "Customize" or the pencil icon, t
 ### What is QuickSwitch? (for rooted users only)
 [QuickSwitch](https://github.com/skittles9823/QuickSwitch) is a Magisk module that enables third-party launchers (like Lawnchair) to access the Recents (QuickStep) APIs, therefore allowing support for Recents customization and more features. This allows for smoother animations and better integration with the system.
 
-Currently, Lawnchair 14 Beta 3 supports QuickSwitch from Android 10 to Android 14 QPR 1.
+Currently, Lawnchair 15 Beta 1 supports QuickSwitch from Android 10 to Android 15 QPR 1.
 
 The nightly builds support Android 10-15, but keep in mind that there will still be bugs regarding its implementation (which can cause crashes). Support for Android 15 QPR2 and newer OS preview/beta versions can vary and may not be immediately available.
 

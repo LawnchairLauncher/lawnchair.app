@@ -2,15 +2,21 @@
    "version": 1,
    "announcements": [
       {
+         "text": "Lawnchair 15 Beta 1 is here!",
+         "url": "https://lawnchair.app/blog/lawnchair-15-beta-1",
+         "active": true,
+         "test": false,
+      },
+      {
          "text":"Lawnchair is live on Play Store!",
          "url":"https://play.google.com/store/apps/details?id=app.lawnchair.play",
-         "active":true,
+         "active":false,
          "test":false
       },
       {
          "text":"Fund Lawnchair's development via Open Collective",
          "url":"https://opencollective.com/lawnchair",
-         "active":true,
+         "active":false,
          "test":false
       },
       {

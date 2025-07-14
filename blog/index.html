@@ -34,11 +34,20 @@
 
     <style>
       .blog {
+        background-color: var(--surface-container-highest);
+        color: var(--on-surface);
+        border-radius: var(--shape-m);
+        padding: 16px;
+        margin-bottom: 8px;
+        transition: all 0.2s;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .blog.latest {
         background-color: var(--secondary-container);
         color: var(--on-secondary-container);
-        border-radius: var(--shape-xl);
-        padding: 16px;
-        transition: all 0.2s
       }
       
       .blog:hover {
@@ -71,6 +80,17 @@
       <p>
         This page lists all the blog posts published by the Lawnchair team.
       </p>
+
+      <a href="/blog/lawnchair-15-beta-1/index.html">
+        <div class="blog latest">
+          <b>Lawnchair 15 Beta 1 is here!</b>
+          <p>
+            This foundational release brings App Drawer Folders, an Android 15 rebase, and much more.
+            <i>Published on July 14, 2025</i>
+          </p>
+        </div>
+      </a>
+
       <a href="/blog/lawnchair-14">
         <div class="blog">
           <b>Lawnchair 14 is here!</b>
