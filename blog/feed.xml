@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <atom:link href="http://lawnchair.app/blog/rss.xml" rel="self" type="application/rss+xml" />
+    <title>Lawnchair Blogs</title>
+    <link>https://lawnchair.app/blog/</link>
+    <description>Announcements and related posts by the Lawnchair team.</description>
+    <language>en-us</language>
+    <pubDate>Wed, 03 Apr 2024 08:20:00 GMT</pubDate>
+    
+    <item>
+      <title>Lawnchair 14 is here!</title>
+      <link>https://lawnchair.app/blog/lawnchair-14/</link>
+      <guid>https://lawnchair.app/blog/lawnchair-14/</guid>
+      <description>This blog highlights the major new features in Lawnchair 14.</description>
+      <pubDate>Wed, 03 Apr 2024 08:20:00 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>Lawnchair 15 Beta 1 is here!</title>
+      <link>https://lawnchair.app/blog/lawnchair-15-beta-1/</link>
+      <guid>https://lawnchair.app/blog/lawnchair-15-beta-1/</guid>
+      <description>This foundational release brings App Drawer Folders, an Android 15 rebase, and much more.
+</description>
+      <pubDate>Mon, 14 Jul 2025 14:00:00 GMT</pubDate>
+    </item>
+    
+    <item>
+      <title>Lawnstate: Building Momentum</title>
+      <link>https://lawnchair.app/blog/lawnstate-building-momentum/</link>
+      <guid>https://lawnchair.app/blog/lawnstate-building-momentum/</guid>
+      <description>A brief description of the second blog post.</description>
+      <pubDate>Wed, 23 Jul 2025 00:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
