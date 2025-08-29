@@ -27,6 +27,8 @@ These builds offer the latest features and bug fixes at a cost of potentially lo
 
 - On GitHub: https://github.com/LawnchairLauncher/lawnchair/releases/tag/nightly
 
+Nightly builds install as a separate app compared to normal builds and have a built-in updater system.
+
 #### Lawnicons
 
 Lawnicons is an icon pack that aims to recreate themed icons for many launchers.
@@ -38,7 +40,7 @@ Lawnicons is an icon pack that aims to recreate themed icons for many launchers.
 
 - GitHub: the primary source for all official releases (stable/beta) and nightly development builds for both Lawnchair and Lawnicons.
 - Telegram and Discord: mirrors of the GitHub releases
-- Play Store: has Lawnicons and Lawnchair (under a different package name). Also has the unsupported Lawnchair Legacy version.
+- Play Store: has Lawnicons and Lawnchair (under a different package name). Also has the unsupported Lawnchair Legacy version. Note that these apps install as a separate version from the GitHub releases.
 
 ### What's the latest version of Lawnchair?
 
