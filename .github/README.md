@@ -1,12 +1,8 @@
 # Lawnchair Website
 
-This is the official Lawnchair website made by [SuperDragonXD](https://github.com/SuperDragonXD). Provides information about us, the launcher, and more.
+This is the source code of the [official Lawnchair website](https://lawnchair.app).
 
-The website can be found at https://lawnchair.app.
-
-## To-do list
-
-While the website itself is good enough to provide information about us, it isn't complete yet. We still have plans to do, which can be found on [the lawnchair.app wiki](https://github.com/LawnchairLauncher/lawnchair.app/wiki).
+If you are experiencing issues relating to Lawnchair or Lawnicons, please create an issue in the respective repositiories.
 
 ## Contributing
 
