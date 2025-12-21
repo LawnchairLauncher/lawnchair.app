@@ -137,6 +137,3 @@ fetchAnnouncements(url)
   .then(list => {
     buildPopup(getAnnouncements(list))
   })
-
-
-
