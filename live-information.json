@@ -2,9 +2,15 @@
    "version": 1,
    "announcements": [
       {
+         "text": "Lawnchair 15 Beta 2 is here! Happy holidays!",
+         "url": "https://github.com/LawnchairLauncher/lawnchair/releases/tag/v15.0.0-beta2",
+         "active": false,
+         "test": false
+      },
+      {
          "text": "Lawnchair 15 Beta 1 is here!",
          "url": "https://lawnchair.app/blog/lawnchair-15-beta-1",
-         "active": true,
+         "active": false,
          "test": false
       },
       {
