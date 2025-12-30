@@ -1,0 +1,22 @@
+figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+figure figcaption {
+  text-align: center;
+  padding-top: 8px;
+  font-style: italic;
+  color: var(--on-surface-variant);
+}
+
+figure picture {
+  border-radius: var(--shape-l);
+}
+
+figure img {
+  margin: auto;
+  display: block;
+}

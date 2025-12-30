@@ -35,12 +35,29 @@
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://lawnchair.app/blog/feed.xml" />
 
     <style>
+      .blogs {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .blogs a, .blogs a:hover {
+        border-bottom: 1px solid var(--outline-variant);
+      }
+
+      .blogs a:active {
+        background: none;
+      }
+
+      .blogs a:last-child {
+        border-bottom: 0;
+      }
+
       .blog {
-        background-color: var(--surface-container-highest);
         color: var(--on-surface);
         border-radius: var(--shape-m);
         padding: 16px;
-        margin-bottom: 8px;
+        margin-bottom: 6px;
         transition: all 0.2s;
         display: flex;
         flex-direction: column;
@@ -53,7 +70,8 @@
       }
       
       .blog:hover {
-        filter: brightness(0.95);
+        background-color: var(--surface-container-highest);
+        border-radius: var(--shape-xl);
       }
 
       .blog p {
@@ -84,35 +102,47 @@
         <a href="/blog/feed.xml">Subscribe to RSS feed</a>
       </p>
 
-      <a href="/blog/lawnstate-building-momentum/">
-        <div class="blog latest">
-          <b>Lawnstate: Building Momentum</b>
-          <p>
-            Let's talk about the past, present, and future of Lawnchair.
-            <i>Published on July 23, 2025</i>
-          </p>
-        </div>
-      </a>
+      <div class="blogs">
+        <a href="/blog/lawnstate-2025-reflection/" class="">
+          <div class="blog latest">
+            <b>Lawnstate: 2025 Year End Reflection</b>
+            <p>
+              Let's talk about the year's progress and a sneak peek on Lawnchair 16.
+              <i>Published on December 30, 2025</i>
+            </p>
+          </div>
+        </a>
 
-      <a href="/blog/lawnchair-15-beta-1/index.html">
-        <div class="blog">
-          <b>Lawnchair 15 Beta 1 is here!</b>
-          <p>
-            This foundational release brings App Drawer Folders, an Android 15 rebase, and much more.
-            <i>Published on July 14, 2025</i>
-          </p>
-        </div>
-      </a>
+        <a href="/blog/lawnstate-building-momentum/" class="">
+          <div class="blog">
+            <b>Lawnstate: Building Momentum</b>
+            <p>
+              Let's talk about the past, present, and future of Lawnchair.
+              <i>Published on July 23, 2025</i>
+            </p>
+          </div>
+        </a>
 
-      <a href="/blog/lawnchair-14">
-        <div class="blog">
-          <b>Lawnchair 14 is here!</b>
-          <p>
-            This blog highlights the major new features in Lawnchair 14.
-            <i>Published on April 3, 2024</i>
-          </p>
-        </div>
-      </a>
+        <a href="/blog/lawnchair-15-beta-1/index.html">
+          <div class="blog">
+            <b>Lawnchair 15 Beta 1 is here!</b>
+            <p>
+              This foundational release brings App Drawer Folders, an Android 15 rebase, and much more.
+              <i>Published on July 14, 2025</i>
+            </p>
+          </div>
+        </a>
+
+        <a href="/blog/lawnchair-14">
+          <div class="blog">
+            <b>Lawnchair 14 is here!</b>
+            <p>
+              This blog highlights the major new features in Lawnchair 14.
+              <i>Published on April 3, 2024</i>
+            </p>
+          </div>
+        </a>
+      </div>
     </main>
     <footer>
       <span

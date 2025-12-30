@@ -79,6 +79,7 @@ main ol li > ul {
 /* links */
 main a {
   color: var(--primary);
+  font-weight: 400;
   text-decoration: none;
   outline-offset: 4px;
 }
@@ -93,4 +94,11 @@ main a:active {
 
 main a:visited {
   color: var(--tertiary);
+}
+
+code {
+  background: var(--surface-variant);
+  border-radius: var(--shape-s);
+  padding: 0 4px;
+  font-family: 'JetBrains Mono', 'Hack', 'Courier New', Courier, monospace;
 }
