@@ -9,17 +9,17 @@
 
 <url>
   <loc>https://lawnchair.app/</loc>
-  <lastmod>2025-08-22T03:40:31+00:00</lastmod>
+  <lastmod>2025-12-25</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://lawnchair.app/blog/</loc>
-  <lastmod>2025-08-22T03:40:31+00:00</lastmod>
+  <lastmod>2026-01-08</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://lawnchair.app/downloads/</loc>
-  <lastmod>2025-08-22T03:40:31+00:00</lastmod>
+  <lastmod>2025-12-25</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -30,7 +30,12 @@
 <url>
   <loc>https://lawnchair.app/privacy_policy/</loc>
   <lastmod>2025-08-22T03:40:31+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.40</priority>
+</url>
+<url>
+  <loc>https://lawnchair.app/blog/lawnstate-2025-reflection/</loc>
+  <lastmod>2026-01-08</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lawnchair.app/blog/lawnstate-building-momentum/</loc>
@@ -45,12 +50,22 @@
 <url>
   <loc>https://lawnchair.app/blog/lawnchair-14/</loc>
   <lastmod>2025-08-22T03:40:31+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.35</priority>
 </url>
 <url>
   <loc>https://lawnchair.app/faq/</loc>
   <lastmod>2025-08-22T03:40:31+00:00</lastmod>
   <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lawnchair.app/privacy-policy/</loc>
+  <lastmod>2025-08-22T03:40:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lawnchair.app/lawnicons-dashboard/</loc>
+  <lastmod>2026-01-08</lastmod>
+  <priority>0.50</priority>
 </url>
 
 </urlset>
