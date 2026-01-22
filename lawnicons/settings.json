@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "messages": [
+    {
+      "title": "Discord giveaway",
+      "description": "A chance for priority requests",
+      "icon": "ic_award"
+    },
+    {
+      "title": "Icon request dashboard",
+      "description": "Consider contributing",
+      "icon": "ic_sheets"
+    }
+  ],
+  "request_progress": {
+    "total": 1000,
+    "remaining": 100,
+  }
+}
