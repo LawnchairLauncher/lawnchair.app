@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "messages": [
+  "announcements": [
     {
       "title": "Discord giveaway",
       "description": "A chance for priority requests",
@@ -14,8 +14,4 @@
       "url": "https://lawnchair.app/lawnicons-requests"
     }
   ],
-  "request_progress": {
-    "total": 1000,
-    "remaining": 100,
-  }
 }
