@@ -27,8 +27,12 @@
     <meta name="msapplication-TileColor" content="#15c666" />
     <meta name="theme-color" content="#02d663" />
 
+    <link href="/assets/m3/colors.css" rel="stylesheet" />
+    <link href="/assets/m3/shapes.css" rel="stylesheet" />
     <link href="/assets/common.css?newv5" rel="stylesheet" />
     <link href="/assets/document.css" rel="stylesheet" />
+
+    <script src="/assets/common.js?newv5" defer></script>
 
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://lawnchair.app/blog/feed.xml" />
   </head>
@@ -38,7 +42,7 @@
       <a href="/" class="lawnchair__logo">
         <picture>
           <source type="image/webp" srcset="/images/lawnchair.webp" />
-          <img src="/images/lawnchair.png" alt="The Lawnchair Logo" />
+          <img src="/images/lawnchair.png" alt="The Lawnchair Logo" fetchpriority="high" decoding="async" />
         </picture>
         <span>Lawnchair</span>
       </a>
@@ -216,7 +220,6 @@
         - View <a href="/privacy_policy">Privacy Policy</a></span
       >
     </footer>
-    <script src="/assets/common.js?newv5"></script>
 
     <script
       async

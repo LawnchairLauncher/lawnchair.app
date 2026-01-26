@@ -14,7 +14,8 @@
   <link rel="preconnect" href="https://scripts.simpleanalyticscdn.com" crossorigin >
   <link rel="preconnect" href="https://fonts.googleapis.com" >
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300&display=swap" rel="stylesheet" >
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&subset=latin&display=swap" fetchpriority="high">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300&icon_names=android,smartphone&display=swap" fetchpriority="high">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" >
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" >
@@ -24,10 +25,19 @@
   <meta name="msapplication-TileColor" content="#15c666" >
   <meta name="theme-color" content="#02d663" >
 
-  <link rel="preload" as="image" href="/images/hero-background.svg" fetchpriority="high" >
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&subset=latin&display=swap" rel="stylesheet" >
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300&icon_names=android,smartphone&display=swap" rel="stylesheet" >
 
+  <link rel="preload" as="image" href="/images/lawnchair.webp" fetchpriority="high" >
+  <link rel="preload" as="image" href="/images/hero-background.svg" fetchpriority="high" >
+  <link rel="preload" as="image" href="/images/phone-pixel.webp" fetchpriority="high" >
+
+  <link href="/assets/m3/colors.css" rel="stylesheet" />
+  <link href="/assets/m3/shapes.css" rel="stylesheet" />
   <link href="/assets/common.css?newv52" rel="stylesheet" >
   <link href="styles.css?newv52" rel="stylesheet" >
+  <script src="/assets/common.js?newv5" defer></script>
+  <script src="script.js?newv5_c12" defer></script>
 
   <script type="application/ld+json">
       {
@@ -118,7 +128,7 @@
       <picture>
         <source type="image/webp" srcset="/images/phone-pixel.webp" >
         <img class="about__image" src="/images/phone-pixel.png"
-          alt="A screenshot of a user using Lawnchair for their home screen." width="300" height="600" loading="lazy" decoding="async" >
+          alt="A screenshot of a user using Lawnchair for their home screen." width="300" height="600" fetchpriority="high" loading="lazy" decoding="async" >
       </picture>
       <div class="about__info">
         <h2 class="about__header">No clever tagline needed</h2>
@@ -206,8 +216,6 @@
       <a href="https://simpleanalytics.com/lawnchair.app">Simple Analytics</a>
       - View <a href="/privacy_policy">Privacy Policy</a></span>
   </footer>
-  <script src="/assets/common.js?newv5"></script>
-  <script src="script.js?newv5_c12"></script>
 
   <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
   <noscript>
