@@ -407,6 +407,9 @@ function removeMarkdownScript(document) {
     if (src.includes("/assets/markdown.js") || src.includes("assets/markdown.js")) {
       script.remove();
     }
+    if (src.includes("marked.umd.min.js")) {
+      script.remove();
+    }
   });
 }
 
