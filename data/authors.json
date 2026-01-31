@@ -1,0 +1,43 @@
+{
+  "authors": [
+    {
+      "id": "generic",
+      "name": "Lawnchair Launcher Team",
+      "role": "what do I write here 🥀",
+      "avatar": "/images/lawnchair.png",
+      "links": {
+        "github": "https://github.com/lawnchairlauncher",
+        "x": "https://x.com/lawnchairapp",
+        "mastodon": "https://mastodon.social/@lawnchairapp"
+      }
+    },
+    {
+      "id": "lawnchair-team",
+      "name": "Lawnchair Team",
+      "role": "what do I write here 🥀",
+      "avatar": "/images/lawnchair.png",
+      "links": {
+        "github": "https://github.com/lawnchairlauncher/lawnchair",
+        "x": "https://x.com/lawnchairapp",
+        "mastodon": "https://mastodon.social/@lawnchairapp"
+      }
+    },
+    {
+      "id": "lawnicons-team",
+      "name": "Lawnicons Team",
+      "role": "what do I write here 🥀",
+      "links": {
+        "github": "https://github.com/lawnchairlauncher/lawnicons"
+      }
+    },
+    {
+      "id": "thesuperdragon",
+      "name": "TheSuperDragon",
+      "role": "Lawnchair developer",
+      "links": {
+        "github": "https://github.com/SuperDragonXD",
+        "x": "https://x.com/lawnchairapp"
+      }
+    }
+  ]
+}

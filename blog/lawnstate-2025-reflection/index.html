@@ -7,6 +7,9 @@
 
     <title>Lawnstate: 2025 Year End Reflection | Lawnchair Blogs</title>
     <meta name="description" content="Let's talk about the year's progress and a sneak peek on Lawnchair 16." />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/16.3.0/lib/marked.umd.min.js"
+      integrity="sha512-V6rGY7jjOEUc7q5Ews8mMlretz1Vn2wLdMW/qgABLWunzsLfluM0FwHuGjGQ1lc8jO5vGpGIGFE+rTzB+63HdA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -152,109 +155,8 @@
         <a href="/support">Support</a>
       </nav>
     </header>
-    <main>
-      <h1 id="lawnstate-end-of-year-reflection">Lawnstate: Year End Reflection</h1>
-        <p>Welcome back to Lawnstate! Happy holidays and advance happy new year as well from the team!</p>
-       <p>It&#39;s been a while since the last post, so we&#39;ve got a lot to cover. We&#39;ll look at what we&#39;ve accomplished and then take a peek at what&#39;s coming next.</p>
-      <h2 id="looking-back-on-the-years-achievements">Looking back on the years&#39; achievements</h2>
-        <p>This year was really about laying the groundwork for the future. We started things off with the release of Lawnchair 15 Beta 1, an important step in modernizing our codebase. The feedback from that release then directly lead us to the work that led to release we had a few days ago: <strong><a href="https://github.com/LawnchairLauncher/lawnchair/releases/tag/v15.0.0-beta2">Lawnchair 15 Beta 2</a></strong>.</p>
-        <p>This new beta is a stability-focused update. It&#39;s packed with bug fixes that address a lot of the common issues from Beta 1, while improving under-the-hood functionality to make things more stable and extensible. The goal is to provide a much more solid foundation for everyone.</p>
-      <h2 id="a-sneak-peek-on-lawnchair-16">A sneak peek on Lawnchair 16</h2>
-        <p>While we&#39;ve been polishing Lawnchair 15, a massive effort has been happening in the background on the <code>16-dev</code> branch. Thanks to our new contributor and now core team member, <a href="https://github.com/validcube">@nullcube</a>, we&#39;ve completed the initial rebase of Lawnchair onto both the Android 16 <em>and</em> the QPR1 codebase. In other words, we're now working on <strong>Lawnchair 16</strong>!</p>
-        <p>This is a huge, complex job. For those that are tech-savvy, this is basically similar to upgrading an out-of-date Linux installation with the newest versions. For those that aren&#39;t, let&#39;s just say that, we replace the older, slightly dusty car engine with the very latest from the manufacturer (aka AOSP).</p>
-        <p>This also allows us to actually implement proper foldable and tablet support in the launcher!</p>
-        <p>Now, pictures describe a lot more than words, so below is a gallery describing some of the upcoming features of Lawnchair 16:</p>
-
-        <figure class="gallery">
-          <ul>
-            <li>
-              <picture>
-                <source type="image/webp" srcset="/images/blog-2025-reflection/lawnchair-16-phone.webp">
-                <img src="/images/blog-2025-reflection/lawnchair-16-phone.webp" alt="Phone screenshot" height="auto" width="1080" loading="lazy">
-              </picture>
-            </li>
-            <li>
-              <picture>
-                <source type="image/webp" srcset="/images/blog-2025-reflection/lawnchair-16-foldable.webp">
-                <img src="/images/blog-2025-reflection/lawnchair-16-foldable.png" alt="Foldable screenshot" height="auto" width="1080" loading="lazy">
-              </picture>
-            </li>
-            <li>
-              <picture>
-                <source type="image/webp" srcset="/images/blog-2025-reflection/lawnchair-16-tablet.webp">
-                <img src="/images/blog-2025-reflection/lawnchair-16-tablet.png" alt="Tablet screenshot" height="auto" width="1080" loading="lazy">
-              </picture>
-            </li>
-            <li>
-              <picture>
-                <source type="image/webp" srcset="/images/blog-2025-reflection/lawnchair-16-phone-appdrawer.webp">
-                <img src="/images/blog-2025-reflection/lawnchair-16-phone-appdrawer.png" alt="Phone app drawer screenshot" height="auto" width="1080" loading="lazy">
-              </picture>
-            </li>
-            <li>
-              <picture>
-                <source type="image/webp" srcset="/images/blog-2025-reflection/lawnchair-16-phone-settings.webp">
-                <img src="/images/blog-2025-reflection/lawnchair-16-phone-settings.png" alt="Phone settings screenshot" height="auto" width="1080" loading="lazy">
-              </picture>
-            </li>
-            <li>
-              <picture>
-                <source type="image/webp" srcset="/images/blog-2025-reflection/lawnchair-16-foldable-settings.webp">
-                <img src="/images/blog-2025-reflection/lawnchair-16-foldable-settings.png" alt="Foldable settings screenshot" height="auto" width="1080" loading="lazy">
-              </picture>
-            </li>
-          </ul>
-          <figcaption>Spoilers for the new look of Lawnchair! We won't showcase too much, though!</figcaption>
-        </figure>
-
-        <p>If you&#39;re brave enough to test, you can download these builds right now from the GitHub Actions tab on our repository. As stated before, this is a completely new foundation and things there can become <em>very unstable</em>, so test at your own discretion.</p>
-      <h2 id="across-the-ecosystem">Across the ecosystem</h2>
-        <p>Now, Lawnchair doesn&#39;t exist in a vacuum. We have other related projects that have seen excellent progress.</p>
-        <h3 id="lawnicons">Lawnicons</h3>
-        <p>Thanks to <a href="https://github.com/x9136">@x9136</a>&#39;s work and community contributions, we were able to increase the icon count from 6700 icons to <strong>7581 icons</strong> in the latest release! That&#39;s a <em>lot</em> of icons over a span of around five months.</p>
-        <p>Alongside that, we are now launching a beta version of the new <strong>Lawnicons request dashboard!</strong> This will make things significantly easier for contributors to view the list of unthemed icons and help grow the icon pack even faster.</p>
-        <a href="/lawnicons-dashboard">
-          <figure>
-            <picture>
-              <source type="image/webp" srcset="/images/blog-2025-reflection/lawnicons-request-dashboard.webp">
-              <img src="/images/blog-2025-reflection/lawnicons-request-dashboard.png" alt="Screenshot of the Lawnicons request dashboard" height="auto" width="1080" loading="lazy">
-            </picture>
-            <figcaption>The Lawnicons requests dashboard! Click the image to check it out!</figcaption>
-          </figure>
-        </a>
-      <h3 id="social-media">Social media</h3>
-        <p>Yes, that&#39;s right. We plan on being more active again on our social media. Starting next year, we plan to be more active on our X (Twitter) and our newly created Mastodon account! Go give us a follow if you haven&#39;t already.</p>
-        <ul class="fancy-links">
-          <li>
-            <a class="fancy-link twitter" href="https://x.com/lawnchairapp">
-              <img class="dark-invert" src="/images/x.svg" alt="" height="50" >
-              <span>Follow us on X</span></a>
-          </li>
-          <li>
-            <a class="fancy-link mastodon" href="https://mastodon.social/@lawnchairapp">
-              <img class="dark-invert" src="/images/mastodon.svg" alt="" height="50" >
-              <span>Follow us on Mastodon</span></a>
-          </li>
-        </ul>
-      <h3 id="regarding-support">Regarding support</h3>
-      <p>Now, we are well aware that support regarding certain issues in the launcher can be a bit... <em>inconsistent</em>, to say the least. As such, we&#39;re taking a few steps to professionalize the project and make this better:</p>
-      <ul>
-      <li>If you haven&#39;t noticed in the navigation bar above, we now have <a href="/support">a support page</a> to centralize support requests!</li>
-      <li>Regarding <a href="/faq">the FAQ</a>, we will slowly update its contents and add a few QoL features to improve its usability.</li>
-      <li>We are also re-evaluating the effectiveness of our triage team to manage the huge number of issues and discussions on GitHub.</li>
-      </ul>
-      <p>This is one of the few steps we are taking to professionalize the project. Stay tuned over at our social media to find out more!</p>
-      <h3 id="thank-you-to-everyone">Thank you to everyone!</h3>
-      <p>As always, a huge thank you to everyone, including:</p>
-      <ul>
-        <li>our <a href="https://github.com/LawnchairLauncher/lawnchair">code contributors at GitHub</a> who implemented new features and fixed bugs;</li>
-        <li>our <a href="https://lawnchair.crowdin.com/">translators at Crowdin</a> who helped make Lawnchair more accessible to everyone, and;</li>
-        <li>our <a href="https://opencollective.com/lawnchair">donors at Open Collective</a> who directly help us fund hardware investments and contributor grants.</li>
-      </ul>
-      <p>Even simply sharing your home screen setups and spreading word about Lawnchair helps make our community grow!</p>
-      <p>Once again, advance Happy New Year from the Lawnchair team!</p>
-      <p>— TheSuperDragon, from the Lawnchair team</p>
-      <p>Published on December 30, 2025</p>
+    <main data-md="/blog/lawnstate-2025-reflection/index.md">
+      <p>Loading post...</p>
     </main>
     <footer>
       <span
@@ -266,6 +168,7 @@
       >
     </footer>
     <script src="/assets/common.js?newv5"></script>
+    <script src="/assets/markdown.js?newv5"></script>
 
     <script
       async
