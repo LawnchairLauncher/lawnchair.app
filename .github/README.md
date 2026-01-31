@@ -10,15 +10,18 @@ Contributions are always welcome. If you feel inclined to, feel free to submit a
 
 In addition, you can also contribute by submitting issues. Please describe the issue with enough details and it will be solved as soon as possible.
 
-## Build
+## Static site generation
 
-This site pre-renders markdown to static HTML during the build. 
-Run the build to generate a deployable copy under `dist/` then run your webserver there.
+By default the site will let client render markdown to html, for faster performance you can opt for static site generation 
+by pre-renders markdown to static HTML. Run the build to generate a deployable copy under `dist/` then run your webserver there.
 
 ```js
 npm install
 npm run build
 ```
+
+> [!IMPORTANT]
+> Always use `npm clean-install` instead of `npm install` for webserver
 
 ### Custom components
 
@@ -52,7 +55,7 @@ The authorship metadata is required when you specify authors in markdown metadat
       "id": "generic",                                      // *Required
       "name": "Lawnchair Launcher Team",                    // *Required
       "role": "Administrator",                              // *Required
-      "avatar": "/images/lawnchair.png",                    // Optional, will not show avatar when not specified
+      "avatar": "/images/lawnchair.png",                    // Optional, support url and local assets, will not show avatar when not specified
       "links": {                                            // Optional, will not show social(s) when not specified
         "github": "https://github.com/lawnchairlauncher",
         "x": "https://x.com/lawnchairapp",
