@@ -5,7 +5,7 @@ import { marked } from "marked";
 import yamlFront from "yaml-front-matter";
 
 const rootDir = process.cwd();
-const authorsPath = path.join(rootDir, "data", "authors.json");
+const authorsPath = path.join(rootDir, "scripts", "data", "authors.json");
 
 const alertTitles = {
   note: "Note",
@@ -247,7 +247,7 @@ function transformAdmonitions(doc, container) {
     const siblingsToMove = [];
     let next = paragraph.nextSibling;
     while (next) {
-      if (next.nodeType === doc.defaultView.Node.ELEMENT_NODE) {
+      if (next.nodeType === 1) {
         const tag = next.tagName;
         if (headingTags.has(tag) || tag === "HR") {
           break;
@@ -420,32 +420,16 @@ async function loadAuthors() {
 }
 
 function configureMarked() {
-  if (marked.use && marked.Renderer && marked.Slugger) {
-    const slugger = new marked.Slugger();
-    const renderer = new marked.Renderer();
-
-    renderer.heading = (text, level, raw) => {
-      const id = slugger.slug(raw || text);
-      return `<h${level} id=\"${id}\">${text}</h${level}>`;
-    };
-
-    marked.use({
-      renderer,
-      gfm: true,
-      breaks: false,
-      mangle: false
-    });
-  } else {
-    marked.setOptions({
-      gfm: true,
-      breaks: false,
-      mangle: false
-    });
-  }
+  marked.use({
+    gfm: true,
+    breaks: false
+  });
 }
 
 async function renderMarkdownIntoTarget(target, markdownSource, authors) {
-  const markdown = await fs.readFile(markdownSource, "utf-8");
+  const markdown = await fs.readFile(markdownSource, "utf-8").catch(() => {
+    throw new Error(`Missing markdown file: ${markdownSource}`);
+  });
   const parsed = parseMetadata(markdown);
   const html = marked.parse(parsed.content);
 
@@ -507,14 +491,26 @@ async function run() {
   await walkHtmlFiles(blogDir, htmlFiles);
   await walkHtmlFiles(faqDir, htmlFiles);
 
-  for (const filePath of htmlFiles) {
-    await processHtmlFile(filePath, authors);
+  const results = await Promise.allSettled(
+    htmlFiles.map((filePath) => processHtmlFile(filePath, authors))
+  );
+
+  const failures = results
+    .map((r, i) => (r.status === "rejected" ? { file: htmlFiles[i], reason: r.reason } : null))
+    .filter(Boolean);
+
+  if (failures.length) {
+    failures.forEach(({ file, reason }) => {
+      console.error(`💥 Failed to process ${file}:`, reason.message || reason);
+    });
+    throw new Error(`💥 Build failed for ${failures.length} file(s).`);
   }
 
-  console.log("Build complete. HTML updated in place.");
+  const successCount = results.length - failures.length;
+  console.log(`🥞 Build complete. Processed ${successCount} file(s).`);
 }
 
 run().catch((error) => {
-  console.error("Build failed.", error);
+  console.error("💥 Build failed.", error);
   process.exit(1);
 });
