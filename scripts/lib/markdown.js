@@ -81,8 +81,6 @@ export async function renderMarkdownIntoTarget(target, markdownSource, authors) 
   }
 
   target.innerHTML = wrapper.innerHTML;
-  target.removeAttribute("data-md");
-  target.removeAttribute("data-toc");
 }
 
 /**
