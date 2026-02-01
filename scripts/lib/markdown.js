@@ -1,20 +1,37 @@
 import fs from "fs/promises";
 import path from "path";
 import { JSDOM } from "jsdom";
-import { marked } from "marked";
+import { Marked } from "marked";
+import { markedHighlight } from "marked-highlight";
+import hljs from "highlight.js";
 import { parseMetadata, findMetadataValue, formatDateString } from "./core.js";
 import * as components from "../components/index.js";
+import markedFootnote from "marked-footnote";
 
 const rootDir = process.cwd();
 
 const metadataLastModifiedKeys = ["last modified"];
 const metadataFirstPublishedKeys = ["first published"];
 
+let markedInstance;
+
 /**
  * Configure marked with default options.
  */
 export function configureMarked() {
-  marked.use({
+  markedInstance = new Marked(
+    markedHighlight({
+      emptyLangClass: "hljs",
+      langPrefix: "hljs language-",
+      highlight(code, lang) {
+        const language = hljs.getLanguage(lang) ? lang : "plaintext";
+        return hljs.highlight(code, { language }).value;
+      }
+    }),
+    markedFootnote(),
+  );
+
+  markedInstance.use({
     gfm: true,
     breaks: false
   });
@@ -44,7 +61,7 @@ export async function renderMarkdownIntoTarget(target, markdownSource, authors) 
     throw new Error(`Missing markdown file: ${markdownSource}`);
   });
   const parsed = parseMetadata(markdown);
-  const html = marked.parse(parsed.content);
+  const html = markedInstance.parse(parsed.content);
 
   const wrapperDom = new JSDOM(`<div id="wrapper">${html}</div>`);
   const wrapperDoc = wrapperDom.window.document;

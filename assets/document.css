@@ -199,7 +199,66 @@ code {
   background: var(--surface-variant);
   border-radius: var(--shape-s);
   padding: 0 4px;
-  font-family: 'JetBrains Mono', 'Hack', 'Courier New', Courier, monospace;
+  font-family: 'Google Sans Code', 'Hack', 'Courier New', Courier, monospace;
+}
+
+pre {
+  background: var(--surface-container-highest);
+  border-radius: var(--shape-m);
+  padding: 16px;
+  overflow-x: auto;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+/* Highlight.js syntax colors */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-built_in,
+.hljs-name,
+.hljs-tag {
+  color: var(--primary);
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-section,
+.hljs-attribute,
+.hljs-literal,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-addition {
+  color: var(--tertiary);
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  color: var(--outline);
+}
+
+.hljs-number,
+.hljs-regexp,
+.hljs-symbol,
+.hljs-variable,
+.hljs-bullet,
+.hljs-link {
+  color: var(--secondary);
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
 }
 
 .markdown-alert {
