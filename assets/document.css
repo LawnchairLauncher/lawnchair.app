@@ -222,7 +222,7 @@ pre code {
 .hljs-built_in,
 .hljs-name,
 .hljs-tag {
-  color: var(--primary);
+  color: var(--code-keyword);
 }
 
 .hljs-string,
@@ -234,14 +234,14 @@ pre code {
 .hljs-template-variable,
 .hljs-type,
 .hljs-addition {
-  color: var(--tertiary);
+  color: var(--code-string);
 }
 
 .hljs-comment,
 .hljs-quote,
 .hljs-deletion,
 .hljs-meta {
-  color: var(--outline);
+  color: var(--code-comment);
 }
 
 .hljs-number,
@@ -250,7 +250,13 @@ pre code {
 .hljs-variable,
 .hljs-bullet,
 .hljs-link {
-  color: var(--secondary);
+  color: var(--code-number);
+}
+
+.hljs-attr,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: var(--code-attr);
 }
 
 .hljs-emphasis {
