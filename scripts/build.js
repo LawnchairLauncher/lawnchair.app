@@ -8,6 +8,7 @@ const rootDir = process.cwd();
 const blogTemplatePath = path.join(rootDir, "scripts", "templates", "blog.html");
 const sitemapPath = path.join(rootDir, "sitemap.xml");
 const feedPath = path.join(rootDir, "blog", "feed.xml");
+const blogIndexPath = path.join(rootDir, "blog", "index.html");
 const SITE_URL = "https://lawnchair.app";
 
 async function walkHtmlFiles(dir, results = []) {
@@ -218,6 +219,90 @@ ${items}
   console.log(`📰 Updated RSS feed with ${rssEntries.length} entries.`);
 }
 
+function escapeHtml(text) {
+  if (!text) return "";
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function formatReadableDate(dateValue) {
+  let date;
+  if (dateValue instanceof Date) {
+    date = dateValue;
+  } else if (typeof dateValue === "string") {
+    date = new Date(`${dateValue}T00:00:00Z`);
+  } else {
+    date = new Date();
+  }
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC"
+  });
+}
+
+async function collectBlogIndexEntries(dirs) {
+  const entries = [];
+  for (const dir of dirs) {
+    const mdPath = path.join(dir, "index.md");
+    const mdContent = await fs.readFile(mdPath, "utf-8");
+    const { metadata } = parseMetadata(mdContent);
+
+    const slug = path.basename(dir);
+    const title = metadata.title || slug;
+    const description = metadata.description || "";
+    const pubDate = findMetadataValue(metadata, ["first published", "first_published"]) ||
+                    findMetadataValue(metadata, ["last modified", "last_modified"]);
+
+    entries.push({
+      slug,
+      title,
+      description,
+      pubDate,
+      pubDateFormatted: formatReadableDate(pubDate)
+    });
+  }
+
+  // Sort by pubDate descending (newest first)
+  entries.sort((a, b) => {
+    const dateA = a.pubDate instanceof Date ? a.pubDate : new Date(`${a.pubDate}T00:00:00Z`);
+    const dateB = b.pubDate instanceof Date ? b.pubDate : new Date(`${b.pubDate}T00:00:00Z`);
+    return dateB - dateA;
+  });
+  return entries;
+}
+
+async function updateBlogIndex(entries) {
+  let html = await fs.readFile(blogIndexPath, "utf-8");
+
+  const blogItems = entries.map((entry, index) => {
+    const latestClass = index === 0 ? " latest" : "";
+    return `        <a href="/blog/${entry.slug}/">
+          <div class="blog${latestClass}">
+            <b>${escapeHtml(entry.title)}</b>
+            <p>
+              ${escapeHtml(entry.description)}
+              <i>Published on ${entry.pubDateFormatted}</i>
+            </p>
+          </div>
+        </a>`;
+  }).join("\n\n");
+
+  // Replace the blogs div content
+  html = html.replace(
+    /<div class="blogs">[\s\S]*?<\/div>\s*<\/main>/,
+    `<div class="blogs">\n${blogItems}\n      </div>\n    </main>`
+  );
+
+  await fs.writeFile(blogIndexPath, html, "utf-8");
+  console.log(`📝 Updated blog index with ${entries.length} entries.`);
+}
+
 async function run() {
   configureMarked();
   const authors = await loadAuthors();
@@ -229,11 +314,13 @@ async function run() {
   await findMarkdownDirs(blogDir, markdownDirs);
   await getHtmlFilesSafely(markdownDirs, blogTemplatePath);
 
-  // Update sitemap and RSS feed with blog entries from frontmatter
+  // Update sitemap, RSS feed, and blog index with blog entries from frontmatter
   const blogEntries = await collectBlogEntries(markdownDirs);
   const rssEntries = await collectRssEntries(markdownDirs);
+  const blogIndexEntries = await collectBlogIndexEntries(markdownDirs);
   await updateSitemap(blogEntries);
   await updateRssFeed(rssEntries);
+  await updateBlogIndex(blogIndexEntries);
 
   // Now find all HTML files and process them
   const htmlFiles = [];

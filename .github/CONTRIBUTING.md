@@ -12,9 +12,10 @@ Install Node runtime, Bun (tested for Bun 1.3.0) or Node.js (at least Node.js 20
 Create a folder inside `blog` and place your markdown file in that folder then run `npm run build` to generate the HTMLified version of your markdown.
 If your markdown has frontmatter with `title` and `description`, they will be automatically used for the page's `<title>` and meta description. Otherwise, `{{title}}` and `{{description}}` placeholders remain for you to fill in manually.
 
-The sitemap and RSS feed is automatically updated with blog entries using `last_modified` or `first_published` from frontmatter (defaults to today if neither is present), for RSS feed the `title` and `description` will be omitted if none is specified.
+The blog index, sitemap and RSS feed is automatically updated with blog entries using `last_modified` or `first_published` from frontmatter (defaults to today if neither is present), for RSS feed the `title` and `description` will be omitted if none is specified.
 
-After that, continue to update live information and blog selector.
+> [!NOTE]
+> The script does not update live information, please manually update the data with the blog that you want to show.
 
 #### Custom components
 
@@ -42,7 +43,7 @@ last_modified: YYYY-MM-DD
 ```
 
 > [!NOTE]
-> If you specify title card and description card, you need to remove the title and description that's embedded in the markdown file, additionally the author card and metadata will be positioned below the description instead of finding the first nearest `h1` heading.
+> The `title` and `description` in frontmatter are the single source of truth. The build script generates the h1 heading and description paragraph from these values, so you should **not** include a duplicate `# Title` in your markdown content. Author cards and metadata are positioned below the generated title/description.
 
 ##### Authorship
 
@@ -67,3 +68,9 @@ The authorship metadata is required when you specify authors in markdown metadat
   ]
 }
 ```
+
+#### Testing
+
+To test the rendering of CommonMark (CM), GitHub-Flavored Markdown (GFM), Lawnchair frontmatter (LC-FM)
+
+Move the `/scripts/test-blog` to `/blog` folder and build the documents.

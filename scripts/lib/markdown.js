@@ -54,6 +54,19 @@ export function removeMarkdownScript(document) {
 }
 
 /**
+ * Remove Google Sans Flex font if no code blocks are present.
+ */
+function removeUnusedCodeFont(document) {
+  const hasCodeBlocks = document.querySelector("pre code.hljs, code.hljs") !== null;
+  if (hasCodeBlocks) {
+    return;
+  }
+
+  const links = Array.from(document.querySelectorAll("link[href*='Google+Sans+Flex']"));
+  links.forEach((link) => link.remove());
+}
+
+/**
  * Render markdown into a target element.
  */
 export async function renderMarkdownIntoTarget(target, markdownSource, authors) {
@@ -128,6 +141,8 @@ export async function processHtmlFile(filePath, authors) {
 
     await renderMarkdownIntoTarget(target, markdownPath, authors);
   }
+
+  removeUnusedCodeFont(document);
 
   await fs.writeFile(filePath, dom.serialize(), "utf-8");
 }

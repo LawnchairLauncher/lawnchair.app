@@ -6,8 +6,6 @@ authors:
 first_published: 2025-07-14
 ---
 
-# Lawnchair 15 Beta 1 is here!
-
 Yes, that's right. After months of hard work, we're thrilled to release **Lawnchair 15 Beta 1**! You can download it today from our [GitHub Releases page](https://github.com/LawnchairLauncher/lawnchair/releases/tag/v15.0.0-beta1).
 
 This is a foundational release, bringing Lawnchair up to date with Android 15 and introducing some of our most requested features ever.

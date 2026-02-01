@@ -1,12 +1,10 @@
 ---
-title: "Lawnstate: Year End Reflection"
+title: "Lawnstate: 2025 Year End Reflection"
 description: "Let's talk about the year's progress and a sneak peek on Lawnchair 16."
 authors:
   - TheSuperDragon
 first_published: 2025-12-30
 ---
-
-# Lawnstate: Year End Reflection
 
 Welcome back to Lawnstate! Happy holidays and advance happy new year as well from the team!
 

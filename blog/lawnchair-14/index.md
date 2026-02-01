@@ -6,8 +6,6 @@ authors:
 first_published: 2024-04-03
 ---
 
-# Lawnchair 14 is here!
-
 (Maybe a clever tagline is needed.)
 
 Yes, that's right. We have released a beta version of **Lawnchair 14** today; download on [GitHub](https://github.com/LawnchairLauncher/lawnchair/releases), [Telegram](https://t.me/lawnchairci), or [Discord](https://discord.gg/3x8qNWxgGZ).

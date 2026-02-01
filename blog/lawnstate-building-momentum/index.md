@@ -1,12 +1,10 @@
 ---
 title: "Lawnstate: Building Momentum"
-description: "The past, present, and future of Lawnchair."
+description: "Let's talk about the past, present, and future of Lawnchair."
 authors:
 	- TheSuperDragon
 last_modified: 2025-07-23
 ---
-
-# Lawnstate: Building Momentum
 
 Hello everyone.
 
