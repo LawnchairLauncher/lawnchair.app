@@ -9,6 +9,7 @@
  * 4. Add it to the pipeline in lib/markdown.js
  */
 
+export * as header from "./header.js";
 export * as headingIds from "./heading-ids.js";
 export * as admonitions from "./admonitions.js";
 export * as metadataInfo from "./metadata-info.js";

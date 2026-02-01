@@ -74,6 +74,8 @@ export async function renderMarkdownIntoTarget(target, markdownSource, authors) 
   const lastModified = formatDateString(lastModifiedRaw);
   const firstPublished = formatDateString(firstPublishedRaw);
   const wantsToc = target.getAttribute("data-toc") === "true";
+  const title = parsed.metadata.title;
+  const description = parsed.metadata.description;
 
   const context = {
     metadata: parsed.metadata,
@@ -81,11 +83,14 @@ export async function renderMarkdownIntoTarget(target, markdownSource, authors) 
     authorRaw,
     firstPublished,
     lastModified,
-    wantsToc
+    wantsToc,
+    title,
+    description
   };
 
   // Run component pipeline
   const pipeline = [
+    components.header,
     components.headingIds,
     components.admonitions,
     components.metadataInfo,

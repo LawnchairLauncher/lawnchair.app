@@ -1,4 +1,6 @@
 ---
+title: "Lawnchair 14 is here!"
+description: "This blog highlights the major new features in Lawnchair 14."
 authors:
 	- generic
 first_published: 2024-04-03

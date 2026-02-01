@@ -1,4 +1,6 @@
 ---
+title: "Lawnstate: Building Momentum"
+description: "The past, present, and future of Lawnchair."
 authors:
 	- TheSuperDragon
 last_modified: 2025-07-23

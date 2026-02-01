@@ -1,4 +1,6 @@
 ---
+title: "Lawnstate: Year End Reflection"
+description: "Let's talk about the year's progress and a sneak peek on Lawnchair 16."
 authors:
   - TheSuperDragon
 first_published: 2025-12-30

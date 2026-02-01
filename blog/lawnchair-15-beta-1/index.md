@@ -1,4 +1,6 @@
 ---
+title: "Lawnchair 15 Beta 1 is here!"
+description: "This foundational release brings App Drawer Folders, an Android 15 rebase, and much more."
 authors:
   - generic
 first_published: 2025-07-14

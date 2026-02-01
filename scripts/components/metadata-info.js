@@ -1,13 +1,22 @@
 import { el } from "../lib/core.js";
 
 /**
- * Insert publication date metadata below the title.
+ * Insert publication date metadata below the title/description.
  */
 export function transform(doc, wrapper, context) {
   const { firstPublished, lastModified } = context;
-  const title = wrapper.querySelector("h1");
 
-  if (!title || (!firstPublished && !lastModified)) {
+  if (!firstPublished && !lastModified) {
+    return;
+  }
+
+  // Find anchor: description > title > first h1
+  const anchor =
+    context.descriptionElement ||
+    context.titleElement ||
+    wrapper.querySelector("h1");
+
+  if (!anchor) {
     return;
   }
 
@@ -23,5 +32,8 @@ export function transform(doc, wrapper, context) {
     className: "metadata",
     textContent: parts.join(" · ")
   });
-  title.insertAdjacentElement("afterend", info);
+  anchor.insertAdjacentElement("afterend", info);
+
+  // Store for author-cards to use
+  context.metadataElement = info;
 }

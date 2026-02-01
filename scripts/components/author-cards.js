@@ -6,16 +6,6 @@ const iconMap = {
   mastodon: "/images/mastodon.svg"
 };
 
-function getAuthorAnchor(title) {
-  if (!title) {
-    return null;
-  }
-
-  return title.nextElementSibling?.classList.contains("metadata")
-    ? title.nextElementSibling
-    : title;
-}
-
 function buildAuthorCard(doc, author) {
   const name = el(doc, "p", {
     className: "author-name",
@@ -64,9 +54,19 @@ function buildAuthorCard(doc, author) {
  */
 export function transform(doc, wrapper, context) {
   const { authorRaw, authors } = context;
-  const title = wrapper.querySelector("h1");
 
-  if (!title || !authorRaw) {
+  if (!authorRaw) {
+    return;
+  }
+
+  // Find anchor: metadata > description > title > first h1
+  const anchor =
+    context.metadataElement ||
+    context.descriptionElement ||
+    context.titleElement ||
+    wrapper.querySelector("h1");
+
+  if (!anchor) {
     return;
   }
 
@@ -84,8 +84,5 @@ export function transform(doc, wrapper, context) {
     authorCards.appendChild(buildAuthorCard(doc, data));
   });
 
-  const anchor = getAuthorAnchor(title);
-  if (anchor) {
-    anchor.insertAdjacentElement("afterend", authorCards);
-  }
+  anchor.insertAdjacentElement("afterend", authorCards);
 }
