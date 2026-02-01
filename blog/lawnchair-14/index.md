@@ -1,7 +1,8 @@
-<!--
-Author: [generic]
-First published: April 3, 2024
--->
+---
+authors:
+	- generic
+first_published: 2024-04-03
+---
 
 # Lawnchair 14 is here!
 

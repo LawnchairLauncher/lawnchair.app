@@ -1,7 +1,8 @@
-<!--
-Author: [TheSuperDragon]
-Last modified: July 23, 2025
--->
+---
+authors:
+	- TheSuperDragon
+last_modified: 2025-07-23
+---
 
 # Lawnstate: Building Momentum
 

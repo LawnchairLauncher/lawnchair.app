@@ -2,6 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 import { JSDOM } from "jsdom";
 import { marked } from "marked";
+import yamlFront from "yaml-front-matter";
 
 const rootDir = process.cwd();
 const outputDir = path.join(rootDir, "dist");
@@ -70,23 +71,20 @@ async function walkHtmlFiles(dir, results = []) {
 }
 
 function parseMetadata(markdown) {
-  const match = markdown.match(/^\s*<!--[\s\S]*?-->\s*/);
-  if (!match) {
-    return { metadata: {}, content: markdown };
-  }
+  const parsed = yamlFront.safeLoadFront(markdown, {
+    contentKeyName: "__content"
+  });
 
-  const rawBlock = match[0];
-  const body = rawBlock.replace(/^\s*<!--|-->\s*$/g, "");
-
-  const metadata = body.split("\n").reduce((acc, line) => {
-    const [key, ...rest] = line.trim().split(/:\s*/);
-    if (key && rest.length) {
-      acc[key.toLowerCase()] = rest.join(": ").trim();
+  const metadata = Object.entries(parsed).reduce((acc, [key, value]) => {
+    if (key === "__content") {
+      return acc;
     }
+    const normalizedKey = key.toLowerCase().replace(/_/g, " ");
+    acc[normalizedKey] = value;
     return acc;
   }, {});
 
-  const content = markdown.slice(rawBlock.length);
+  const content = typeof parsed.__content === "string" ? parsed.__content : "";
   return { metadata, content };
 }
 
@@ -95,7 +93,11 @@ function parseAuthorList(value) {
     return [];
   }
 
-  const trimmed = value.trim();
+  if (Array.isArray(value)) {
+    return value.map((item) => String(item).trim()).filter(Boolean);
+  }
+
+  const trimmed = String(value).trim();
   if (!trimmed || trimmed === "[]") {
     return [];
   }
@@ -121,6 +123,21 @@ function slugify(text) {
 function formatDateString(value) {
   if (!value) {
     return value;
+  }
+
+  if (value instanceof Date) {
+    if (Number.isNaN(value.getTime())) {
+      return value;
+    }
+    return value.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    });
+  }
+
+  if (typeof value !== "string") {
+    return String(value);
   }
 
   const isoMatch = value.match(/^\d{4}-\d{2}-\d{2}$/);
@@ -471,7 +488,7 @@ async function renderMarkdownIntoTarget(target, markdownSource, authors) {
 
   const lastModifiedRaw = findMetadataValue(parsed.metadata, metadataLastModifiedKeys);
   const firstPublishedRaw = findMetadataValue(parsed.metadata, metadataFirstPublishedKeys);
-  const authorRaw = parsed.metadata.author || parsed.metadata.authors;
+  const authorRaw = parsed.metadata.authors || parsed.metadata.author;
   const lastModified = formatDateString(lastModifiedRaw);
   const firstPublished = formatDateString(firstPublishedRaw);
   const title = wrapper.querySelector("h1");
@@ -484,6 +501,7 @@ async function renderMarkdownIntoTarget(target, markdownSource, authors) {
 
   target.innerHTML = wrapper.innerHTML;
   target.removeAttribute("data-md");
+  target.removeAttribute("data-toc");
 }
 
 async function processHtmlFile(filePath, authors) {

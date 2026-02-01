@@ -1,7 +1,8 @@
-<!--
-Author: [generic]
-First published: July 14, 2025
--->
+---
+authors:
+  - generic
+first_published: 2025-07-14
+---
 
 # Lawnchair 15 Beta 1 is here!
 

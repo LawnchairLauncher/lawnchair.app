@@ -1,6 +1,6 @@
-<!--
-Last modified: July 14, 2025
--->
+---
+last_modified: 2025-07-14
+---
 
 # Lawnchair FAQ
 

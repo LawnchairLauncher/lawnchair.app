@@ -67,14 +67,6 @@ function initToc() {
 }
 
 const contents = document.getElementById("contents");
-if (contents && !contents.getAttribute("data-md")) {
+if (contents) {
   initToc();
-} else {
-  document.addEventListener("markdown:rendered", (event) => {
-    if (event?.detail?.container?.id !== "contents") {
-      return;
-    }
-
-    initToc();
-  });
 }

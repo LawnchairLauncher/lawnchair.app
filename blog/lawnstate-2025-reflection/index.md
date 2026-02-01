@@ -1,7 +1,8 @@
-<!--
-Author: [TheSuperDragon]
-First published: 2025-12-30
--->
+---
+authors:
+  - TheSuperDragon
+first_published: 2025-12-30
+---
 
 # Lawnstate: Year End Reflection
 

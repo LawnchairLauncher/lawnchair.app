@@ -12,8 +12,7 @@ In addition, you can also contribute by submitting issues. Please describe the i
 
 ## Static site generation
 
-By default the site will let client render markdown to html, for faster performance you can opt for static site generation 
-by pre-renders markdown to static HTML. Run the build to generate a deployable copy under `dist/` then run your webserver there.
+The site is built as static HTML for deployment. Run the build to generate a deployable copy under `dist/`, then run your webserver there.
 
 ```js
 npm install
@@ -34,14 +33,16 @@ Lawnchair markdown renderer has extra components to extend the current CommonMar
 
 ##### Markdown
 
-The markdown metadata is completely optional, supports displaying multiple authors, rendering published date and modified date using YYYY-MM-DD format (can be human readable format).
+The markdown metadata is completely optional, supports displaying multiple authors, rendering published date and modified date using YYYY-MM-DD format.
 
 ```md
-<!--
-Author: [array1, array2, ...]
-First published: YYYY-MM-DD
-Last modified: YYYY-MM-DD
--->
+---
+authors:
+  - array1
+  - array2
+first_published: YYYY-MM-DD
+last_modified: YYYY-MM-DD
+---
 ```
 
 #### Authorship
@@ -60,7 +61,7 @@ The authorship metadata is required when you specify authors in markdown metadat
         "github": "https://github.com/lawnchairlauncher",
         "x": "https://x.com/lawnchairapp",
         "mastodon": "https://mastodon.social/@lawnchairapp"
-        // Want to add more socials? Search for iconMap in markdown.js so that icon will render correctly for your socials
+        // Want to add more socials? Search for iconMap in scripts/build.js so that icon will render correctly for your socials
       }
     }
   ]
