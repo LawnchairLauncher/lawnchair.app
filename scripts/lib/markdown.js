@@ -54,16 +54,33 @@ export function removeMarkdownScript(document) {
 }
 
 /**
- * Remove Google Sans Flex font if no code blocks are present.
+ * Manage font links based on content needs.
+ * - Add Google Sans Flex if code blocks are present
+ * - Add Material Symbols if admonitions are present
  */
-function removeUnusedCodeFont(document) {
-  const hasCodeBlocks = document.querySelector("pre code.hljs, code.hljs") !== null;
-  if (hasCodeBlocks) {
+function manageFontLinks(document) {
+  const head = document.head;
+  if (!head) {
     return;
   }
 
-  const links = Array.from(document.querySelectorAll("link[href*='Google+Sans+Flex']"));
-  links.forEach((link) => link.remove());
+  const hasCodeBlocks = document.querySelector("pre code.hljs, code.hljs") !== null;
+  const hasCodeFont = document.querySelector("link[href*='Google+Sans+Flex']") !== null;
+  if (hasCodeBlocks && !hasCodeFont) {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap";
+    head.appendChild(link);
+  }
+
+  const hasAdmonitions = document.querySelector(".markdown-alert") !== null;
+  const hasMaterialSymbols = document.querySelector("link[href*='Material+Symbols+Outlined'][href*='icon_names']") !== null;
+  if (hasAdmonitions && !hasMaterialSymbols) {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dangerous,feedback,info,lightbulb_2,warning";
+    head.appendChild(link);
+  }
 }
 
 /**
@@ -142,7 +159,7 @@ export async function processHtmlFile(filePath, authors) {
     await renderMarkdownIntoTarget(target, markdownPath, authors);
   }
 
-  removeUnusedCodeFont(document);
+  manageFontLinks(document);
 
   await fs.writeFile(filePath, dom.serialize(), "utf-8");
 }

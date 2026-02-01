@@ -6,7 +6,15 @@
     <link>https://lawnchair.app/blog/</link>
     <description>Announcements and related posts by the Lawnchair team.</description>
     <language>en-us</language>
-    <pubDate>Tue, 30 Dec 2025 00:00:00 GMT</pubDate>
+    <pubDate>Sat, 23 Jan 2077 00:00:00 GMT</pubDate>
+
+    <item>
+      <title>LC-FM Title</title>
+      <link>https://lawnchair.app/blog/test-blog/</link>
+      <guid>https://lawnchair.app/blog/test-blog/</guid>
+      <description>LC-FM Description</description>
+      <pubDate>Sat, 23 Jan 2077 00:00:00 GMT</pubDate>
+    </item>
 
     <item>
       <title>Lawnstate: 2025 Year End Reflection</title>

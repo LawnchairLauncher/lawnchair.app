@@ -297,7 +297,31 @@ pre code {
 .markdown-alert .markdown-alert-title {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
   font-weight: 600;
+}
+
+.markdown-alert-icon {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+.markdown-alert-note .markdown-alert-title {
+  color: var(--secondary);
+}
+
+.markdown-alert-tip .markdown-alert-title {
+  color: var(--primary);
+}
+
+.markdown-alert-important .markdown-alert-title {
+  color: var(--tertiary);
+}
+
+.markdown-alert-warning .markdown-alert-title,
+.markdown-alert-caution .markdown-alert-title {
+  color: var(--error);
 }
 
 /* Tables */

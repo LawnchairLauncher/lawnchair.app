@@ -1,25 +1,43 @@
 import { el } from "../lib/core.js";
 
-const alertTitles = {
-  note: "Note",
-  tip: "Tip",
-  important: "Important",
-  warning: "Warning",
-  caution: "Caution"
+const alertTypes = {
+  note: {
+    title: "Note",
+    icon: "info"
+  },
+  tip: {
+    title: "Tip",
+    icon: "lightbulb_2"
+  },
+  important: {
+    title: "Important",
+    icon: "feedback"
+  },
+  warning: {
+    title: "Warning",
+    icon: "warning"
+  },
+  caution: {
+    title: "Caution",
+    icon: "dangerous"
+  }
 };
 
 const headingTags = new Set(["H1", "H2", "H3", "H4", "H5", "H6"]);
 
 function createMarkdownAlert(doc, typeKey, inlineText) {
-  const titleText = alertTitles[typeKey];
-  if (!titleText) {
+  const alertType = alertTypes[typeKey];
+  if (!alertType) {
     return null;
   }
 
-  const titleEl = el(doc, "p", {
-    className: "markdown-alert-title",
-    textContent: titleText
+  const iconSpan = el(doc, "span", {
+    className: "material-symbols-outlined markdown-alert-icon",
+    textContent: alertType.icon
   });
+
+  const titleText = doc.createTextNode(alertType.title);
+  const titleEl = el(doc, "p", { className: "markdown-alert-title" }, [iconSpan, titleText]);
   const inlinePara = inlineText ? el(doc, "p", { textContent: inlineText }) : null;
 
   return el(
