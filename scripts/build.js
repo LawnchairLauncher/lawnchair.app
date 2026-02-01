@@ -5,7 +5,6 @@ import { marked } from "marked";
 import yamlFront from "yaml-front-matter";
 
 const rootDir = process.cwd();
-const ignoreDirs = new Set(["node_modules", "dist", ".git", ".github"]);
 const authorsPath = path.join(rootDir, "data", "authors.json");
 
 const alertTitles = {
@@ -26,24 +25,13 @@ const iconMap = {
   mastodon: "/images/mastodon.svg"
 };
 
-function shouldCopy(sourcePath) {
-  const rel = path.relative(rootDir, sourcePath);
-  if (!rel) {
-    return true;
-  }
-  const segment = rel.split(path.sep)[0];
-  return !ignoreDirs.has(segment);
-}
-
 async function walkHtmlFiles(dir, results = []) {
   const entries = await fs.readdir(dir, { withFileTypes: true });
   await Promise.all(
     entries.map(async (entry) => {
       const fullPath = path.join(dir, entry.name);
       if (entry.isDirectory()) {
-        if (!ignoreDirs.has(entry.name)) {
-          await walkHtmlFiles(fullPath, results);
-        }
+        await walkHtmlFiles(fullPath, results);
       } else if (entry.isFile() && entry.name.toLowerCase().endsWith(".html")) {
         results.push(fullPath);
       }
