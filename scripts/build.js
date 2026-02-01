@@ -5,9 +5,8 @@ import { marked } from "marked";
 import yamlFront from "yaml-front-matter";
 
 const rootDir = process.cwd();
-const outputDir = path.join(rootDir, "dist");
 const ignoreDirs = new Set(["node_modules", "dist", ".git", ".github"]);
-const authorsPath = path.join(outputDir, "data", "authors.json");
+const authorsPath = path.join(rootDir, "data", "authors.json");
 
 const alertTitles = {
   note: "Note",
@@ -34,23 +33,6 @@ function shouldCopy(sourcePath) {
   }
   const segment = rel.split(path.sep)[0];
   return !ignoreDirs.has(segment);
-}
-
-async function copyWorkspace() {
-  await fs.rm(outputDir, { recursive: true, force: true });
-  await fs.mkdir(outputDir, { recursive: true });
-  const entries = await fs.readdir(rootDir, { withFileTypes: true });
-  for (const entry of entries) {
-    if (ignoreDirs.has(entry.name)) {
-      continue;
-    }
-    const source = path.join(rootDir, entry.name);
-    const destination = path.join(outputDir, entry.name);
-    await fs.cp(source, destination, {
-      recursive: true,
-      filter: shouldCopy
-    });
-  }
 }
 
 async function walkHtmlFiles(dir, results = []) {
@@ -519,7 +501,7 @@ async function processHtmlFile(filePath, authors) {
     }
 
     const markdownPath = source.startsWith("/")
-      ? path.join(outputDir, source.replace(/^\//, ""))
+      ? path.join(rootDir, source.replace(/^\//, ""))
       : path.join(path.dirname(filePath), source);
 
     await renderMarkdownIntoTarget(target, markdownPath, authors);
@@ -530,15 +512,18 @@ async function processHtmlFile(filePath, authors) {
 
 async function run() {
   configureMarked();
-  await copyWorkspace();
   const authors = await loadAuthors();
-  const htmlFiles = await walkHtmlFiles(outputDir);
+  const htmlFiles = [];
+  const blogDir = path.join(rootDir, "blog");
+  const faqDir = path.join(rootDir, "faq");
+  await walkHtmlFiles(blogDir, htmlFiles);
+  await walkHtmlFiles(faqDir, htmlFiles);
 
   for (const filePath of htmlFiles) {
     await processHtmlFile(filePath, authors);
   }
 
-  console.log(`Build complete. Output in ${path.relative(rootDir, outputDir)}`);
+  console.log("Build complete. HTML updated in place.");
 }
 
 run().catch((error) => {
