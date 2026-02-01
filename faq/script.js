@@ -50,7 +50,7 @@ function initToc() {
 
   toc.innerHTML = tocContents;
 
-  const tocToggle = document.querySelector("button");
+  const tocToggle = toc.querySelector("button");
   if (!tocToggle) {
     return;
   }

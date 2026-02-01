@@ -21,11 +21,11 @@ npm run build
 ```
 
 > [!IMPORTANT]
-> Always use `npm clean-install` instead of `npm install` for webserver
+> For production deployments or when preparing the site for a web server, use `npm ci` instead of `npm install` to ensure a clean, reproducible install.
 
 ### Custom components
 
-Lawnchair markdown renderer have extra components to extends the current CommonMark specifications:
+Lawnchair markdown renderer has extra components to extend the current CommonMark specifications:
  * Lawnchair metadata (Optional: Authorship(s), publish date, modified date):
  * Inlining Table of Contents (ToC) at any location: `<toc-inline></toc-inline>` (user override and disable toc globally by adding `?disabletoc=*` to the url param)
  * Admonitions: Quote block starting with `> [!TIP/NOTE/IMPORTANT/WARNING/CAUTION]` [(same as GitHub-flavored alerts)](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts)
@@ -34,7 +34,7 @@ Lawnchair markdown renderer have extra components to extends the current CommonM
 
 ##### Markdown
 
-The markdown metadata is completely optional, support displaying multiple authors, rendering published date and modified date using YYYY-MM-DD format (can be human readable format).
+The markdown metadata is completely optional, supports displaying multiple authors, rendering published date and modified date using YYYY-MM-DD format (can be human readable format).
 
 ```md
 <!--
@@ -55,7 +55,7 @@ The authorship metadata is required when you specify authors in markdown metadat
       "id": "generic",                                      // *Required
       "name": "Lawnchair Launcher Team",                    // *Required
       "role": "Administrator",                              // *Required
-      "avatar": "/images/lawnchair.png",                    // Optional, support url and local assets, will not show avatar when not specified
+      "avatar": "/images/lawnchair.png",                    // Optional, supports URLs and local assets, and will not show an avatar when not specified
       "links": {                                            // Optional, will not show social(s) when not specified
         "github": "https://github.com/lawnchairlauncher",
         "x": "https://x.com/lawnchairapp",
