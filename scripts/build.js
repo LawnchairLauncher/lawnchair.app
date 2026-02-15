@@ -56,8 +56,8 @@ async function getHtmlFilesSafely(dirs, templatePath) {
 
       // Replace HTML placeholders with frontmatter values, or as-is if not found
       let html = template;
-      html = html.replace(/\{\{title\}\}/g, metadata.title || "{{title}}");
-      html = html.replace(/\{\{description\}\}/g, metadata.description || "{{description}}");
+      html = html.replace(/\{\{title\}\}/g, escapeHtml(metadata.title) || "{{title}}");
+      html = html.replace(/\{\{description\}\}/g, escapeHtml(metadata.description) || "{{description}}");
 
       await fs.writeFile(htmlPath, html, "utf-8");
       created++;
