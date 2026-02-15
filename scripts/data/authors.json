@@ -4,40 +4,23 @@
       "id": "generic",
       "name": "Lawnchair Launcher Team",
       "role": "Organization",
-      "avatar": "/images/lawnchair.png",
-      "links": {
-        "github": "https://github.com/lawnchairlauncher",
-        "x": "https://x.com/lawnchairapp",
-        "mastodon": "https://mastodon.social/@lawnchairapp"
-      }
+      "avatar": "/images/lawnchair.png"
     },
     {
       "id": "lawnchair-team",
       "name": "Lawnchair Team",
       "role": "Android launcher",
-      "avatar": "/images/lawnchair.png",
-      "links": {
-        "github": "https://github.com/lawnchairlauncher/lawnchair",
-        "x": "https://x.com/lawnchairapp",
-        "mastodon": "https://mastodon.social/@lawnchairapp"
-      }
+      "avatar": "/images/lawnchair.png"
     },
     {
       "id": "lawnicons-team",
       "name": "Lawnicons Team",
-      "role": "Icon design",
-      "links": {
-        "github": "https://github.com/lawnchairlauncher/lawnicons"
-      }
+      "role": "Icon design"
     },
     {
       "id": "thesuperdragon",
       "name": "TheSuperDragon",
-      "role": "Lawnchair developer",
-      "links": {
-        "github": "https://github.com/SuperDragonXD",
-        "x": "https://x.com/lawnchairapp"
-      }
+      "role": "Lawnchair developer"
     }
   ]
 }
