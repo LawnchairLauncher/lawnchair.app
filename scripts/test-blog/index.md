@@ -9,13 +9,17 @@ first_published: 2077-01-23
 last_modified: 2025-07-23
 ---
 
+<!-- CM Comment! -->
+
 <toc-inline></toc-inline>
 
-Decoration escape \*Italicised\* to \*\*Bold\*\*.
+<!-- ToC Inline only work with ToC Script! -->
 
-*CM Italicised* / CM Italicised (alternative)_
+Decoration escape \*Italicised\* to \*\*Bold\*\*
 
-**CM Bold** / CM Bold (alternative)__
+*CM Italicised* / _CM Italicised (alternative)_
+
+**CM Bold** / __CM Bold (alternative)__
 
 ***Markdown Italicised + Bold***
 
@@ -31,9 +35,8 @@ CM List
 		* Nested-ed list 1
 
 CM Bullet point
-0. Point 0
-1. Point 1
-2. Point 2
+1. Point 0
+2. Point 1
 	0. Nested point 0
 	1. Nested point 1
 		0. Nested-ed point 0
@@ -53,11 +56,19 @@ CM Bullet point
 
 ```md
 # CM Codeblock (md)
+
+<!-- Hi! -->
 ```
 
 ```py
 print("CM Codeblock (py)")
+
+# Hi!
 ```
+
+    CM Codeblock (alternative)
+
+	Hi!
 
 `CM Inline code`
 
@@ -71,7 +82,13 @@ CM Separator (Alternative)
 
 # CM h1
 
+CM h1 (Alternative)
+===================
+
 ## CM h2
+
+CM h2 (Alternative)
+-------------------
 
 ### CM h3
 
@@ -87,6 +104,14 @@ Inline HTML
 
 <bold>HTML bold</bold>
 
+GFM Tasklist
+- [x] 🧋 Lawnchair Bubble Tea
+  - [ ] Tapioca
+  - [x] Milk
+  - [ ] Tea
+- [ ] Lawnchair Cinnamon Tea
+
+~~GFM Strikethrough~~
 
 > [!TIP]
 > GFM Admonition tip!
