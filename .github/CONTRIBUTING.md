@@ -10,7 +10,7 @@ Welcome to Lawnchair contributing guidelines, this guide primarily focus on writ
 ### Write from Markdown to HTML
 
 1. Setup page directory
-  Write your blog in markdown, create a folder inside `blog` and place it there.
+  Write your blog in markdown with [metadata](#metadata), create a folder inside `blog` and place it there.
 
 2. Build RSS feeds, sitemap and blog index, and your HTMLified markdown
   Run `npm run build` to generate a sitemap, RSS feeds, blog selector and your HTMLified version of your markdown.
