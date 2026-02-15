@@ -216,6 +216,15 @@ pre code {
   line-height: 1.5;
 }
 
+blockquote {
+  background: var(--surface-container-high);
+  border-radius: var(--shape-s);
+  border-left: 5px solid var(--outline-variant);
+  margin: 1.5em 10px;
+  padding: 0.01em 10px;
+  margin-inline-start: 0;
+}
+
 /* Highlight.js syntax colors */
 .hljs-keyword,
 .hljs-selector-tag,
