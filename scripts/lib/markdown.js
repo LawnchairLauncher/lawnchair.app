@@ -54,22 +54,22 @@ export function removeMarkdownScript(document) {
 }
 
 /**
- * Manage font links based on content needs.
- * - Add Google Sans Flex if code blocks are present
+ * Load fonts when needed
+ * - Add Google Sans Code if code blocks are present
  * - Add Material Symbols if admonitions are present
  */
-function manageFontLinks(document) {
+function loadFonts(document) {
   const head = document.head;
   if (!head) {
     return;
   }
 
   const hasCodeBlocks = document.querySelector("pre code.hljs, code.hljs") !== null;
-  const hasCodeFont = document.querySelector("link[href*='Google+Sans+Flex']") !== null;
+  const hasCodeFont = document.querySelector("link[href*='Google+Sans+Code']") !== null;
   if (hasCodeBlocks && !hasCodeFont) {
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap";
+    link.href = "https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@400&subset=latin-ext,latin&display=swap";
     head.appendChild(link);
   }
 
@@ -159,7 +159,7 @@ export async function processHtmlFile(filePath, authors) {
     await renderMarkdownIntoTarget(target, markdownPath, authors);
   }
 
-  manageFontLinks(document);
+  loadFonts(document);
 
   await fs.writeFile(filePath, dom.serialize(), "utf-8");
 }
