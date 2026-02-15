@@ -280,6 +280,7 @@ blockquote {
   background: var(--surface-container-high);
   border-radius: var(--shape-s);
   padding: 8px 16px;
+  margin: 10px 0px;
 }
 
 .markdown-alert.markdown-alert-important {
