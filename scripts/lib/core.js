@@ -100,11 +100,7 @@ export function formatDateString(value) {
     if (Number.isNaN(value.getTime())) {
       return value;
     }
-    return value.toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric"
-    });
+    return value.toLocaleDateString("en-US", dateOptions);
   }
 
   if (typeof value !== "string") {
@@ -121,11 +117,7 @@ export function formatDateString(value) {
     return value;
   }
 
-  return date.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric"
-  });
+  return date.toLocaleDateString("en-US", dateOptions);
 }
 
 /**
