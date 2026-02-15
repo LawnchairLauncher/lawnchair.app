@@ -197,9 +197,9 @@ main a:visited {
 
 code {
   background: var(--surface-variant);
-  border-radius: var(--shape-s);
-  padding: 0 4px;
-  font-family: 'Google Sans Code', 'Hack', 'Courier New', Courier, monospace;
+  border-radius: var(--shape-m); 
+  padding: 8px;
+  font-family: 'Google Sans Code', monospace;
 }
 
 pre {
