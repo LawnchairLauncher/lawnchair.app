@@ -203,7 +203,7 @@ code {
 }
 
 pre {
-  background: var(--surface-container-highest);
+  background: var(--surface-variant);
   border-radius: var(--shape-m);
   padding: 16px;
   overflow-x: auto;
