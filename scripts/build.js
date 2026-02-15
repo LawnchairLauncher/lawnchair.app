@@ -230,6 +230,13 @@ function escapeHtml(text) {
 }
 
 function formatReadableDate(dateValue) {
+  const dateOptions = { 
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  };
+  
   let date;
   if (dateValue instanceof Date) {
     date = dateValue;
@@ -238,12 +245,7 @@ function formatReadableDate(dateValue) {
   } else {
     date = new Date();
   }
-  return date.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    timeZone: "UTC"
-  });
+  return date.toLocaleDateString("en-US", dateOptions);
 }
 
 async function collectBlogIndexEntries(dirs) {

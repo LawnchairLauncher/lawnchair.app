@@ -85,6 +85,13 @@ export function parseAuthorList(value) {
  * Format a date value to a human-readable string.
  */
 export function formatDateString(value) {
+  const dateOptions = { 
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  };
+
   if (!value) {
     return value;
   }
