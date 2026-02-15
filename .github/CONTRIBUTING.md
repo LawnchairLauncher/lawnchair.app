@@ -62,7 +62,7 @@ The authorship metadata is required when you specify authors in markdown metadat
         "x": "https://x.com/lawnchairapp",
         "mastodon": "https://mastodon.social/@lawnchairapp"
         /* Want to add more socials? 
-           Add your icons to the asset, search for iconMap in scripts/build.js and configure it so that icon will render correctly for your socials */
+           Add your icons to the asset, search for iconMap in scripts/components/author-cards.js and configure it so that icon will render correctly for your socials */
       }
     }
   ]
