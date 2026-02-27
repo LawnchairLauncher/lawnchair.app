@@ -2,7 +2,7 @@
 
 Welcome to the Lawnchair FAQ! This page provides answers to frequently asked questions about projects relating to Lawnchair, including Lawnicons.
 
-Last updated: July 14, 2025
+Last updated: March 1, 2025
 
 ## Getting started
 
@@ -44,7 +44,7 @@ Lawnicons is an icon pack that aims to recreate themed icons for many launchers.
 
 ### What's the latest version of Lawnchair?
 
-The latest official release is [Lawnchair 15 Beta 2](https://github.com/LawnchairLauncher/lawnchair/releases/tag/v15.0.0-beta2). We are also developing newer versions of Lawnchair 15 in our nightly builds.
+The latest official release is [Lawnchair 15 Beta 2.1](https://github.com/LawnchairLauncher/lawnchair/releases/tag/v15.0.0-beta2.1). We are also developing newer versions of Lawnchair 15 in our nightly builds.
 
 ### What happened to Lawnchair Legacy?
 
