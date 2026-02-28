@@ -2,13 +2,6 @@
   "version": 2,
   "announcements": [
     {
-      "title": "Discord giveaway",
-      "description": "A chance for priority requests.",
-      "icon": "ic_award",
-      "url": "https://discord.com/channels/803299970169700402/1436369447899107473",
-      "location": "iconrequest"
-    },
-    {
       "title": "Icon request dashboard",
       "description": "Consider contributing.",
       "icon": "ic_table",
@@ -21,6 +14,13 @@
       "icon": "ic_donate",
       "url": "https://opencollective.com/lawnchair/projects/lawnicons",
       "location": "iconrequest"
-    }
+    },
+    {
+      "title": "Discord giveaway",
+      "description": "A chance for priority requests.",
+      "icon": "ic_award",
+      "url": "https://discord.com/channels/803299970169700402/1436369447899107473",
+      "location": "iconrequest"
+    }    
   ]
 }
